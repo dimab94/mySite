@@ -1,1 +1,61 @@
-.App 
+@import "../fonts/proectFonts.css"
+
+$mainFont:'Oswald',sans-serif
+$secondFont:'VT323', sans-serif
+$mainColor: rgba(173, 255, 0, 1)
+
+
+body
+    background-color: rgba(36, 36, 36, 1)
+h1,li
+    font-family: $secondFont
+    color: $mainColor
+h1
+    font-size: 48px
+li
+    font-size: 30px
+h2,h3,p
+    font-family: 'Oswald',sans-serif
+.style__shadow
+    box-shadow: 8px -6px 0px 0px $mainColor
+.main
+    max-width: 1172px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(3,31.5%)
+    column-gap: 2.75%
+    &_title
+        display: flex
+        justify-content: center
+        grid-row: 1/2
+        grid-column: 1/4
+    &_menu
+        list-style: none
+        display: flex
+        justify-content: space-between
+        padding: 0 22% 6vh
+        flex-direction: row
+        grid-row: 2/3
+        grid-column: 1/4
+    &_page
+        grid-column: 1/4
+        grid-row: 3/4
+        position: relative
+        &_pic
+            display: flex
+            justify-content: space-between
+        &_slogan
+            position: absolute
+            top: 50%
+            margin-right: auto
+            left: 0
+            right: 0
+            text-align: center
+            background: rgba(36, 36, 36, 1)
+            display: flex
+            justify-content: center
+            color: $mainColor
+            font-size: 60px
+
+            
+
