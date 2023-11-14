@@ -1,9 +1,15 @@
-@import "../fonts/proectFonts.css"
-
-$mainFont:'Oswald',sans-serif
+@font-face 
+    font-family: "Oswald"
+    src: url("../fonts/Oswald/Oswald-Light.ttf") format("truetype")
+    font-weight: normal
+@font-face 
+    font-family: "VT323"
+    src: url("../fonts/VT323/VT323-Regular.ttf") format("truetype")
+    font-weight: normal
+    
+$mainFont:'Oswald'
 $secondFont:'VT323', sans-serif
 $mainColor: rgba(173, 255, 0, 1)
-
 
 body
     background-color: rgba(36, 36, 36, 1)
@@ -12,10 +18,13 @@ h1,li
     color: $mainColor
 h1
     font-size: 48px
+    font-weight: normal
 li
     font-size: 30px
 h2,h3,p
-    font-family: 'Oswald',sans-serif
+    font-family: $mainFont
+    color: $mainColor
+    font-weight: normal
 .style__shadow
     box-shadow: 8px -6px 0px 0px $mainColor
 .main
@@ -47,15 +56,16 @@ h2,h3,p
         &_slogan
             position: absolute
             top: 50%
-            margin-right: auto
+            /* margin-right: auto */
             left: 0
             right: 0
             text-align: center
-            background: rgba(36, 36, 36, 1)
-            display: flex
-            justify-content: center
-            color: $mainColor
-            font-size: 60px
-
+            font-size: 48px
+            &_wrapper
+                background: rgba(36, 36, 36, 1)
+                width: 60%
+                margin: 0 auto
+                
+                
             
 
