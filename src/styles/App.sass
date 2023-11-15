@@ -7,7 +7,7 @@
     src: url("../fonts/VT323/VT323-Regular.ttf") format("truetype")
     font-weight: normal
     
-$mainFont:'Oswald'
+$mainFont:'Oswald',sans-serif
 $secondFont:'VT323', sans-serif
 $mainColor: rgba(173, 255, 0, 1)
 
@@ -19,53 +19,123 @@ h1,li
 h1
     font-size: 48px
     font-weight: normal
+    @media (max-width: 1170px)
+        font-size: 30px
+    @media (max-width: 500px)
+        font-size: 24px
 li
     font-size: 30px
+    @media (max-width: 1170px)
+        font-size: 24px
+    @media (max-width: 740px)
+        font-size: 20px
 h2,h3,p
     font-family: $mainFont
     color: $mainColor
     font-weight: normal
-.style__shadow
-    box-shadow: 8px -6px 0px 0px $mainColor
 .main
     max-width: 1172px
     margin: 0 auto
     display: grid
     grid-template-columns: repeat(3,31.5%)
-    column-gap: 2.75%
+    gap: 5% 2.75% 
     &_title
-        display: flex
-        justify-content: center
         grid-row: 1/2
-        grid-column: 1/4
+        grid-column: 2/3
+        justify-self: center
+        margin: 0
     &_menu
         list-style: none
         display: flex
-        justify-content: space-between
-        padding: 0 22% 6vh
+        justify-content: space-around
         flex-direction: row
         grid-row: 2/3
         grid-column: 1/4
+        margin: 0
+        @media (max-width: 500px)
+            display: none
+        &_button
+            display: none
+            @media (max-width: 500px)
+                grid-column: 3/4
+                grid-row: 1/2
+                justify-self: flex-end
+                align-self: center
+                widows: 32px
+                height: 18px
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                span
+                    width: 32px
+                    height: 4px
+                    background: $mainColor
     &_page
         grid-column: 1/4
         grid-row: 3/4
         position: relative
+        @media (max-width: 500px)
+            grid-row: 2/4
         &_pic
-            display: flex
-            justify-content: space-between
+            display: grid
+            grid-template-columns: repeat(3,31.5%)
+            gap: 5% 2.75%
+            img
+                width: 100%
+            .swimming
+                grid-column: 1/2
+            .cycling
+                grid-column: 2/3
+                box-shadow: 8px -6px 0px 0px $mainColor
+                @media (max-width: 1170px)
+                    box-shadow: 6px -6px 0px 0px $mainColor
+                @media (max-width: 500px)
+                    box-shadow: 4px -4px 0px 0px $mainColor
+            .running
+                grid-column: 3/4
         &_slogan
             position: absolute
-            top: 50%
+            top: 60%
             /* margin-right: auto */
             left: 0
             right: 0
             text-align: center
             font-size: 48px
+            @media (max-width: 1170px)
+                font-size: 30px
+            @media (max-width: 740px)
+                font-size: 20px
+            @media (max-width: 500px)
+                font-size: 15px
+                top: 50%
             &_wrapper
                 background: rgba(36, 36, 36, 1)
-                width: 60%
+                width: 55%
+                height: fit-content
                 margin: 0 auto
-                
+                @media (max-width: 500px)
+                    width: 75%
+                h2
+                    padding: 1%
+    &_button
+        grid-column: 2/3
+        grid-row: 4/5
+        height: 62px
+        background: $mainColor
+        border: none
+        font-size: 30px
+        font-family: $mainFont
+        padding: 2%
+        height: 100%
+        @media (max-width: 1170px)
+            font-size: 24px
+        @media (max-width: 740px)
+            font-size: 20px
+        @media (max-width: 500px)
+            font-size: 16px
+            grid-column: 1/4
+            width: 80%
+            justify-self: center
                 
             
 
