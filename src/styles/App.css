@@ -12,7 +12,7 @@ body {
   background-color: rgb(36, 36, 36);
 }
 
-h1, li {
+h1 {
   font-family: "VT323", sans-serif;
   color: rgb(173, 255, 0);
 }
@@ -29,20 +29,6 @@ h1 {
 @media (max-width: 500px) {
   h1 {
     font-size: 24px;
-  }
-}
-
-li {
-  font-size: 30px;
-}
-@media (max-width: 1170px) {
-  li {
-    font-size: 24px;
-  }
-}
-@media (max-width: 740px) {
-  li {
-    font-size: 20px;
   }
 }
 
@@ -78,6 +64,24 @@ h2, h3, p {
   .main_menu {
     display: none;
   }
+}
+.main_menu li {
+  font-family: "VT323", sans-serif;
+  color: rgb(173, 255, 0);
+  font-size: 30px;
+}
+@media (max-width: 1170px) {
+  .main_menu li {
+    font-size: 24px;
+  }
+}
+@media (max-width: 740px) {
+  .main_menu li {
+    font-size: 20px;
+  }
+}
+.main_menu li :hover {
+  cursor: pointer;
 }
 .main_menu_button {
   display: none;
@@ -147,7 +151,7 @@ h2, h3, p {
   text-align: center;
   font-size: 48px;
 }
-@media (max-width: 1170px) {
+@media (max-width: 1000px) {
   .main_page_slogan {
     font-size: 30px;
   }
@@ -165,13 +169,23 @@ h2, h3, p {
 }
 .main_page_slogan_wrapper {
   background: rgb(36, 36, 36);
-  width: 55%;
   height: fit-content;
   margin: 0 auto;
+  width: 700px;
+}
+@media (max-width: 1000px) {
+  .main_page_slogan_wrapper {
+    width: 450px;
+  }
+}
+@media (max-width: 740px) {
+  .main_page_slogan_wrapper {
+    width: 300px;
+  }
 }
 @media (max-width: 500px) {
   .main_page_slogan_wrapper {
-    width: 75%;
+    width: 220px;
   }
 }
 .main_page_slogan_wrapper h2 {

@@ -14,12 +14,12 @@ function App() {
         <div className='main'>
           <h1 className='main_title'>Baruzdin.tri</h1>
           <ul className='main_menu'>
-            <li>About</li>
-            <li>Coach</li>
-            <li>Program</li>
-            <li>FAQ</li>
-            <li>Payment</li>
-            <li>Utility</li>
+            <li><a>About</a></li>
+            <li><a>Coach</a></li>
+            <li><a>Program</a></li>
+            <li><a>FAQ</a></li>
+            <li><a>Payment</a></li>
+            <li><a>Utility</a></li>
           </ul>
           <div className='main_menu_button'>
             <span></span>
@@ -39,6 +39,49 @@ function App() {
             </div>
           </div>
           <button className='main_button'>Начать тренировки</button>
+        </div>
+        <div className='about'>
+          <div className='question_one'>
+            <h3>Что такое online план тренировок?</h3>
+            <p>Это календарь с&nbsp;тренировками на&nbsp;каждый день. Календарь составляется в&nbsp;приложении Training Pekas. Приложение позволяет подробно анализировать результаты тренировок и&nbsp;соревнований, а&nbsp;так&nbsp;же интегрируется с&nbsp;популярными приложениями и&nbsp;устройствами.</p>
+          </div>
+          <div className='question_two'>
+            <h3>Бег, плавание, вело, а&nbsp;может триатлон?</h3>
+            <ul>
+              <li>Разнообразие тренировок и&nbsp;фокус на&nbsp;результате</li>
+              <li>Современная online платформа</li>
+              <li>Связь с&nbsp;тренером и&nbsp;корректировки online</li>
+              <li>Подготовка к&nbsp;различным дисциплинам и&nbsp;дистанциям</li>
+            </ul>
+            <Zebra/>
+          </div>
+          <div className='question_three'>
+            <h3>Ваш календарь уникален и&nbsp;учитывает:</h3>
+            <ul>
+              <li>Целевой старт</li>
+              <li>Текущую форму</li>
+              <li>Ограничения по&nbsp;времени</li>
+              <li>Индивидуальные особенности</li>
+              <li>Командировки, болезни</li>
+            </ul>
+          </div>
+          <div className='question_four'>
+            <h3>Что необходимо для занятий?</h3>
+            <ul>
+              <li>Спортивные часы с&nbsp;пульсометром</li>
+              <li>Наличие абонемента в&nbsp;бассейн</li>
+              <li>Велосипед, велосипедный станок</li>
+            </ul>
+          </div>
+          <div className='question_five'>
+            <h3>Какой минимальный начальный уровень?</h3>
+            <ul>
+              <li>Плавание&nbsp;&mdash; не&nbsp;более 23&nbsp;мин/1км</li>
+              <li>Вело&nbsp;&mdash; базовые навыки езды 
+                + езда в&nbsp;контактных педалях.</li>
+              <li>Бег&nbsp;&mdash; не&nbsp;более 35&nbsp;мин/5км</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
