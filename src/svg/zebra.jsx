@@ -1,5 +1,5 @@
 const Zebra = () => (
-    <svg width="218" height="42" viewBox="0 0 218 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="42" viewBox="0 0 218 42" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_d_1683_168)">
     <rect y="0.623718" width="3" height="39" transform="rotate(-12 0 0.623718)" fill="#F1FAEE"/>
     <rect x="72" y="0.623718" width="3" height="39" transform="rotate(-12 72 0.623718)" fill="#F1FAEE"/>

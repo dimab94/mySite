@@ -4,9 +4,9 @@ import './styles/App.css'
 import swimming from './pic/swimming.png'
 import cycling from './pic/cycling.png'
 import running from './pic/running.png'
-import phoneTP from './pic/phoneTP.png'
+import phoneTP from './pic/phioneTP@1x.png'
 import macBook from './pic/macBook.png'
-import phone from './pic/phone.png'
+import phone from './pic/phone@1x.png'
 import gym from './pic/gym.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
@@ -57,7 +57,9 @@ function App() {
             <img src={phone} alt="phone" />
             <img src={phoneTP} alt="phoneTP" />
           </div>
-          <img className='about_macBook' src={macBook} alt="macBook"/>
+          <div className='about_macBook'>
+            <img  src={macBook} alt="macBook"/>
+          </div>
           <div className='about_question_two'>
             <h3>Бег, плавание, вело, а&nbsp;может триатлон?</h3>
             <ul>
@@ -67,7 +69,7 @@ function App() {
               <li>Подготовка к&nbsp;различным дисциплинам и&nbsp;дистанциям</li>
             </ul>
           </div>
-          <Zebra/>
+          {<Zebra/>}
           <div className='about_question_three'>
             <h3>Ваш календарь уникален и&nbsp;учитывает:</h3>
             <ul>
@@ -97,8 +99,8 @@ function App() {
           </div>
           <div className='about_gym'>
             <div className='about_gym_background'>
-              <h4 className='about_gym_text'>План включает в&nbsp;себя не&nbsp;только тренировки по&nbsp;целевым видам, но&nbsp;и&nbsp;занятия в&nbsp;зале (ОФП, СФП), а&nbsp;так&nbsp;же упражнния направленные на&nbsp;улучшение координации, баланса, подвижности.</h4>
-            </div>
+{              <h4 className='about_gym_text'>План включает в&nbsp;себя не&nbsp;только тренировки по&nbsp;целевым видам, но&nbsp;и&nbsp;занятия в&nbsp;зале (ОФП, СФП), а&nbsp;так&nbsp;же упражнния направленные на&nbsp;улучшение координации, баланса, подвижности.</h4>
+}            </div>
           </div>
         </div>
       </div>
