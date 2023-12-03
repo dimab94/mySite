@@ -46,8 +46,9 @@ function App() {
         </div>
         <div className='about'>
           <div className='about_asside'>
+            <span/>
             <div>About</div>
-            <span></span>
+            <span/>
           </div>
           <div className='about_question_one'>
             <h3>Что такое online план тренировок?</h3>
