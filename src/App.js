@@ -32,9 +32,9 @@ function App() {
           </div>
           <div className='main_page'>
             <div className='main_page_pic'>
-              <img src={swimming} className='swimming' alt='swimming'/>
-              <img src={cycling} className='cycling' alt='cycling'/>
-              <img src={running} className='running' alt='running'/>
+              <div className='swimming'/>
+              <div className='cycling'/>
+              <div className='running'/>
             </div>
             <div className='main_page_slogan'>
               <div className='main_page_slogan_wrapper'>
