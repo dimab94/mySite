@@ -43,7 +43,7 @@ h2,h3,h4
     margin-bottom: 5vh
     @media (max-width: 500px)
         row-gap: 20px
-        grid-template-rows: 10vh 50vh 25vh
+        grid-template-rows: 10vh 60vh 60px
     &_title
         grid-row: 1/2
         grid-column: 2/3
@@ -94,7 +94,7 @@ h2,h3,h4
         grid-row: 3/4
         position: relative
         @media (max-width: 500px)
-            grid-row: 2/4
+            grid-row: 2/3
         &_pic
             display: flex
             height: 100%
@@ -165,6 +165,9 @@ h2,h3,h4
             grid-column: 1/4
             width: 80%
             justify-self: center
+        @media (max-width: 500px)
+            grid-row: 3/4
+            height: 50.5px
 .about
     max-width: 1172px
     width: 100%
