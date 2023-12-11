@@ -43,7 +43,7 @@ h2,h3,h4
     margin-bottom: 5vh
     @media (max-width: 500px)
         row-gap: 20px
-        grid-template-rows: 10vh 60vh 60px
+        grid-template-rows: 8vh 63vh 60px
     &_title
         grid-row: 1/2
         grid-column: 2/3
@@ -108,7 +108,7 @@ h2,h3,h4
                 background: no-repeat url(../pic/swimming.png)
                 background-size: cover
                 @media (max-width: 500px)
-                    background-position-x: -150px
+                    background-position-x: -70px
             .cycling
                 background: no-repeat url(../pic/cycling.png)
                 background-size: cover
@@ -123,7 +123,7 @@ h2,h3,h4
                 background-size: cover
                 background-position: center
                 @media (max-width: 500px)
-                    background-position-x: -180px
+                    background-position-x: -130px
 
         &_slogan
             position: absolute
@@ -148,6 +148,7 @@ h2,h3,h4
                     width: 80%
                 h2
                     padding: 2%
+                    margin: 0
     &_button
         grid-column: 2/3
         grid-row: 4/5
@@ -218,16 +219,29 @@ h2,h3,h4
                 height: auto
                 position: relative
         span
-            width: 500px
+            width: 780px
             height: 1px
             background: $green
             text-align: center
-            margin-left: 16px
+            margin-right: 16px
+            @media (max-width:916px)
+                width: 918px
+            @media (max-width:769px)
+                width: 1050px
+            @media (max-width:666px)
+                width: 1079px
+            @media (max-width:648px)
+                width: 1186px
+            @media (max-width:505px)
+                width: 1080px
             @media (max-width:474px)
-                width: 84px
+                width: 80px
             &:first-child
                 @media (min-width:475px)
                     display: none
+            &:last-child
+                    margin-right: 0
+                    margin-left: 16px
     &_question_one
         grid-column: 2/3
         grid-row: 1/5

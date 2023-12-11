@@ -1,13 +1,9 @@
 import Zebra from './svg/zebra'
 import '@csstools/normalize.css'
 import './styles/App.css'
-import swimming from './pic/swimming.png'
-import cycling from './pic/cycling.png'
-import running from './pic/running.png'
 import phoneTP from './pic/phioneTP@1x.png'
 import macBook from './pic/macBook.png'
 import phone from './pic/phone@1x.png'
-import gym from './pic/gym.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
 
