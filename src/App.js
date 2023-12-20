@@ -8,6 +8,7 @@ import phoneTP from './pic/phioneTP@1x.png'
 import macBook from './pic/macBook.png'
 import phone from './pic/phone@1x.png'
 import coach from './pic/coach.png'
+import background from './pic/coachBackground.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
 
@@ -45,7 +46,7 @@ function App() {
           <button className='main_button'>Начать тренировки</button>
         </div>
         <div className='about section'>
-          <div className='about_asside'>
+          <div className='about_asside asside'>
             <span/>
             <div>About</div>
             <span/>
@@ -104,30 +105,42 @@ function App() {
           </div>
         </div>
         <div className='coach section'>
-          <img src={coach}/>
+          <div className='coach_asside asside'>
+            <span/>
+            <div>Coach</div>
+            <span/>
+          </div>
+          <div className='coach_photo'>
+            <img className='coach_photo_background' src={background}/>
+            <img className='coach_photo_face' src={coach}/>
+          </div>
           <h2>Меня зовут Дима Барзудин</h2>
-          <article>
+          <article className='coach_first'>
           Высшее образование в&nbsp;сфере физической культуры и&nbsp;спорта, закончил бакалавриат и&nbsp;магистратуру НГУ им. Лесгафта. Занимаюсь тренерской деятельностью с&nbsp;2014&nbsp;года, начинал с&nbsp;обучения плаванию.</article>
-          <article>
+          <article className='coach_second'>
           Работаю со&nbsp;спортсменами разных возрастов и&nbsp;уровней. Подготавливаю к&nbsp;стартам в&nbsp;тритлоне от&nbsp;самых коротких, до&nbsp;самых длинных дистанций, порой даже экстримальных&nbsp;&mdash; таких как триатлон Siberman.</article>
-          <article>С&nbsp;детства профессионально занимался плаванием, позже перешел в&nbsp;триатлон. До&nbsp;2014 года являлся профессиональным спртсменом, выступал за&nbsp;сборную России. Мастер спорта по&nbsp;тритлону.</article>
-          <div>
+          <article className='coach_third'>С&nbsp;детства профессионально занимался плаванием, позже перешел в&nbsp;триатлон. До&nbsp;2014 года являлся профессиональным спртсменом, выступал за&nbsp;сборную России. Мастер спорта по&nbsp;тритлону.</article>
+          <div className='coach_logo'>
             <h1 className='main_title'>Baruzdin.tri</h1>
-            <Insta/>
-            <Telegram/>
-            <Strava/>
+            <div className='social'>
+              <Insta/>
+              <Telegram/>
+              <Strava/>
+            </div>
           </div>
-          <div className='statistics'>
-            <div>9</div>
-            <p>лет тренерского стажа</p>
+          <div className='coach_statistics'>
+            <div className='exp'>
+              <div className='coach_number'>9</div>
+              <p>лет тренерского стажа</p>
+            </div>
+            <div className='finishers_middle'>
+              <div className='coach_number'>22</div>
+              <p>финишера 70.3</p>
+            </div>
+            <div className='finishers_long'>
+              <div className='coach_number'>6</div>
+              <p>финишеров IM</p>
           </div>
-          <div className='statistics'>
-            <div>22</div>
-            <p>финишера 70.3</p>
-          </div>
-          <div className='statistics'>
-            <div>6</div>
-            <p>финишеров IM</p>
           </div>
         </div>
       </div>
