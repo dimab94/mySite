@@ -112,7 +112,7 @@ function App() {
           </div>
           <div className='coach_photo'>
             <img className='coach_photo_background' src={background}/>
-            <img className='coach_photo_face' src={coach}/>
+            <div className='coach_photo_face'></div>
           </div>
           <h2>Меня зовут Дима Барзудин</h2>
           <article className='coach_first'>
@@ -131,7 +131,7 @@ function App() {
           <div className='coach_statistics'>
             <div className='exp'>
               <div className='coach_number'>9</div>
-              <p>лет тренерского стажа</p>
+              <p>лет стажа</p>
             </div>
             <div className='finishers_middle'>
               <div className='coach_number'>22</div>
