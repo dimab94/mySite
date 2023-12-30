@@ -262,24 +262,19 @@ h2, h3, h4 {
   width: 100%;
   display: grid;
   grid-template-columns: 7% repeat(3, 1fr) 7%;
-  gap: 2% 1.2%;
+  gap: 0 1.2%;
   margin-bottom: 10px;
 }
 @media (max-width: 769px) {
   .section {
     grid-template-columns: 7% repeat(2, 1fr) 7%;
-    gap: 20px 3%;
-  }
-}
-@media (max-width: 666px) {
-  .section {
-    gap: 30px 3%;
+    gap: 0 3%;
   }
 }
 @media (max-width: 474px) {
   .section {
     grid-template-columns: 1fr;
-    gap: 15px 0;
+    gap: 0;
   }
 }
 
@@ -291,7 +286,7 @@ h2, h3, h4 {
   font-family: "VT323", sans-serif;
   font-size: 48px;
   grid-column: 1/2;
-  grid-row: 1/-1;
+  grid-row: 1/6;
 }
 @media (max-width: 474px) {
   .asside {
@@ -332,23 +327,33 @@ h2, h3, h4 {
 }
 
 .about {
-  grid-template-rows: 21% 5% 12% 12% auto 36%;
+  grid-template-rows: repeat(4, auto) 200px;
+  margin-bottom: 30px;
 }
 @media (max-width: 769px) {
   .about {
-    grid-template-rows: 23% 5% 16% 10% auto 23%;
+    grid-template-rows: repeat(4, auto) 200px;
   }
 }
 @media (max-width: 474px) {
   .about {
-    grid-template-rows: 70px 217px 250px 180px 180px 200px 130px 150px 220px;
+    grid-template-rows: repeat(8, auto) 220px;
     justify-content: center;
   }
 }
 .about_question_one {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 1/3;
   align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 769px) {
+  .about_question_one {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 100%;
+  }
 }
 @media (max-width: 474px) {
   .about_question_one {
@@ -358,18 +363,13 @@ h2, h3, h4 {
 }
 .about_question_two {
   grid-column: 3/4;
-  grid-row: 3/4;
+  grid-row: 4/5;
   align-self: flex-start;
 }
 @media (max-width: 769px) {
   .about_question_two {
     grid-column: 2/3;
     grid-row: 2/3;
-  }
-}
-@media (max-width: 587px) {
-  .about_question_two {
-    grid-row: 6/9;
   }
 }
 @media (max-width: 474px) {
@@ -386,12 +386,7 @@ h2, h3, h4 {
 @media (max-width: 769px) {
   .about_question_three {
     grid-column: 3/4;
-    grid-row: 3/4;
-  }
-}
-@media (max-width: 505px) {
-  .about_question_three {
-    grid-row: 3/7;
+    grid-row: 2/3;
   }
 }
 @media (max-width: 474px) {
@@ -402,18 +397,13 @@ h2, h3, h4 {
 }
 .about_question_four {
   grid-column: 4/5;
-  grid-row: 2/3;
+  grid-row: 2/4;
   align-self: flex-start;
 }
 @media (max-width: 769px) {
   .about_question_four {
     grid-column: 3/4;
-    grid-row: 4/5;
-  }
-}
-@media (max-width: 505px) {
-  .about_question_four {
-    grid-row: 6/9;
+    grid-row: 3/4;
   }
 }
 @media (max-width: 474px) {
@@ -424,23 +414,13 @@ h2, h3, h4 {
 }
 .about_question_five {
   grid-column: 4/5;
-  grid-row: 4/4;
+  grid-row: 4/5;
   align-self: flex-start;
 }
 @media (max-width: 769px) {
   .about_question_five {
     grid-column: 3/4;
-    grid-row: 5/6;
-  }
-}
-@media (max-width: 648px) {
-  .about_question_five {
-    grid-row: 10/12;
-  }
-}
-@media (max-width: 505px) {
-  .about_question_five {
-    grid-row: 9/12;
+    grid-row: 4/5;
   }
 }
 @media (max-width: 474px) {
@@ -451,105 +431,66 @@ h2, h3, h4 {
 }
 .about_phones {
   grid-column: 2/3;
-  grid-row: 3/6;
+  grid-row: 3/5;
   display: flex;
   overflow: hidden;
-  align-items: flex-end;
   width: 100%;
   position: relative;
-  justify-self: center;
+  align-items: flex-end;
 }
-@media (max-width: 900px) {
+@media (max-width: 474px) {
   .about_phones {
-    height: 90%;
-    align-self: center;
-  }
-}
-@media (max-width: 870px) {
-  .about_phones {
-    grid-row: 3/6;
-    height: 90%;
-    align-items: flex-end;
-  }
-}
-@media (max-width: 666px) {
-  .about_phones {
-    grid-row: 8/12;
-  }
-}
-@media (max-width: 587px) {
-  .about_phones {
-    grid-row: 10/13;
-  }
-}
-@media (max-width: 505px) {
-  .about_phones {
-    grid-row: 10/12;
+    grid-column: 1/2;
+    grid-row: 6/7;
     width: 80%;
+    justify-self: center;
+    height: 200px;
     align-items: flex-start;
   }
 }
-@media (max-width: 474px) {
-  .about_phones {
-    width: 62%;
-    grid-column: 1/2;
-    grid-row: 6/7;
-  }
-}
-.about_phones img {
-  height: calc(100% - 26px);
+.about_phones img:first-child {
+  margin: 0 0 5% 6%;
 }
 @media (max-width: 769px) {
-  .about_phones img {
-    height: 355px;
+  .about_phones img:first-child {
+    margin-left: 6%;
   }
 }
 @media (max-width: 474px) {
-  .about_phones img {
-    height: 250px;
-  }
-}
-.about_phones img:first-child {
-  margin-left: 6%;
-}
-@media (max-width: 505px) {
   .about_phones img:first-child {
-    margin: 20px 0 0;
+    margin: 3px 0 0 0;
   }
 }
 .about_phones img:last-child {
   filter: drop-shadow(8px -6px 0px #ADFF00);
   position: absolute;
   z-index: -1;
-  right: 6%;
-  top: 6px;
+  right: 5%;
+  top: 5%;
 }
-@media (max-width: 769px) {
-  .about_phones img:last-child {
-    top: 15px;
-  }
-}
-@media (max-width: 900px) {
+@media (max-width: 890px) {
   .about_phones img:last-child {
     filter: drop-shadow(4px -2px 0px #ADFF00);
   }
 }
+@media (max-width: 474px) {
+  .about_phones img:last-child {
+    top: 3px;
+    right: 4px;
+  }
+}
 .about_macBook {
   grid-column: 3/4;
-  grid-row: 1/3;
+  grid-row: 1/4;
   width: 100%;
+  height: 100%;
   display: flex;
   overflow: hidden;
 }
 @media (max-width: 769px) {
   .about_macBook {
     grid-column: 3/4;
-    grid-row: 1/3;
-  }
-}
-@media (max-width: 505px) {
-  .about_macBook {
-    grid-row: 1/3;
+    grid-row: 1/2;
   }
 }
 @media (max-width: 474px) {
@@ -563,9 +504,11 @@ h2, h3, h4 {
   height: calc(100% - 6px);
   align-self: flex-end;
 }
-@media (max-width: 505px) {
+@media (max-width: 769px) {
   .about_macBook img {
     filter: drop-shadow(4px -2px 0px #ADFF00);
+    height: calc(100% - 4px);
+    margin-top: 3px;
   }
 }
 .about_gym {
@@ -573,10 +516,10 @@ h2, h3, h4 {
   background-size: cover;
   background-position: center;
   grid-column: 2/5;
-  grid-row: 6/7;
+  grid-row: 5/6;
   display: flex;
   filter: drop-shadow(8px -6px 0px #ADFF00);
-  margin-top: 6px;
+  margin-top: 10px;
   width: calc(100% - 8px);
   justify-content: center;
   align-items: center;
@@ -584,22 +527,8 @@ h2, h3, h4 {
 @media (max-width: 769px) {
   .about_gym {
     grid-column: 2/4;
-  }
-}
-@media (max-width: 666px) {
-  .about_gym {
-    grid-row: 12/15;
-  }
-}
-@media (max-width: 648px) {
-  .about_gym {
-    grid-row: 13/16;
-  }
-}
-@media (max-width: 505px) {
-  .about_gym {
-    grid-row: 12/15;
     filter: drop-shadow(4px -2px 0px #ADFF00);
+    width: calc(100% - 4px);
   }
 }
 @media (max-width: 474px) {
@@ -626,44 +555,21 @@ h2, h3, h4 {
   }
 }
 .about svg {
-  visibility: hidden;
-  grid-column: 3/4;
-  grid-row: 5/6;
-  justify-self: center;
-  align-self: flex-end;
-  padding-bottom: 3px;
-}
-@media (max-width: 1100px) {
-  .about svg {
-    visibility: visible;
-  }
+  display: none;
 }
 @media (max-width: 769px) {
   .about svg {
-    visibility: hidden;
-    grid-row: 6/7;
-    grid-column: 3/4;
+    display: block;
+    margin-bottom: 5%;
   }
 }
-@media (max-width: 666px) {
-  .about svg {
-    visibility: hidden;
-  }
-}
-@media (max-width: 648px) {
-  .about svg {
-    visibility: visible;
-    grid-row: 12/13;
-    grid-column: 2/3;
-  }
-}
-@media (max-width: 587px) {
+@media (max-width: 524px) {
   .about svg {
     display: none;
   }
 }
 .about ul {
-  margin: 0;
+  margin: 0 0 2% 0;
 }
 .about li, .about p {
   font-family: "Oswald", sans-serif;
@@ -677,25 +583,14 @@ h2, h3, h4 {
     font-size: 18px;
   }
 }
-@media (max-width: 916px) {
-  .about p {
-    margin-left: 2%;
-  }
-}
-@media (max-width: 769px) {
-  .about p {
-    margin-left: 35px;
-  }
-}
 .about h3 {
   text-align: center;
   font-size: 24px;
-  margin: 0 0 16px 0;
+  margin: 5% 0 3% 0;
 }
 @media (max-width: 505px) {
   .about h3 {
     font-size: 20px;
-    margin: 0 0 12px 0;
   }
 }
 

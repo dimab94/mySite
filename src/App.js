@@ -52,8 +52,11 @@ function App() {
             <span/>
           </div>
           <div className='about_question_one'>
+            <div>
             <h3>Что такое online план тренировок?</h3>
             <p>Это календарь с&nbsp;тренировками на&nbsp;каждый день. Календарь составляется в&nbsp;приложении Training Pekas. Приложение позволяет подробно анализировать результаты тренировок и&nbsp;соревнований, а&nbsp;так&nbsp;же интегрируется с&nbsp;популярными приложениями и&nbsp;устройствами.</p>
+            </div>
+            {<Zebra/>}
           </div>
           <div className='about_phones'>
             <img src={phone} alt="phone" />
@@ -71,7 +74,6 @@ function App() {
               <li>Подготовка к&nbsp;различным дисциплинам и&nbsp;дистанциям</li>
             </ul>
           </div>
-          {<Zebra/>}
           <div className='about_question_three'>
             <h3>Ваш календарь уникален и&nbsp;учитывает:</h3>
             <ul>
