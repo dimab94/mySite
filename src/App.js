@@ -1,13 +1,12 @@
 import Zebra from './svg/zebra'
-import Telegram from './svg/telegram'
-import Strava from './svg/strava'
-import Insta from './svg/instagram'
+import Telegram from './svg/telegram.svg'
+import Strava from './svg/strava.svg'
+import Instagram from './svg/instagram.svg'
 import '@csstools/normalize.css'
 import './styles/App.css'
 import phoneTP from './pic/phioneTP@1x.png'
 import macBook from './pic/macBook.png'
 import phone from './pic/phone@1x.png'
-import coach from './pic/coach.png'
 import background from './pic/coachBackground.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
@@ -125,9 +124,9 @@ function App() {
           <div className='coach_logo'>
             <h1 className='main_title'>Baruzdin.tri</h1>
             <div className='social'>
-              <Insta/>
-              <Telegram/>
-              <Strava/>
+              < img src={Instagram} alt='logo' width="25" height="25"/>
+              < img src={Telegram} alt='logo' width="25" height="25"/>
+              < img src={Strava} alt='logo' width="25" height="25"/>
             </div>
           </div>
           <div className='coach_statistics'>
