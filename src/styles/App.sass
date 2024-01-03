@@ -210,7 +210,7 @@ h2,h3,h4
         transform-origin: 55px 40px
         @media (max-width:474px)
             rotate: none
-            height: auto
+            height: fit-content
     span
         margin: 15px 0 0 0
         height: 100%
@@ -225,7 +225,6 @@ h2,h3,h4
                 display: none
         
 .about
-    grid-template-rows: auto
     margin-bottom: 30px
     @media (max-width:474px)
         justify-content: center          
@@ -293,6 +292,7 @@ h2,h3,h4
         position: relative
         align-items: flex-end
         @media (max-width:474px)
+            margin:5% 0
             grid-column: 1/2
             grid-row: 6/7
             width: 80%
@@ -328,8 +328,10 @@ h2,h3,h4
             grid-column: 3/4
             grid-row: 1/2
         @media (max-width:474px)
+            margin:5% 0
             grid-column: 1/2
             grid-row: 3/4
+            height: 350px
         img
             filter: $shadowDek
             height: calc( 100% - 6px )

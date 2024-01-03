@@ -304,7 +304,7 @@ h2, h3, h4 {
 @media (max-width: 474px) {
   .asside div {
     rotate: none;
-    height: auto;
+    height: fit-content;
   }
 }
 .asside span {
@@ -327,7 +327,6 @@ h2, h3, h4 {
 }
 
 .about {
-  grid-template-rows: auto;
   margin-bottom: 30px;
 }
 @media (max-width: 474px) {
@@ -436,6 +435,7 @@ h2, h3, h4 {
 }
 @media (max-width: 474px) {
   .about_phones {
+    margin: 5% 0;
     grid-column: 1/2;
     grid-row: 6/7;
     width: 80%;
@@ -491,8 +491,10 @@ h2, h3, h4 {
 }
 @media (max-width: 474px) {
   .about_macBook {
+    margin: 5% 0;
     grid-column: 1/2;
     grid-row: 3/4;
+    height: 350px;
   }
 }
 .about_macBook img {
