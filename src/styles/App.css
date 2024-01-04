@@ -265,7 +265,7 @@ h2, h3, h4 {
   gap: 0 1.2%;
   margin-bottom: 10px;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .section {
     grid-template-columns: 7% repeat(2, 1fr) 7%;
     gap: 0 3%;
@@ -341,7 +341,7 @@ h2, h3, h4 {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_question_one {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -361,7 +361,7 @@ h2, h3, h4 {
   grid-row: 4/5;
   align-self: flex-start;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_question_two {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -378,7 +378,7 @@ h2, h3, h4 {
   grid-row: 1/2;
   align-self: flex-start;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_question_three {
     grid-column: 3/4;
     grid-row: 2/3;
@@ -395,7 +395,7 @@ h2, h3, h4 {
   grid-row: 2/4;
   align-self: flex-start;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_question_four {
     grid-column: 3/4;
     grid-row: 3/4;
@@ -412,7 +412,7 @@ h2, h3, h4 {
   grid-row: 4/5;
   align-self: flex-start;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_question_five {
     grid-column: 3/4;
     grid-row: 4/5;
@@ -447,7 +447,7 @@ h2, h3, h4 {
 .about_phones img:first-child {
   margin: 0 0 5% 6%;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_phones img:first-child {
     margin-left: 6%;
   }
@@ -479,14 +479,16 @@ h2, h3, h4 {
   grid-column: 3/4;
   grid-row: 1/4;
   width: 100%;
-  height: 100%;
+  height: 440px;
   display: flex;
   overflow: hidden;
+  align-self: center;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_macBook {
     grid-column: 3/4;
     grid-row: 1/2;
+    height: 400px;
   }
 }
 @media (max-width: 474px) {
@@ -502,7 +504,7 @@ h2, h3, h4 {
   height: calc(100% - 6px);
   align-self: flex-end;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_macBook img {
     filter: drop-shadow(4px -2px 0px #ADFF00);
     height: calc(100% - 4px);
@@ -523,7 +525,7 @@ h2, h3, h4 {
   align-items: center;
   height: 200px;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about_gym {
     grid-column: 2/4;
     filter: drop-shadow(4px -2px 0px #ADFF00);
@@ -557,7 +559,7 @@ h2, h3, h4 {
 .about svg {
   display: none;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .about svg {
     display: block;
     margin-bottom: 5%;
@@ -598,7 +600,7 @@ h2, h3, h4 {
   grid-template-rows: repeat(3, auto) 200px;
   position: relative;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .coach {
     grid-template-rows: auto;
   }
@@ -628,6 +630,7 @@ h2, h3, h4 {
   grid-row: 1/4;
   position: relative;
   overflow: hidden;
+  max-height: 500px;
 }
 @media (max-width: 569px) {
   .coach_photo {
@@ -638,7 +641,7 @@ h2, h3, h4 {
   .coach_photo {
     grid-column: 1/2;
     grid-row: 3/4;
-    height: 600px;
+    max-height: 600px;
   }
 }
 .coach_photo_background {
@@ -649,12 +652,22 @@ h2, h3, h4 {
 }
 .coach_photo_face {
   position: absolute;
-  width: 101%;
-  height: 100%;
+  width: 100%;
+  height: 500px;
   left: 0;
   top: 0;
   background: no-repeat url(../pic/coach.png) top center;
   background-size: cover;
+}
+@media (max-width: 569px) {
+  .coach_photo_face {
+    height: 400px;
+  }
+}
+@media (max-width: 474px) {
+  .coach_photo_face {
+    height: 600px;
+  }
 }
 .coach h2 {
   grid-column: 3/5;
@@ -672,7 +685,6 @@ h2, h3, h4 {
 .coach_first {
   grid-column: 3/4;
   grid-row: 2/3;
-  height: 100%;
 }
 @media (max-width: 474px) {
   .coach_first {
@@ -694,7 +706,7 @@ h2, h3, h4 {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .coach_third {
     grid-column: 3/4;
     grid-row: 4/5;
@@ -716,12 +728,12 @@ h2, h3, h4 {
   grid-column: 4/5;
   grid-row: 3/4;
   display: flex;
-  height: 50%;
-  align-self: center;
+  height: 100px;
+  align-self: flex-start;
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .coach_logo {
     height: 80px;
     grid-column: 2/3;
@@ -735,7 +747,7 @@ h2, h3, h4 {
     width: 37vw;
     height: 30px;
     left: 1.5vw;
-    top: 190px;
+    top: 80%;
   }
   .coach_logo h1 {
     display: none;
@@ -745,7 +757,6 @@ h2, h3, h4 {
   .coach_logo {
     grid-column: 1/2;
     left: 0;
-    top: 500px;
     grid-row: 3/4;
     width: 100%;
     height: 60px;
@@ -760,7 +771,7 @@ h2, h3, h4 {
   column-gap: 5px;
   align-items: flex-start;
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .coach_statistics {
     grid-column: 2/4;
     grid-row: 5/6;
@@ -785,7 +796,7 @@ h2, h3, h4 {
   font-family: "Oswald-Bold", sans-serif;
   color: rgb(173, 255, 0);
 }
-@media (max-width: 769px) {
+@media (max-width: 834px) {
   .coach_number {
     font-size: 90px;
   }
@@ -794,6 +805,12 @@ h2, h3, h4 {
 .social {
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 474px) {
+  .social img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

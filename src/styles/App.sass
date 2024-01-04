@@ -183,7 +183,7 @@ h2,h3,h4
     grid-template-columns: 7% repeat(3,1fr) 7%
     gap: 0 1.2% 
     margin-bottom: 10px
-    @media (max-width:769px) 
+    @media (max-width:834px) 
         grid-template-columns: 7% repeat(2,1fr) 7%
         gap: 0 3%
     @media (max-width:474px)
@@ -234,7 +234,7 @@ h2,h3,h4
         align-self: flex-start
         display: flex
         flex-direction: column
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 2/3
             grid-row: 1/2
             height: 100%
@@ -247,7 +247,7 @@ h2,h3,h4
         grid-column: 3/4
         grid-row: 4/5
         align-self: flex-start
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 2/3
             grid-row: 2/3
         @media (max-width:474px)
@@ -257,7 +257,7 @@ h2,h3,h4
         grid-column: 4/5
         grid-row: 1/2
         align-self: flex-start
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 3/4
             grid-row: 2/3
         @media (max-width:474px)
@@ -267,7 +267,7 @@ h2,h3,h4
         grid-column: 4/5
         grid-row: 2/4
         align-self: flex-start
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 3/4
             grid-row: 3/4
         @media (max-width:474px)
@@ -277,7 +277,7 @@ h2,h3,h4
         grid-column: 4/5
         grid-row: 4/5
         align-self: flex-start
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 3/4
             grid-row: 4/5
         @media (max-width:474px)
@@ -302,7 +302,7 @@ h2,h3,h4
         img
             &:first-child
                 margin: 0 0 5% 6%
-                @media (max-width:769px)
+                @media (max-width:834px)
                     margin-left: 6%
                 @media (max-width:474px)
                     margin: 3px 0 0 0
@@ -321,12 +321,14 @@ h2,h3,h4
         grid-column: 3/4
         grid-row: 1/4
         width: 100%
-        height: 100%
+        height: 440px
         display: flex
         overflow: hidden
-        @media (max-width:769px)
+        align-self: center
+        @media (max-width:834px)
             grid-column: 3/4
             grid-row: 1/2
+            height: 400px
         @media (max-width:474px)
             margin:5% 0
             grid-column: 1/2
@@ -336,7 +338,7 @@ h2,h3,h4
             filter: $shadowDek
             height: calc( 100% - 6px )
             align-self: flex-end
-            @media (max-width:769px)
+            @media (max-width:834px)
                 filter: $shadowMob
                 height: calc( 100% - 4px )
                 margin-top: 3px 
@@ -353,7 +355,7 @@ h2,h3,h4
         justify-content: center
         align-items: center
         height: 200px
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 2/4
             filter: $shadowMob
             width: calc( 100% - 4px )
@@ -375,7 +377,7 @@ h2,h3,h4
                 margin: 2px
     svg
         display: none
-        @media (max-width: 769px)
+        @media (max-width: 834px)
             display: block
             margin-bottom: 5%
         @media (max-width: 524px)
@@ -399,7 +401,7 @@ h2,h3,h4
 .coach
     grid-template-rows: repeat(3, auto) 200px
     position: relative
-    @media (max-width:769px)
+    @media (max-width:834px)
         grid-template-rows: auto
     &_asside
         @media (max-width:474px)
@@ -419,12 +421,13 @@ h2,h3,h4
         grid-row: 1/4
         position: relative
         overflow: hidden
+        max-height: 500px
         @media (max-width:569px)
             grid-row: 1/3
         @media (max-width:474px)
             grid-column: 1/2
             grid-row: 3/4
-            height: 600px
+            max-height: 600px
         &_background
             filter: $shadowDek
             position: relative
@@ -432,12 +435,16 @@ h2,h3,h4
             width: 100%
         &_face
             position: absolute
-            width: 101%
-            height: 100%
+            width: 100%
+            height: 500px
             left: 0
             top: 0
             background: no-repeat url(../pic/coach.png) top center
             background-size: cover
+            @media (max-width:569px)
+                height: 400px
+            @media (max-width:474px)
+                height: 600px
     h2
         grid-column: 3/5
         grid-row: 1/2
@@ -450,7 +457,6 @@ h2,h3,h4
     &_first
         grid-column: 3/4
         grid-row: 2/3
-        height: 100%
         @media (max-width:474px)
             grid-column: 1/2
             grid-row: 5/6
@@ -463,7 +469,7 @@ h2,h3,h4
     &_third
         grid-column: 4/5
         grid-row: 2/3
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 3/4
             grid-row: 4/5
         @media (max-width:569px)
@@ -476,11 +482,11 @@ h2,h3,h4
         grid-column: 4/5
         grid-row: 3/4
         display: flex
-        height: 50%
-        align-self: center
+        height: 100px
+        align-self: flex-start
         flex-direction: column
         justify-content: space-between
-        @media (max-width:769px)
+        @media (max-width:834px)
             height: 80px
             grid-column: 2/3
             grid-row: 4/5
@@ -490,13 +496,12 @@ h2,h3,h4
             width: 37vw
             height: 30px
             left: 1.5vw
-            top: 190px
+            top: 80%
             h1
                 display: none
         @media (max-width:474px)
             grid-column: 1/2
             left: 0
-            top: 500px
             grid-row: 3/4
             width: 100%
             height: 60px
@@ -508,7 +513,7 @@ h2,h3,h4
         grid-template-columns: repeat(3,1fr)
         column-gap: 5px
         align-items: flex-start
-        @media (max-width:769px)
+        @media (max-width:834px)
             grid-column: 2/4
             grid-row: 5/6
         div
@@ -522,8 +527,12 @@ h2,h3,h4
         font-size: 128px
         font-family: $mainFontBold
         color: $green
-        @media (max-width:769px)
+        @media (max-width:834px)
             font-size: 90px
 .social
     display: flex
     justify-content: space-evenly
+    img
+        @media (max-width:474px)
+            width: 40px
+            height: 40px

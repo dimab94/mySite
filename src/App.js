@@ -124,7 +124,7 @@ function App() {
           <div className='coach_logo'>
             <h1 className='main_title'>Baruzdin.tri</h1>
             <div className='social'>
-              < img src={Instagram} alt='logo' width="25" height="25"/>
+              < img src={Instagram} alt='logo'/>
               < img src={Telegram} alt='logo' width="25" height="25"/>
               < img src={Strava} alt='logo' width="25" height="25"/>
             </div>
