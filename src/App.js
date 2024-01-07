@@ -144,6 +144,37 @@ function App() {
           </div>
           </div>
         </div>
+        <div className='programs section'>
+          <div className='programs_asside asside'>
+            <span/>
+            <div>Programs</div>
+            <span/>
+          </div>
+          <h2>Годовое планирование, тестирование, гоночный план, аналитика стартов, консультации, советы, всё в&nbsp;одном.</h2>
+          {<Zebra/>}
+          <div className='programs_benefit'>
+            <div>
+              <h2>Виды спорта</h2>
+              <p>Подготовка к&nbsp;тритлону или к&nbsp;одному из&nbsp;видов в&nbsp;отдельности.</p>
+            </div>
+            <div>
+            <h2>Сроки</h2>
+              <p>Программы подготовки рассчитаны на&nbsp;срок от&nbsp;2х&nbsp;месяцев, до&nbsp;2х&nbsp;лет.</p>
+            </div>
+            <div>
+            <h2>Цели</h2>
+              <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
+            </div>
+          </div>
+          <div className='programs_cart'>
+            <h4>Triathlon</h4>
+            <p>Комплексная подготовка по&nbsp;всем трем видам.</p>
+            <h5>10 000₽</h5>
+            <button>
+              Заполнить анкету
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

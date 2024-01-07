@@ -813,4 +813,18 @@ h2, h3, h4 {
   }
 }
 
+.programs_cart {
+  width: 230px;
+  height: 383px;
+  background: #707070;
+  filter: drop-shadow(8px -6px 0px #ADFF00);
+  border-radius: 20px;
+}
+.programs button {
+  width: 210px;
+  height: 60px;
+  background: rgb(29, 53, 87);
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=App.css.map */
