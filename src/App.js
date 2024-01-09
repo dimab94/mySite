@@ -166,9 +166,17 @@ function App() {
               <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
             </div>
           </div>
-          <div className='programs_cart'>
+          <div className='programs_triathlon card'>
             <h4>Triathlon</h4>
             <p>Комплексная подготовка по&nbsp;всем трем видам.</p>
+            <h5>10 000₽</h5>
+            <button>
+              Заполнить анкету
+            </button>
+          </div>
+          <div className='programs_run card'>
+            <h4>Multisport</h4>
+            <p>Подготовка по плаванию&nbsp;/ велосипеду&nbsp;/ бегу.</p>
             <h5>10 000₽</h5>
             <button>
               Заполнить анкету
