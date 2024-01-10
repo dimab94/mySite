@@ -182,7 +182,7 @@ h2,h3,h4
     display: grid
     grid-template-columns: 7% repeat(3,1fr) 7%
     gap: 0 1.2% 
-    margin-bottom: 10px
+    margin-bottom: 30px
     @media (max-width:834px) 
         grid-template-columns: 7% repeat(2,1fr) 7%
         gap: 0 3%
@@ -225,7 +225,6 @@ h2,h3,h4
                 display: none
         
 .about
-    margin-bottom: 30px
     @media (max-width:474px)
         justify-content: center          
     &_question_one
@@ -537,12 +536,24 @@ h2,h3,h4
             width: 40px
             height: 40px
 .programs
-    h2
+    &_description
         grid-column: 2/4
         grid-row: 1/2
-    svg
+        height: 205px
+        display: flex
+        align-items: center
+        h2
+            margin: 0
+    &_top
         grid-column: 4/5
-        grid-row: 1/2 
+        grid-row: 1/2
+        display: flex
+        align-items: center
+    &_bottom
+        grid-column: 2/3
+        grid-row: 3/4
+        display: flex
+        align-items: center
     &_benefit
         grid-column: 2/3
         grid-row: 2/3
@@ -552,11 +563,17 @@ h2,h3,h4
     &_triathlon
         background: no-repeat url(../pic/swimCard.png) top center
         background-size: cover
+    &_feedback
+        grid-column: 3/5
+        grid-row: 3/4
+        display: flex
+        justify-content: center
     .card_wrapper
         width: 238px
-        height: calc( 100% + 6px )
+        height: 389px
         display: flex
         align-items: flex-end
+        justify-self: center
     .card
         width: 230px
         filter: $shadowDek

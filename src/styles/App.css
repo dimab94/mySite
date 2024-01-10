@@ -42,16 +42,9 @@ h2, h3, h4 {
 }
 
 .generall_page_wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main {
@@ -83,15 +76,9 @@ h2, h3, h4 {
 }
 .main_menu {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: space-around;
+  flex-direction: row;
   align-self: center;
   grid-row: 2/3;
   grid-column: 1/4;
@@ -131,16 +118,9 @@ h2, h3, h4 {
     align-self: center;
     widows: 32px;
     height: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .main_menu_button span {
     width: 32px;
@@ -159,13 +139,9 @@ h2, h3, h4 {
   }
 }
 .main_page_pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .main_page_pic div {
   width: 360px;
@@ -189,19 +165,16 @@ h2, h3, h4 {
   background: no-repeat url(../pic/cycling.png);
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: drop-shadow(8px -6px 0px #ADFF00);
-          box-shadow: drop-shadow(8px -6px 0px #ADFF00);
+  box-shadow: drop-shadow(8px -6px 0px #ADFF00);
 }
 @media (max-width: 1170px) {
   .main_page_pic .cycling {
-    -webkit-box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
-            box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
+    box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
   }
 }
 @media (max-width: 500px) {
   .main_page_pic .cycling {
-    -webkit-box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
-            box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
+    box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
   }
 }
 .main_page_pic .running {
@@ -235,8 +208,6 @@ h2, h3, h4 {
 }
 .main_page_slogan_wrapper {
   background: rgb(36, 36, 36);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
   width: 700px;
@@ -292,7 +263,7 @@ h2, h3, h4 {
   display: grid;
   grid-template-columns: 7% repeat(3, 1fr) 7%;
   gap: 0 1.2%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media (max-width: 834px) {
   .section {
@@ -308,16 +279,9 @@ h2, h3, h4 {
 }
 
 .asside {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   color: rgb(173, 255, 0);
   font-family: "VT323", sans-serif;
   font-size: 48px;
@@ -328,26 +292,18 @@ h2, h3, h4 {
   .asside {
     grid-column: 1/2;
     grid-row: 1/2;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 .asside div {
   height: 110px;
   rotate: 270deg;
-  -webkit-transform-origin: 55px 40px;
-          transform-origin: 55px 40px;
+  transform-origin: 55px 40px;
 }
 @media (max-width: 474px) {
   .asside div {
     rotate: none;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -370,36 +326,24 @@ h2, h3, h4 {
   }
 }
 
-.about {
-  margin-bottom: 30px;
-}
 @media (max-width: 474px) {
   .about {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 .about_question_one {
   grid-column: 2/3;
   grid-row: 1/3;
   align-self: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 @media (max-width: 834px) {
   .about_question_one {
     grid-column: 2/3;
     grid-row: 1/2;
     height: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
 @media (max-width: 474px) {
@@ -480,15 +424,11 @@ h2, h3, h4 {
 .about_phones {
   grid-column: 2/3;
   grid-row: 3/5;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   width: 100%;
   position: relative;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 @media (max-width: 474px) {
   .about_phones {
@@ -498,9 +438,7 @@ h2, h3, h4 {
     width: 80%;
     justify-self: center;
     height: 200px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
 }
 .about_phones img:first-child {
@@ -517,8 +455,7 @@ h2, h3, h4 {
   }
 }
 .about_phones img:last-child {
-  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
-          filter: drop-shadow(8px -6px 0px #ADFF00);
+  filter: drop-shadow(8px -6px 0px #ADFF00);
   position: absolute;
   z-index: -1;
   right: 5%;
@@ -526,8 +463,7 @@ h2, h3, h4 {
 }
 @media (max-width: 890px) {
   .about_phones img:last-child {
-    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
-            filter: drop-shadow(4px -2px 0px #ADFF00);
+    filter: drop-shadow(4px -2px 0px #ADFF00);
   }
 }
 @media (max-width: 474px) {
@@ -541,8 +477,6 @@ h2, h3, h4 {
   grid-row: 1/4;
   width: 100%;
   height: 440px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   align-self: center;
@@ -563,16 +497,13 @@ h2, h3, h4 {
   }
 }
 .about_macBook img {
-  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
-          filter: drop-shadow(8px -6px 0px #ADFF00);
+  filter: drop-shadow(8px -6px 0px #ADFF00);
   height: calc(100% - 6px);
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 @media (max-width: 834px) {
   .about_macBook img {
-    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
-            filter: drop-shadow(4px -2px 0px #ADFF00);
+    filter: drop-shadow(4px -2px 0px #ADFF00);
     height: calc(100% - 4px);
     margin-top: 3px;
   }
@@ -583,26 +514,18 @@ h2, h3, h4 {
   background-position: center;
   grid-column: 2/5;
   grid-row: 5/6;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
-          filter: drop-shadow(8px -6px 0px #ADFF00);
+  filter: drop-shadow(8px -6px 0px #ADFF00);
   margin-top: 10px;
   width: calc(100% - 8px);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 200px;
 }
 @media (max-width: 834px) {
   .about_gym {
     grid-column: 2/4;
-    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
-            filter: drop-shadow(4px -2px 0px #ADFF00);
+    filter: drop-shadow(4px -2px 0px #ADFF00);
     width: calc(100% - 4px);
   }
 }
@@ -616,14 +539,8 @@ h2, h3, h4 {
 .about_gym_background {
   background: rgba(36, 36, 36, 0.6);
   width: 85%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
 }
 .about_gym_text {
@@ -725,8 +642,7 @@ h2, h3, h4 {
   }
 }
 .coach_photo_background {
-  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
-          filter: drop-shadow(8px -6px 0px #ADFF00);
+  filter: drop-shadow(8px -6px 0px #ADFF00);
   position: relative;
   top: 6px;
   width: 100%;
@@ -808,18 +724,11 @@ h2, h3, h4 {
 .coach_logo {
   grid-column: 4/5;
   grid-row: 3/4;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100px;
   align-self: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (max-width: 834px) {
   .coach_logo {
@@ -848,9 +757,7 @@ h2, h3, h4 {
     grid-row: 3/4;
     width: 100%;
     height: 60px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 .coach_statistics {
@@ -858,12 +765,8 @@ h2, h3, h4 {
   grid-row: 4/5;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 5px;
-     -moz-column-gap: 5px;
-          column-gap: 5px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  column-gap: 5px;
+  align-items: flex-start;
 }
 @media (max-width: 834px) {
   .coach_statistics {
@@ -897,12 +800,8 @@ h2, h3, h4 {
 }
 
 .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 @media (max-width: 474px) {
   .social img {
@@ -911,13 +810,27 @@ h2, h3, h4 {
   }
 }
 
-.programs h2 {
+.programs_description {
   grid-column: 2/4;
   grid-row: 1/2;
+  height: 205px;
+  display: flex;
+  align-items: center;
 }
-.programs svg {
+.programs_description h2 {
+  margin: 0;
+}
+.programs_top {
   grid-column: 4/5;
   grid-row: 1/2;
+  display: flex;
+  align-items: center;
+}
+.programs_bottom {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  align-items: center;
 }
 .programs_benefit {
   grid-column: 2/3;
@@ -931,27 +844,27 @@ h2, h3, h4 {
   background: no-repeat url(../pic/swimCard.png) top center;
   background-size: cover;
 }
+.programs_feedback {
+  grid-column: 3/5;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+}
 .programs .card_wrapper {
   width: 238px;
-  height: calc(100% + 6px);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 389px;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
+  justify-self: center;
 }
 .programs .card {
   width: 230px;
-  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
-          filter: drop-shadow(8px -6px 0px #ADFF00);
+  filter: drop-shadow(8px -6px 0px #ADFF00);
   border-radius: 20px;
   display: grid;
   grid-template-rows: 118px 125px 60px 80px;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .programs .card_triathlon {
   grid-column: 3/4;
@@ -986,4 +899,6 @@ h2, h3, h4 {
   font-family: "Oswald", sans-serif;
   color: rgb(241, 250, 238);
   font-size: 20px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+/*# sourceMappingURL=App.css.map */

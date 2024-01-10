@@ -150,8 +150,10 @@ function App() {
             <div>Programs</div>
             <span/>
           </div>
-          <h2>Годовое планирование, тестирование, гоночный план, аналитика стартов, консультации, советы, всё в&nbsp;одном.</h2>
-          <Zebra className='programs_top'/>
+          <div className='programs_description'>
+            <h2>Годовое планирование, тестирование, гоночный план, аналитика стартов, консультации, советы, всё в&nbsp;одном.</h2>
+          </div>
+          <div className='programs_top'><Zebra/></div>
           <div className='programs_benefit'>
             <div>
               <h2>Виды спорта</h2>
@@ -186,7 +188,10 @@ function App() {
               </button>
             </div>
           </div>
-          <Zebra className='programs_bottom'/>
+          <div className='programs_bottom'><Zebra/></div>
+          <div className='programs_feedback'>
+            <p>После подачи завяки необходимо дождаться обратной связи.</p>
+          </div>
         </div>
       </div>
     </div>
