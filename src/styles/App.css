@@ -911,13 +911,55 @@ h2, h3, h4 {
   }
 }
 
+.programs h2 {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.programs svg {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.programs_benefit {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.programs_run {
+  background: no-repeat url(../pic/runCard.png) top center;
+  background-size: cover;
+}
+.programs_triathlon {
+  background: no-repeat url(../pic/swimCard.png) top center;
+  background-size: cover;
+}
+.programs .card_wrapper {
+  width: 238px;
+  height: calc(100% + 6px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
 .programs .card {
   width: 230px;
-  height: 383px;
-  background: #707070;
   -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
           filter: drop-shadow(8px -6px 0px #ADFF00);
   border-radius: 20px;
+  display: grid;
+  grid-template-rows: 118px 125px 60px 80px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.programs .card_triathlon {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.programs .card_run {
+  grid-column: 4/5;
+  grid-row: 2/3;
 }
 .programs button {
   width: 210px;
@@ -925,17 +967,20 @@ h2, h3, h4 {
   background: rgb(29, 53, 87);
   border-radius: 10px;
   border: 0;
+  justify-self: center;
 }
 .programs h4 {
   font-family: "Oswald", sans-serif;
   color: rgb(241, 250, 238);
   font-size: 40px;
   text-shadow: 1px 3px 0px #ADFF00;
+  margin: 0;
 }
 .programs h5 {
   font-family: "Oswald", sans-serif;
   color: rgb(173, 255, 0);
   font-size: 30px;
+  margin: 0;
 }
 .programs p, .programs button {
   font-family: "Oswald", sans-serif;

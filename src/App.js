@@ -151,7 +151,7 @@ function App() {
             <span/>
           </div>
           <h2>Годовое планирование, тестирование, гоночный план, аналитика стартов, консультации, советы, всё в&nbsp;одном.</h2>
-          {<Zebra/>}
+          <Zebra className='programs_top'/>
           <div className='programs_benefit'>
             <div>
               <h2>Виды спорта</h2>
@@ -166,22 +166,27 @@ function App() {
               <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
             </div>
           </div>
-          <div className='programs_triathlon card'>
-            <h4>Triathlon</h4>
-            <p>Комплексная подготовка по&nbsp;всем трем видам.</p>
-            <h5>10 000₽</h5>
-            <button>
-              Заполнить анкету
-            </button>
+          <div className='card_wrapper card_triathlon'>
+            <div className='programs_triathlon card'>
+              <h4>Triathlon</h4>
+              <p>Комплексная подготовка по&nbsp;всем трем видам.</p>
+              <h5>12 000₽</h5>
+              <button>
+                Заполнить анкету
+              </button>
+            </div>
           </div>
-          <div className='programs_run card'>
-            <h4>Multisport</h4>
-            <p>Подготовка по плаванию&nbsp;/ велосипеду&nbsp;/ бегу.</p>
-            <h5>10 000₽</h5>
-            <button>
-              Заполнить анкету
-            </button>
+          <div className='card_wrapper card_run'>
+            <div className='programs_run card'>
+              <h4>Multisport</h4>
+              <p>Подготовка по плаванию&nbsp;/ велосипеду&nbsp;/ бегу.</p>
+              <h5>10 000₽</h5>
+              <button>
+                Заполнить анкету
+              </button>
+            </div>
           </div>
+          <Zebra className='programs_bottom'/>
         </div>
       </div>
     </div>
