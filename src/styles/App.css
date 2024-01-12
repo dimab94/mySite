@@ -286,7 +286,12 @@ h2, h3, h4 {
   font-family: "VT323", sans-serif;
   font-size: 48px;
   grid-column: 1/2;
-  grid-row: 1/6;
+  grid-row: 1/7;
+}
+@media (max-width: 579px) {
+  .asside {
+    font-size: 38px;
+  }
 }
 @media (max-width: 474px) {
   .asside {
@@ -296,19 +301,19 @@ h2, h3, h4 {
     justify-content: center;
   }
 }
-.asside div {
-  height: 110px;
-  rotate: 270deg;
-  transform-origin: 55px 40px;
+.asside_text {
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  margin-bottom: 30px;
 }
 @media (max-width: 474px) {
-  .asside div {
-    rotate: none;
-    height: fit-content;
+  .asside_text {
+    transform: none;
+    writing-mode: horizontal-tb;
+    margin-bottom: 0;
   }
 }
 .asside span {
-  margin: 15px 0 0 0;
   height: 100%;
   width: 1px;
   background: rgb(173, 255, 0);
@@ -813,12 +818,23 @@ h2, h3, h4 {
 .programs_description {
   grid-column: 2/4;
   grid-row: 1/2;
-  height: 205px;
+  height: 150px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
-.programs_description h2 {
-  margin: 0;
+@media (max-width: 834px) {
+  .programs_description {
+    height: 105px;
+  }
+}
+@media (max-width: 474px) {
+  .programs_description {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    height: auto;
+    text-align: center;
+    margin: 5% 0 0;
+  }
 }
 .programs_top {
   grid-column: 4/5;
@@ -826,15 +842,78 @@ h2, h3, h4 {
   display: flex;
   align-items: center;
 }
+@media (max-width: 834px) {
+  .programs_top {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 538px) {
+  .programs_top {
+    display: none;
+  }
+}
 .programs_bottom {
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 5/6;
   display: flex;
   align-items: center;
 }
-.programs_benefit {
+@media (max-width: 834px) {
+  .programs_bottom {
+    grid-row: 5/6;
+  }
+}
+@media (max-width: 834px) and (max-width: 579px) {
+  .programs_bottom {
+    display: none;
+  }
+}
+.programs_benefit_types {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+@media (max-width: 474px) {
+  .programs_benefit_types {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+.programs_benefit_deadlines {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+@media (max-width: 834px) {
+  .programs_benefit_deadlines {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
+@media (max-width: 474px) {
+  .programs_benefit_deadlines {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+.programs_benefit_goals {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+@media (max-width: 834px) {
+  .programs_benefit_goals {
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 538px) {
+  .programs_benefit_goals {
+    grid-column: 2/4;
+  }
+}
+@media (max-width: 474px) {
+  .programs_benefit_goals {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
 }
 .programs_run {
   background: no-repeat url(../pic/runCard.png) top center;
@@ -846,16 +925,46 @@ h2, h3, h4 {
 }
 .programs_feedback {
   grid-column: 3/5;
-  grid-row: 3/4;
+  grid-row: 5/6;
   display: flex;
   justify-content: center;
 }
+@media (max-width: 834px) {
+  .programs_feedback {
+    grid-row: 5/6;
+    grid-column: 3/4;
+  }
+}
+@media (max-width: 579px) {
+  .programs_feedback {
+    grid-row: 6/7;
+    grid-column: 2/4;
+  }
+}
+@media (max-width: 474px) {
+  .programs_feedback {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+}
+.programs_feedback p {
+  width: 100%;
+}
+@media (max-width: 474px) {
+  .programs_feedback p {
+    width: 80%;
+  }
+}
 .programs .card_wrapper {
-  width: 238px;
-  height: 389px;
   display: flex;
   align-items: flex-end;
   justify-self: center;
+  height: 389px;
+}
+@media (max-width: 579px) {
+  .programs .card_wrapper {
+    margin-bottom: 5%;
+  }
 }
 .programs .card {
   width: 230px;
@@ -866,13 +975,53 @@ h2, h3, h4 {
   text-align: center;
   align-items: center;
 }
+@media (max-width: 890px) {
+  .programs .card {
+    filter: drop-shadow(4px -2px 0px #ADFF00);
+  }
+}
 .programs .card_triathlon {
   grid-column: 3/4;
-  grid-row: 2/3;
+  grid-row: 2/5;
+}
+@media (max-width: 834px) {
+  .programs .card_triathlon {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}
+@media (max-width: 579px) {
+  .programs .card_triathlon {
+    grid-column: 2/4;
+  }
+}
+@media (max-width: 474px) {
+  .programs .card_triathlon {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
 }
 .programs .card_run {
   grid-column: 4/5;
-  grid-row: 2/3;
+  grid-row: 2/5;
+}
+@media (max-width: 834px) {
+  .programs .card_run {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+}
+@media (max-width: 579px) {
+  .programs .card_run {
+    grid-column: 2/4;
+    grid-row: 5/6;
+  }
+}
+@media (max-width: 474px) {
+  .programs .card_run {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
 }
 .programs button {
   width: 210px;
@@ -895,10 +1044,24 @@ h2, h3, h4 {
   font-size: 30px;
   margin: 0;
 }
+.programs h2 {
+  margin: 0;
+}
+@media (max-width: 474px) {
+  .programs h2 {
+    margin: 5% 0;
+    text-align: center;
+  }
+}
 .programs p, .programs button {
   font-family: "Oswald", sans-serif;
   color: rgb(241, 250, 238);
   font-size: 20px;
+}
+@media (max-width: 474px) {
+  .programs p {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

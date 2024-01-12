@@ -47,7 +47,7 @@ function App() {
         <div className='about section'>
           <div className='about_asside asside'>
             <span/>
-            <div>About</div>
+              <div className='asside_text'>About</div>
             <span/>
           </div>
           <div className='about_question_one'>
@@ -108,7 +108,7 @@ function App() {
         <div className='coach section'>
           <div className='coach_asside asside'>
             <span/>
-            <div>Coach</div>
+              <div className='asside_text'>Coach</div>
             <span/>
           </div>
           <div className='coach_photo'>
@@ -147,26 +147,24 @@ function App() {
         <div className='programs section'>
           <div className='programs_asside asside'>
             <span/>
-            <div>Programs</div>
+              <div className='asside_text'>Programs</div>
             <span/>
           </div>
           <div className='programs_description'>
             <h2>Годовое планирование, тестирование, гоночный план, аналитика стартов, консультации, советы, всё в&nbsp;одном.</h2>
           </div>
           <div className='programs_top'><Zebra/></div>
-          <div className='programs_benefit'>
-            <div>
+            <div className='programs_benefit_types'>
               <h2>Виды спорта</h2>
               <p>Подготовка к&nbsp;тритлону или к&nbsp;одному из&nbsp;видов в&nbsp;отдельности.</p>
             </div>
-            <div>
-            <h2>Сроки</h2>
-              <p>Программы подготовки рассчитаны на&nbsp;срок от&nbsp;2х&nbsp;месяцев, до&nbsp;2х&nbsp;лет.</p>
+            <div className='programs_benefit_deadlines'>
+              <h2>Сроки</h2>
+                <p>Программы подготовки рассчитаны на&nbsp;срок от&nbsp;2х&nbsp;месяцев, до&nbsp;2х&nbsp;лет.</p>
             </div>
-            <div>
-            <h2>Цели</h2>
-              <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
-            </div>
+            <div className='programs_benefit_goals'>
+              <h2>Цели</h2>
+                <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
           </div>
           <div className='card_wrapper card_triathlon'>
             <div className='programs_triathlon card'>
@@ -190,7 +188,7 @@ function App() {
           </div>
           <div className='programs_bottom'><Zebra/></div>
           <div className='programs_feedback'>
-            <p>После подачи завяки необходимо дождаться обратной связи.</p>
+            <p>После заполнения анкеты необходимо дождаться обратной связи.</p>
           </div>
         </div>
       </div>

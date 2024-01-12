@@ -198,21 +198,24 @@ h2,h3,h4
     font-family: $secondFont
     font-size: 48px
     grid-column: 1/2
-    grid-row: 1/6
+    grid-row: 1/7
+    @media (max-width:579px)
+        font-size: 38px
     @media (max-width:474px)
         grid-column: 1/2
         grid-row: 1/2
         flex-direction: row
         justify-content: center
-    div
-        height: 110px
-        rotate: 270deg
-        transform-origin: 55px 40px
+    &_text
+        transform: rotate(180deg)
+        writing-mode: vertical-lr
+        margin-bottom: 30px
         @media (max-width:474px)
-            rotate: none
-            height: fit-content
+            transform: none
+            writing-mode: horizontal-tb
+            margin-bottom:0
+            
     span
-        margin: 15px 0 0 0
         height: 100%
         width: 1px
         background: $green
@@ -539,24 +542,62 @@ h2,h3,h4
     &_description
         grid-column: 2/4
         grid-row: 1/2
-        height: 205px
+        height: 150px
         display: flex
-        align-items: center
-        h2
-            margin: 0
+        align-items: flex-start
+        @media (max-width:834px)
+            height: 105px
+        @media (max-width:474px)
+            grid-row: 2/3
+            grid-column: 1/2
+            height: auto
+            text-align: center
+            margin: 5% 0 0
     &_top
         grid-column: 4/5
         grid-row: 1/2
         display: flex
         align-items: center
+        @media (max-width:834px)
+            grid-column: 3/4
+            grid-row: 3/4
+        @media (max-width:538px)
+                display: none
     &_bottom
         grid-column: 2/3
-        grid-row: 3/4
+        grid-row: 5/6
         display: flex
         align-items: center
+        @media (max-width:834px)
+            grid-row: 5/6
+            @media (max-width:579px)
+                display: none
     &_benefit
-        grid-column: 2/3
-        grid-row: 2/3
+        &_types
+            grid-column: 2/3
+            grid-row: 2/3
+            @media (max-width:474px)
+                grid-column: 1/2
+                grid-row: 3/4
+        &_deadlines
+            grid-column: 2/3
+            grid-row: 3/4
+            @media (max-width:834px)
+                grid-column: 3/4
+                grid-row: 2/3
+            @media (max-width:474px)
+                grid-column: 1/2
+                grid-row: 4/5
+        &_goals
+            grid-column: 2/3
+            grid-row: 4/5
+            @media (max-width:834px)
+                grid-row: 3/4
+            @media (max-width:538px)
+                grid-column: 2/4
+            @media (max-width:474px)
+                grid-column: 1/2
+                grid-row: 5/6
     &_run
         background: no-repeat url(../pic/runCard.png) top center
         background-size: cover
@@ -565,15 +606,29 @@ h2,h3,h4
         background-size: cover
     &_feedback
         grid-column: 3/5
-        grid-row: 3/4
+        grid-row: 5/6
         display: flex
         justify-content: center
+        @media (max-width:834px)
+            grid-row: 5/6
+            grid-column: 3/4
+        @media (max-width:579px)
+            grid-row: 6/7
+            grid-column: 2/4
+        @media (max-width:474px)
+            grid-column: 1/2
+            grid-row: 8/9
+        p
+            width: 100%
+            @media (max-width:474px)
+                width: 80%
     .card_wrapper
-        width: 238px
-        height: 389px
         display: flex
         align-items: flex-end
         justify-self: center
+        height: 389px
+        @media (max-width:579px)
+            margin-bottom: 5%
     .card
         width: 230px
         filter: $shadowDek
@@ -582,12 +637,31 @@ h2,h3,h4
         grid-template-rows: 118px 125px 60px 80px
         text-align: center
         align-items: center
+        @media (max-width:890px)
+            filter: $shadowMob
     .card_triathlon
             grid-column: 3/4
-            grid-row: 2/3
+            grid-row: 2/5
+            @media (max-width:834px)
+                grid-column: 2/3
+                grid-row: 4/5
+            @media (max-width:579px)
+                grid-column: 2/4
+            @media (max-width:474px)
+                grid-column: 1/2
+                grid-row: 6/7
     .card_run
             grid-column: 4/5
-            grid-row: 2/3
+            grid-row: 2/5
+            @media (max-width:834px)
+                grid-column: 3/4
+                grid-row: 4/5
+            @media (max-width:579px)
+                grid-column: 2/4
+                grid-row: 5/6
+            @media (max-width:474px)
+                grid-column: 1/2
+                grid-row: 7/8
 
     button
         width: 210px
@@ -607,7 +681,15 @@ h2,h3,h4
         color: $green
         font-size: 30px
         margin: 0
+    h2
+        margin: 0
+        @media (max-width:474px)
+            margin: 5% 0
+            text-align: center
     p,button
         font-family: $mainFont
         color: $white
         font-size: 20px
+    p
+        @media (max-width:474px)
+            text-align: center
