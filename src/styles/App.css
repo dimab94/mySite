@@ -15,6 +15,7 @@
 }
 body {
   background-color: rgb(36, 36, 36);
+  margin: 0;
 }
 
 h1 {
@@ -42,9 +43,16 @@ h2, h3, h4 {
 }
 
 .generall_page_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main {
@@ -76,9 +84,15 @@ h2, h3, h4 {
 }
 .main_menu {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   align-self: center;
   grid-row: 2/3;
   grid-column: 1/4;
@@ -118,9 +132,16 @@ h2, h3, h4 {
     align-self: center;
     widows: 32px;
     height: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .main_menu_button span {
     width: 32px;
@@ -139,9 +160,13 @@ h2, h3, h4 {
   }
 }
 .main_page_pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .main_page_pic div {
   width: 360px;
@@ -165,16 +190,19 @@ h2, h3, h4 {
   background: no-repeat url(../pic/cycling.png);
   background-size: cover;
   background-position: center;
-  box-shadow: drop-shadow(8px -6px 0px #ADFF00);
+  -webkit-box-shadow: drop-shadow(8px -6px 0px #ADFF00);
+          box-shadow: drop-shadow(8px -6px 0px #ADFF00);
 }
 @media (max-width: 1170px) {
   .main_page_pic .cycling {
-    box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
+    -webkit-box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
+            box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
   }
 }
 @media (max-width: 500px) {
   .main_page_pic .cycling {
-    box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
+    -webkit-box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
+            box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
   }
 }
 .main_page_pic .running {
@@ -208,6 +236,8 @@ h2, h3, h4 {
 }
 .main_page_slogan_wrapper {
   background: rgb(36, 36, 36);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
   width: 700px;
@@ -279,9 +309,16 @@ h2, h3, h4 {
 }
 
 .asside {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: rgb(173, 255, 0);
   font-family: "VT323", sans-serif;
   font-size: 48px;
@@ -297,19 +334,30 @@ h2, h3, h4 {
   .asside {
     grid-column: 1/2;
     grid-row: 1/2;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .asside_text {
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
   margin-bottom: 30px;
 }
 @media (max-width: 474px) {
   .asside_text {
-    transform: none;
-    writing-mode: horizontal-tb;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
     margin-bottom: 0;
   }
 }
@@ -333,22 +381,31 @@ h2, h3, h4 {
 
 @media (max-width: 474px) {
   .about {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .about_question_one {
   grid-column: 2/3;
   grid-row: 1/3;
   align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (max-width: 834px) {
   .about_question_one {
     grid-column: 2/3;
     grid-row: 1/2;
     height: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media (max-width: 474px) {
@@ -429,11 +486,15 @@ h2, h3, h4 {
 .about_phones {
   grid-column: 2/3;
   grid-row: 3/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   width: 100%;
   position: relative;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 @media (max-width: 474px) {
   .about_phones {
@@ -443,7 +504,9 @@ h2, h3, h4 {
     width: 80%;
     justify-self: center;
     height: 200px;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .about_phones img:first-child {
@@ -460,7 +523,8 @@ h2, h3, h4 {
   }
 }
 .about_phones img:last-child {
-  filter: drop-shadow(8px -6px 0px #ADFF00);
+  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
+          filter: drop-shadow(8px -6px 0px #ADFF00);
   position: absolute;
   z-index: -1;
   right: 5%;
@@ -468,7 +532,8 @@ h2, h3, h4 {
 }
 @media (max-width: 890px) {
   .about_phones img:last-child {
-    filter: drop-shadow(4px -2px 0px #ADFF00);
+    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
+            filter: drop-shadow(4px -2px 0px #ADFF00);
   }
 }
 @media (max-width: 474px) {
@@ -482,6 +547,8 @@ h2, h3, h4 {
   grid-row: 1/4;
   width: 100%;
   height: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   align-self: center;
@@ -502,13 +569,16 @@ h2, h3, h4 {
   }
 }
 .about_macBook img {
-  filter: drop-shadow(8px -6px 0px #ADFF00);
+  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
+          filter: drop-shadow(8px -6px 0px #ADFF00);
   height: calc(100% - 6px);
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 @media (max-width: 834px) {
   .about_macBook img {
-    filter: drop-shadow(4px -2px 0px #ADFF00);
+    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
+            filter: drop-shadow(4px -2px 0px #ADFF00);
     height: calc(100% - 4px);
     margin-top: 3px;
   }
@@ -519,18 +589,26 @@ h2, h3, h4 {
   background-position: center;
   grid-column: 2/5;
   grid-row: 5/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  filter: drop-shadow(8px -6px 0px #ADFF00);
+  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
+          filter: drop-shadow(8px -6px 0px #ADFF00);
   margin-top: 10px;
   width: calc(100% - 8px);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 200px;
 }
 @media (max-width: 834px) {
   .about_gym {
     grid-column: 2/4;
-    filter: drop-shadow(4px -2px 0px #ADFF00);
+    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
+            filter: drop-shadow(4px -2px 0px #ADFF00);
     width: calc(100% - 4px);
   }
 }
@@ -544,8 +622,14 @@ h2, h3, h4 {
 .about_gym_background {
   background: rgba(36, 36, 36, 0.6);
   width: 85%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .about_gym_text {
@@ -647,7 +731,8 @@ h2, h3, h4 {
   }
 }
 .coach_photo_background {
-  filter: drop-shadow(8px -6px 0px #ADFF00);
+  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
+          filter: drop-shadow(8px -6px 0px #ADFF00);
   position: relative;
   top: 6px;
   width: 100%;
@@ -729,11 +814,18 @@ h2, h3, h4 {
 .coach_logo {
   grid-column: 4/5;
   grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100px;
   align-self: flex-start;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (max-width: 834px) {
   .coach_logo {
@@ -762,7 +854,9 @@ h2, h3, h4 {
     grid-row: 3/4;
     width: 100%;
     height: 60px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .coach_statistics {
@@ -770,8 +864,12 @@ h2, h3, h4 {
   grid-row: 4/5;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 5px;
-  align-items: flex-start;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media (max-width: 834px) {
   .coach_statistics {
@@ -805,8 +903,12 @@ h2, h3, h4 {
 }
 
 .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 @media (max-width: 474px) {
   .social img {
@@ -819,8 +921,12 @@ h2, h3, h4 {
   grid-column: 2/4;
   grid-row: 1/2;
   height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media (max-width: 834px) {
   .programs_description {
@@ -839,8 +945,12 @@ h2, h3, h4 {
 .programs_top {
   grid-column: 4/5;
   grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 834px) {
   .programs_top {
@@ -856,8 +966,12 @@ h2, h3, h4 {
 .programs_bottom {
   grid-column: 2/3;
   grid-row: 5/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 834px) {
   .programs_bottom {
@@ -926,8 +1040,10 @@ h2, h3, h4 {
 .programs_feedback {
   grid-column: 3/5;
   grid-row: 5/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  text-align: center;
 }
 @media (max-width: 834px) {
   .programs_feedback {
@@ -956,8 +1072,12 @@ h2, h3, h4 {
   }
 }
 .programs .card_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   justify-self: center;
   height: 389px;
 }
@@ -968,16 +1088,20 @@ h2, h3, h4 {
 }
 .programs .card {
   width: 230px;
-  filter: drop-shadow(8px -6px 0px #ADFF00);
+  -webkit-filter: drop-shadow(8px -6px 0px #ADFF00);
+          filter: drop-shadow(8px -6px 0px #ADFF00);
   border-radius: 20px;
   display: grid;
   grid-template-rows: 118px 125px 60px 80px;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 890px) {
   .programs .card {
-    filter: drop-shadow(4px -2px 0px #ADFF00);
+    -webkit-filter: drop-shadow(4px -2px 0px #ADFF00);
+            filter: drop-shadow(4px -2px 0px #ADFF00);
   }
 }
 .programs .card_triathlon {
@@ -1064,4 +1188,95 @@ h2, h3, h4 {
   }
 }
 
-/*# sourceMappingURL=App.css.map */
+.footer {
+  width: 100%;
+  background: rgb(29, 29, 29);
+  height: 172px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer_icons {
+  width: 132px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer_title {
+  font-style: normal;
+  color: rgb(57, 57, 57);
+  font-size: 40px;
+}
+.footer_block {
+  width: 90%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer_social {
+  width: 347px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer_mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer_mail img {
+  margin-right: 2%;
+}
+.footer_mail address {
+  font-style: normal;
+  font-family: "VT323", sans-serif;
+  color: rgb(57, 57, 57);
+  font-size: 24px;
+}
+.footer_location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 180px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.footer_location div {
+  font-family: "VT323", sans-serif;
+  color: rgb(57, 57, 57);
+  font-size: 24px;
+}
+.footer_location img {
+  height: 10px;
+  margin-right: 2%;
+}/*# sourceMappingURL=App.css.map */

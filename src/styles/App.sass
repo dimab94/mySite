@@ -16,11 +16,14 @@ $mainFontBold:'Oswald-Bold',sans-serif
 $secondFont:'VT323', sans-serif
 $green: rgba(173, 255, 0, 1)
 $white: rgba(241, 250, 238, 1)
+$footerGrey: rgba(57, 57, 57, 1)
+$footerFontColor:rgba(57, 57, 57, 1)
 $shadowDek: drop-shadow(8px -6px 0px #ADFF00)
 $shadowMob: drop-shadow(4px -2px 0px #ADFF00)
 
 body
     background-color: rgba(36, 36, 36, 1)
+    margin: 0
 h1
     font-family: $secondFont
     color: $green
@@ -608,7 +611,7 @@ h2,h3,h4
         grid-column: 3/5
         grid-row: 5/6
         display: flex
-        justify-content: center
+        text-align: center
         @media (max-width:834px)
             grid-row: 5/6
             grid-column: 3/4
@@ -693,3 +696,52 @@ h2,h3,h4
     p
         @media (max-width:474px)
             text-align: center
+.footer
+    width: 100%
+    background: rgba(29, 29, 29, 1)
+    height: 172px
+    align-items: center
+    display: flex
+    justify-content: center
+    &_icons
+        width: 132px 
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_title
+        font-style: normal
+        color: $footerFontColor
+        font-size: 40px
+    &_block
+        width: 90%
+        height: 100px
+        display: flex
+        justify-content: space-between
+    &_social
+        width: 347px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &_mail
+        display: flex
+        align-items: center
+        img
+            margin-right: 2%
+        address
+            font-style: normal
+            font-family: $secondFont
+            color: $footerFontColor
+            font-size: 24px
+    &_location
+        display: flex
+        width: 180px
+        flex-wrap: wrap
+        align-items: center
+        justify-content: flex-end
+        div
+            font-family: $secondFont
+            color: $footerFontColor
+            font-size: 24px
+        img
+            height: 10px
+            margin-right: 2%

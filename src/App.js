@@ -1,7 +1,12 @@
 import Zebra from './svg/zebra'
 import Telegram from './svg/telegram.svg'
 import Strava from './svg/strava.svg'
+import InstagramGrey from './svg/instagramGrey.svg'
+import TelegramGrey from './svg/telegramGrey.svg'
+import StravaGrey from './svg/stravaGrey.svg'
 import Instagram from './svg/instagram.svg'
+import Mail from './svg/mail.svg'
+import Flag from './svg/flag.svg'
 import '@csstools/normalize.css'
 import './styles/App.css'
 import phoneTP from './pic/phioneTP@1x.png'
@@ -189,6 +194,27 @@ function App() {
           <div className='programs_bottom'><Zebra/></div>
           <div className='programs_feedback'>
             <p>После заполнения анкеты необходимо дождаться обратной связи.</p>
+          </div>
+        </div>
+        <div className='footer'>
+          <div className='footer_block'>
+            <div className='footer_social'>
+              <h1 className='footer_title main_title'>Baruzdin.tri</h1>
+              <div className='footer_icons'>
+                < img src={InstagramGrey} alt='logo'/>
+                < img src={TelegramGrey} alt='logo' width="25" height="25"/>
+                < img src={StravaGrey} alt='logo' width="25" height="25"/>
+              </div>
+              <div className='footer_mail'>
+                <img src={Mail} alt='mail'/>
+                <address>tri@baruzdin.online</address>
+              </div>
+            </div>
+            <div className='footer_location'>
+              <img src={Flag} alt='ru'/>
+              <div className='footer_location_city'>Saint-Petersburg</div>
+              <div className='footer_location_date'>2024</div>
+            </div>
           </div>
         </div>
       </div>
