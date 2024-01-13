@@ -199,7 +199,7 @@ function App() {
         <div className='footer'>
           <div className='footer_block'>
             <div className='footer_social'>
-              <h1 className='footer_title main_title'>Baruzdin.tri</h1>
+              <h1 className='footer_title'>Baruzdin.tri</h1>
               <div className='footer_icons'>
                 < img src={InstagramGrey} alt='logo'/>
                 < img src={TelegramGrey} alt='logo' width="25" height="25"/>

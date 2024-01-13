@@ -62,6 +62,7 @@ h2,h3,h4
         @media (max-width: 500px)
             grid-column: 1/3
             justify-self: start
+            padding-left: 5px
     &_menu
         list-style: none
         display: flex
@@ -86,6 +87,7 @@ h2,h3,h4
         &_button
             display: none
             @media (max-width: 500px)
+                margin-right: 5px
                 grid-column: 3/4
                 grid-row: 1/2
                 justify-self: flex-end
@@ -132,8 +134,6 @@ h2,h3,h4
                 background: no-repeat url(../pic/running.png)
                 background-size: cover
                 background-position: center
-                @media (max-width: 500px)
-                    background-position-x: -130px
 
         &_slogan
             position: absolute
@@ -190,7 +190,7 @@ h2,h3,h4
         grid-template-columns: 7% repeat(2,1fr) 7%
         gap: 0 3%
     @media (max-width:474px)
-        grid-template-columns: 1fr
+        grid-template-columns: 100%
         gap: 0
 
 .asside
@@ -229,9 +229,7 @@ h2,h3,h4
         &:first-child
             @media (min-width:475px)
                 display: none
-.about
-    @media (max-width:474px)
-        justify-content: center          
+.about        
     &_question_one
         grid-column: 2/3
         grid-row: 1/3
@@ -397,6 +395,10 @@ h2,h3,h4
         margin: 0
         @media (max-width: 1100px)
             font-size: 18px
+    p
+        @media (max-width:474px)
+            padding: 0 2%
+
     h3
         text-align: center
         font-size: 24px
@@ -623,10 +625,10 @@ h2,h3,h4
         @media (max-width:474px)
             grid-column: 1/2
             grid-row: 8/9
+            width: 80%
+            justify-self: center
         p
             width: 100%
-            @media (max-width:474px)
-                width: 80%
     .card_wrapper
         display: flex
         align-items: flex-end
@@ -698,6 +700,7 @@ h2,h3,h4
     p
         @media (max-width:474px)
             text-align: center
+            margin: 20px 2%
 .footer
     width: 100%
     background: rgba(29, 29, 29, 1)
@@ -705,24 +708,33 @@ h2,h3,h4
     align-items: center
     display: flex
     justify-content: center
+    @media (max-width:454px)
+        height: 200px
     &_icons
         width: 132px 
         display: flex
         justify-content: space-between
         align-items: center
         margin: 0 5% 2% 0
+        @media (max-width:454px)
+            margin: 0
     &_title
         font-style: normal
         color: $footerFontColor
         font-size: 40px
         margin: 0 5% 2% 0
+        width: 190px
+        @media (max-width:454px)
+            margin: 0
     &_block
         width: 90%
-        height: 100px
+        min-height: 100px
         display: flex
         justify-content: space-between
         @media (max-width:454px)
+            height: 90%
             flex-direction: column
+            justify-content: space-between
     &_social
         display: flex
         flex-wrap: wrap
@@ -730,11 +742,17 @@ h2,h3,h4
         width: 50%
         @media (max-width:454px)
             width: 100%
-            justify-content: center
+            height: 65%
+            justify-content: space-between
+            align-items: center
+            flex-direction: column
+            flex-wrap: nowrap
     &_mail
         display: flex
         align-items: center
         margin-bottom: 2%
+        @media (max-width:454px)
+            margin: 0
         img
             margin-right: 2%
         address
@@ -758,6 +776,5 @@ h2,h3,h4
             color: $footerFontColor
             font-size: 24px
         img
-            height: 10px
             margin-right: 2%
 svg
