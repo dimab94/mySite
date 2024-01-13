@@ -1,5 +1,4 @@
-const Zebra = () => (
-    <svg width="216" height="39" viewBox="0 0 216 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="216" height="39" viewBox="0 0 216 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="0.623779" width="3" height="39" transform="rotate(-12 0 0.623779)" fill="#F1FAEE"/>
 <rect x="72" y="0.623779" width="3" height="39" transform="rotate(-12 72 0.623779)" fill="#F1FAEE"/>
 <rect x="144" y="0.623779" width="3" height="39" transform="rotate(-12 144 0.623779)" fill="#F1FAEE"/>
@@ -19,5 +18,3 @@ const Zebra = () => (
 <rect x="132" y="0.623779" width="3" height="39" transform="rotate(-12 132 0.623779)" fill="#F1FAEE"/>
 <rect x="204" y="0.623779" width="3" height="39" transform="rotate(-12 204 0.623779)" fill="#F1FAEE"/>
 </svg>
-);
-export default Zebra;

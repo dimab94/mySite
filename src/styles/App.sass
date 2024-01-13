@@ -229,7 +229,6 @@ h2,h3,h4
         &:first-child
             @media (min-width:475px)
                 display: none
-        
 .about
     @media (max-width:474px)
         justify-content: center          
@@ -381,6 +380,7 @@ h2,h3,h4
             @media (max-width:474px)
                 margin: 2px
     svg
+        filter: drop-shadow(2px 3px 0px #ADFF00)
         display: none
         @media (max-width: 834px)
             display: block
@@ -561,12 +561,14 @@ h2,h3,h4
         grid-row: 1/2
         display: flex
         align-items: center
+        filter: drop-shadow(2px 3px 0px #ADFF00)
         @media (max-width:834px)
             grid-column: 3/4
             grid-row: 3/4
         @media (max-width:538px)
                 display: none
     &_bottom
+        filter: drop-shadow(2px 3px 0px #ADFF00)
         grid-column: 2/3
         grid-row: 5/6
         display: flex
@@ -708,23 +710,31 @@ h2,h3,h4
         display: flex
         justify-content: space-between
         align-items: center
+        margin: 0 5% 2% 0
     &_title
         font-style: normal
         color: $footerFontColor
         font-size: 40px
+        margin: 0 5% 2% 0
     &_block
         width: 90%
         height: 100px
         display: flex
         justify-content: space-between
+        @media (max-width:454px)
+            flex-direction: column
     &_social
-        width: 347px
         display: flex
-        justify-content: space-between
         flex-wrap: wrap
+        justify-content: flex-start
+        width: 50%
+        @media (max-width:454px)
+            width: 100%
+            justify-content: center
     &_mail
         display: flex
         align-items: center
+        margin-bottom: 2%
         img
             margin-right: 2%
         address
@@ -734,10 +744,15 @@ h2,h3,h4
             font-size: 24px
     &_location
         display: flex
-        width: 180px
         flex-wrap: wrap
         align-items: center
         justify-content: flex-end
+        @media (max-width:454px)
+            width: 100%
+            justify-content: center
+        &_city
+            @media (max-width:454px)
+                margin-right:5%
         div
             font-family: $secondFont
             color: $footerFontColor
@@ -745,3 +760,4 @@ h2,h3,h4
         img
             height: 10px
             margin-right: 2%
+svg
