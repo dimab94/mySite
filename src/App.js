@@ -1,6 +1,7 @@
 import Zebra from './svg/zebra'
 import Telegram from './svg/telegram.svg'
 import Strava from './svg/strava.svg'
+import Vk from './svg/vk.svg'
 import InstagramGrey from './svg/instagramGrey.svg'
 import TelegramGrey from './svg/telegramGrey.svg'
 import StravaGrey from './svg/stravaGrey.svg'
@@ -26,9 +27,9 @@ function App() {
             <li><a>About</a></li>
             <li><a>Coach</a></li>
             <li><a>Program</a></li>
-            <li><a>FAQ</a></li>
+{/*             <li><a>FAQ</a></li> */}
             <li><a>Payment</a></li>
-            <li><a>Utility</a></li>
+{/*             <li><a>Utility</a></li> */}
           </ul>
           <div className='main_menu_button'>
             <span></span>
@@ -120,7 +121,7 @@ function App() {
             <img className='coach_photo_background' src={background}/>
             <div className='coach_photo_face'></div>
           </div>
-          <h2>Меня зовут Дима Барзудин</h2>
+          <h2>Меня зовут Дима Баруздин</h2>
           <article className='coach_first'>
           Высшее образование в&nbsp;сфере физической культуры и&nbsp;спорта, закончил бакалавриат и&nbsp;магистратуру НГУ им. Лесгафта. Занимаюсь тренерской деятельностью с&nbsp;2014&nbsp;года, начинал с&nbsp;обучения плаванию.</article>
           <article className='coach_second'>
@@ -129,9 +130,10 @@ function App() {
           <div className='coach_logo'>
             <h1 className='main_title'>Baruzdin.tri</h1>
             <div className='social'>
-              < img src={Instagram} alt='logo'/>
-              < img src={Telegram} alt='logo' width="25" height="25"/>
-              < img src={Strava} alt='logo' width="25" height="25"/>
+              {/* < img src={Instagram} alt='logo'/> */}
+              < img src={Vk} alt='logo' width="30" height="30"/>
+              < img src={Telegram} alt='logo' width="30" height="30"/>
+              {/* < img src={Strava} alt='logo' width="25" height="25"/> */}
             </div>
           </div>
           <div className='coach_statistics'>
