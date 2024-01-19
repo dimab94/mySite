@@ -15,7 +15,7 @@ $mainFont:'Oswald',sans-serif
 $mainFontBold:'Oswald-Bold',sans-serif
 $secondFont:'VT323', sans-serif
 $green: rgba(173, 255, 0, 1)
-$white: rgba(241, 250, 238, 1)
+$white: #f1faee
 $footerGrey: rgba(57, 57, 57, 1)
 $footerFontColor:rgba(57, 57, 57, 1)
 $shadowDek: drop-shadow(8px -6px 0px #ADFF00)
@@ -84,6 +84,7 @@ h2,h3,h4
                 font-size: 20px
             &:hover
                 cursor: pointer
+                filter: drop-shadow(2px -1px 0px #f1faee)
         &_button
             display: none
             @media (max-width: 500px)
@@ -167,6 +168,7 @@ h2,h3,h4
         border: none
         font-size: 30px
         font-family: $mainFont
+        color: #242424
         padding: 2%
         height: 100%
         @media (max-width: 1170px)
@@ -493,15 +495,14 @@ h2,h3,h4
         align-self: flex-start
         flex-direction: column
         justify-content: space-between
+        align-items: center
         @media (max-width:834px)
-            height: 80px
             grid-column: 2/3
             grid-row: 4/5
         @media (max-width:569px)
             grid-row: 2/3
             position: absolute
             width: 37vw
-            height: 30px
             left: 1.5vw
             top: 80%
             h1
@@ -538,11 +539,24 @@ h2,h3,h4
             font-size: 90px
 .social
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
+    width: 120px
+    @media (max-width:474px)
+        width: 160px
     img
+        @media (min-width:834px)
+            filter: gray
+            -webkit-filter: grayscale(1)
+            filter: grayscale(1)
+            opacity: 0.5
+            &:hover
+                -webkit-filter: grayscale(0)
+                filter: none
+                opacity: 1
         @media (max-width:474px)
-            width: 40px
-            height: 40px
+            width: 60px
+            height: 60px
+
 .programs
     &_description
         grid-column: 2/4
@@ -704,77 +718,71 @@ h2,h3,h4
 .footer
     width: 100%
     background: rgba(29, 29, 29, 1)
-    height: 172px
+    height: 200px
     align-items: center
     display: flex
     justify-content: center
-    @media (max-width:454px)
-        height: 200px
-    &_icons
-        width: 132px 
+    font-style: normal
+    font-family: $secondFont
+    color: $footerFontColor
+    font-size: 24px
+    @media (max-width:474px)
+        height:205px
+    &_block
+        height: 130px
+        margin: 0 10px
+        @media (max-width:474px)
+            height:90%
+    &_social
+        grid-column: 1/3
         display: flex
+        flex-direction: column
         justify-content: space-between
-        align-items: center
-        margin: 0 5% 2% 0
-        @media (max-width:454px)
-            margin: 0
+        @media (max-width:474px)
+            grid-column: 1/2
+            grid-row: 1/2
+            height: 140px
+    &_contact
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @media (max-width:474px)
+            justify-content: space-evenly
+            height: 75px
+        a
+            text-decoration: none
+            margin-right: 10px
+            color: $footerFontColor
+            &:hover
+                color:$white
+        &_mail
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 215px
     &_title
-        font-style: normal
         color: $footerFontColor
         font-size: 40px
-        margin: 0 5% 2% 0
-        width: 190px
-        @media (max-width:454px)
-            margin: 0
-    &_block
-        width: 90%
-        min-height: 100px
-        display: flex
-        justify-content: space-between
-        @media (max-width:454px)
-            height: 90%
-            flex-direction: column
-            justify-content: space-between
-    &_social
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-        width: 50%
-        @media (max-width:454px)
-            width: 100%
-            height: 65%
-            justify-content: space-between
-            align-items: center
-            flex-direction: column
-            flex-wrap: nowrap
-    &_mail
-        display: flex
-        align-items: center
-        margin-bottom: 2%
-        @media (max-width:454px)
-            margin: 0
-        img
-            margin-right: 2%
-        address
-            font-style: normal
-            font-family: $secondFont
-            color: $footerFontColor
-            font-size: 24px
+        @media (max-width:474px)
+            text-align: center
     &_location
+        grid-column: 4/6
+        align-self: flex-end
+        height: 55.2px
         display: flex
-        flex-wrap: wrap
-        align-items: center
-        justify-content: flex-end
-        @media (max-width:454px)
-            width: 100%
-            justify-content: center
-        &_city
-            @media (max-width:454px)
-                margin-right:5%
-        div
-            font-family: $secondFont
-            color: $footerFontColor
-            font-size: 24px
-        img
-            margin-right: 2%
-svg
+        align-items: flex-end
+        justify-content: space-between
+        flex-direction: column
+        @media (max-width:834px)
+            grid-column: 3/5
+        @media (max-width:474px)
+            grid-column: 1/2
+            grid-row: 2/3
+            justify-self: center
+            flex-direction: row
+            width: 230px
+            height: 40px
+        &_wrapper-city
+            display: flex
+            width: 175px
+            justify-content: space-between
