@@ -17,6 +17,8 @@ import background from './pic/coachBackground.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
 
+const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
+
 function App() {
   return (
     <div className="App">
@@ -178,7 +180,7 @@ function App() {
               <h4>Triathlon</h4>
               <p>Комплексная подготовка по&nbsp;всем трем видам.</p>
               <h5>12 000₽</h5>
-              <button>
+              <button onClick={()=>window.location.href = formTri}>
                 Заполнить анкету
               </button>
             </div>
@@ -188,7 +190,7 @@ function App() {
               <h4>Multisport</h4>
               <p>Подготовка по плаванию&nbsp;/ велосипеду&nbsp;/ бегу.</p>
               <h5>10 000₽</h5>
-              <button>
+              <button onClick={()=>window.location.href = formTri}>
                 Заполнить анкету
               </button>
             </div>
@@ -219,6 +221,7 @@ function App() {
                 <div className='footer_location_city'>Saint-Petersburg</div>
               </div>
               <div className='footer_location_date'>2024</div>
+              
             </div>
           </div>
         </div>
