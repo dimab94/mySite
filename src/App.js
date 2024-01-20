@@ -16,8 +16,10 @@ import phone from './pic/phone@1x.png'
 import background from './pic/coachBackground.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
+import { useState } from 'react'
 
 const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
+
 
 function App() {
   return (
@@ -50,7 +52,7 @@ function App() {
               </div>
             </div>
           </div>
-          <button className='main_button'>Начать тренировки</button>
+          <button className='main_button' onClick={()=>document.querySelector('#programs').scrollIntoView({ behavior: 'smooth' })}>Начать тренировки </button>
         </div>
         <div className='about section' id='about'>
           <div className='about_asside asside'>

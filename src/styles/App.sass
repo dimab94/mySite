@@ -176,6 +176,15 @@ h2,h3,h4
         color: #242424
         padding: 2%
         height: 100%
+        cursor: pointer
+        transition: all 0.1s ease-out
+        @media (min-width: 475px)
+            &:hover
+                transform: translate(-4px, -6px)
+                filter: drop-shadow(4px 6px 0px #d6dfd3)
+            &:active
+                transform: none
+                filter: none
         @media (max-width: 1170px)
             font-size: 24px
         @media (max-width: 740px)
@@ -696,8 +705,7 @@ h2,h3,h4
         border-radius: 10px
         border: 0
         justify-self: center
-        &:hover
-            cursor: pointer
+        cursor: pointer
         &:active
             background: #0f1b2c
     h4
@@ -762,8 +770,9 @@ h2,h3,h4
             text-decoration: none
             margin-right: 10px
             color: $footerFontColor
-            &:hover
-                color:$white
+            @media (min-width:835px)
+                &:hover
+                    color:$white
         &_mail
             display: flex
             align-items: center
