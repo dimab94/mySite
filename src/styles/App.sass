@@ -21,6 +21,8 @@ $footerFontColor:rgba(57, 57, 57, 1)
 $shadowDek: drop-shadow(8px -6px 0px #ADFF00)
 $shadowMob: drop-shadow(4px -2px 0px #ADFF00)
 
+html
+    scroll-behavior: smooth
 body
     background-color: rgba(36, 36, 36, 1)
     margin: 0
@@ -82,6 +84,9 @@ h2,h3,h4
                 font-size: 24px
             @media (max-width: 740px)
                 font-size: 20px
+            a
+                color: $green
+                text-decoration: none
             &:hover
                 cursor: pointer
                 filter: drop-shadow(2px -1px 0px #f1faee)
@@ -444,7 +449,7 @@ h2,h3,h4
             width: 100%
         &_face
             position: absolute
-            width: 100%
+            width: 101%
             height: 500px
             left: 0
             top: 0

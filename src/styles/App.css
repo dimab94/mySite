@@ -13,6 +13,10 @@
   src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
   font-weight: bold;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(36, 36, 36);
   margin: 0;
@@ -105,6 +109,10 @@ h2, h3, h4 {
   .main_menu li {
     font-size: 20px;
   }
+}
+.main_menu li a {
+  color: rgb(173, 255, 0);
+  text-decoration: none;
 }
 .main_menu li:hover {
   cursor: pointer;
@@ -655,7 +663,7 @@ h2, h3, h4 {
 }
 .coach_photo_face {
   position: absolute;
-  width: 100%;
+  width: 101%;
   height: 500px;
   left: 0;
   top: 0;

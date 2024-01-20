@@ -26,9 +26,9 @@ function App() {
         <div className='main'>
           <h1 className='main_title'>Baruzdin.tri</h1>
           <ul className='main_menu'>
-            <li><a>About</a></li>
-            <li><a>Coach</a></li>
-            <li><a>Program</a></li>
+            <li><a href='#about'>About</a></li>
+            <li><a href='#coach'>Coach</a></li>
+            <li><a href='#programs'>Programs</a></li>
 {/*             <li><a>FAQ</a></li> */}
             <li><a>Payment</a></li>
 {/*             <li><a>Utility</a></li> */}
@@ -52,7 +52,7 @@ function App() {
           </div>
           <button className='main_button'>Начать тренировки</button>
         </div>
-        <div className='about section'>
+        <div className='about section' id='about'>
           <div className='about_asside asside'>
             <span/>
               <div className='asside_text'>About</div>
@@ -113,7 +113,7 @@ function App() {
               <h4 className='about_gym_text'>План включает в&nbsp;себя не&nbsp;только тренировки по&nbsp;целевым видам, но&nbsp;и&nbsp;занятия в&nbsp;зале (ОФП, СФП), а&nbsp;так&nbsp;же упражнния направленные на&nbsp;улучшение координации, баланса, подвижности.</h4>            </div>
           </div>
         </div>
-        <div className='coach section'>
+        <div className='coach section' id='coach'>
           <div className='coach_asside asside'>
             <span/>
               <div className='asside_text'>Coach</div>
@@ -153,7 +153,7 @@ function App() {
           </div>
           </div>
         </div>
-        <div className='programs section'>
+        <div className='programs section' id='programs'>
           <div className='programs_asside asside'>
             <span/>
               <div className='asside_text'>Programs</div>
