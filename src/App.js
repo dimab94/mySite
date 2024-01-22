@@ -1,11 +1,8 @@
+import { useState } from 'react'
 import Zebra from './svg/zebra'
 import Telegram from './svg/telegram.svg'
-import Strava from './svg/strava.svg'
 import Vk from './svg/vk.svg'
-import InstagramGrey from './svg/instagramGrey.svg'
-import TelegramGrey from './svg/telegramGrey.svg'
-import StravaGrey from './svg/stravaGrey.svg'
-import Instagram from './svg/instagram.svg'
+import Menu from './menu/menu'
 import Mail from './svg/mail.svg'
 import Flag from './svg/flag.svg'
 import '@csstools/normalize.css'
@@ -16,30 +13,28 @@ import phone from './pic/phone@1x.png'
 import background from './pic/coachBackground.png'
 import './fonts/Oswald/Oswald-Light.ttf'
 import './fonts/VT323/VT323-Regular.ttf'
-import { useState } from 'react'
-
-const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
-
 
 function App() {
+
+  const [menuIsActive,setMenuIsActive] = useState(false)
+
+  const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
+
+  const items = [{value:'About',href:'#about'},{value:'Coach',href:'#coach'},{value:'Programs',href:'#programs'},{value:'Payment',href:''}]
+
   return (
     <div className="App">
-      <div className='generall_page_wrapper'>
+      <div className='generall_page_wrapper' onClick={()=>setMenuIsActive(false)}>
         <div className='main'>
-          <h1 className='main_title'>Baruzdin.tri</h1>
-          <ul className='main_menu'>
-            <li><a href='#about'>About</a></li>
-            <li><a href='#coach'>Coach</a></li>
-            <li><a href='#programs'>Programs</a></li>
-{/*             <li><a>FAQ</a></li> */}
-            <li><a>Payment</a></li>
-{/*             <li><a>Utility</a></li> */}
-          </ul>
-          <div className='main_menu_button'>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <nav className='main_wrapper-menu'>
+              <h1 className='main_title'>Baruzdin.tri</h1>
+              <div className='main_burger' onClick={(e)=>{e.stopPropagation(); setMenuIsActive(!menuIsActive)}}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+          </nav>
+          <Menu active={menuIsActive} setActive={setMenuIsActive} items={items}/>
           <div className='main_page'>
             <div className='main_page_pic'>
               <div className='swimming'/>
