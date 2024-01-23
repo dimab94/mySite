@@ -19,6 +19,7 @@ function App() {
   const [menuIsActive,setMenuIsActive] = useState(false)
 
   const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
+  const formMult = 'https://forms.yandex.ru/u/65aebf2d2530c278d9a62430/'
 
   const items = [{value:'About',href:'#about'},{value:'Coach',href:'#coach'},{value:'Programs',href:'#programs'},{value:'Payment',href:''}]
 
@@ -187,7 +188,7 @@ function App() {
               <h4>Multisport</h4>
               <p>Подготовка по плаванию&nbsp;/ велосипеду&nbsp;/ бегу.</p>
               <h5>10 000₽</h5>
-              <button onClick={()=>window.location.href = formTri}>
+              <button onClick={()=>window.location.href = formMult}>
                 Заполнить анкету
               </button>
             </div>

@@ -84,7 +84,7 @@ h2, h3, h4 {
     z-index: 2;
     width: 100vw;
     height: 50px;
-    background: rgb(36, 36, 36);
+    background: rgb(29, 29, 29);
   }
 }
 .main_title {
@@ -112,6 +112,9 @@ h2, h3, h4 {
     height: 4px;
     background: rgb(173, 255, 0);
   }
+}
+.main_burger.close {
+  rotate: 90deg;
 }
 .main_page {
   grid-column: 1/4;
