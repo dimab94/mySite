@@ -29,7 +29,7 @@ function App() {
         <div className='main'>
           <nav className='main_wrapper-menu'>
               <h1 className='main_title'>Baruzdin.tri</h1>
-              <div className='main_burger' onClick={(e)=>{e.stopPropagation(); setMenuIsActive(!menuIsActive)}}>
+              <div className={menuIsActive ? 'main_burger close' : 'main_burger'} onClick={(e)=>{e.stopPropagation(); setMenuIsActive(!menuIsActive)}}>
                 <span></span>
                 <span></span>
                 <span></span>

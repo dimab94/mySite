@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald/Oswald-Light.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../fonts/VT323/VT323-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
 .content-menu {
   grid-row: 2/3;
   grid-column: 1/4;

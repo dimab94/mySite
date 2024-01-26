@@ -43,24 +43,23 @@ h2,h3,h4
         justify-content: center
         height: 100%
         @media (max-width:500px)
+            padding: 0 5px
             flex-direction: row
             justify-content: space-between
             align-items: center
             position: fixed
             z-index: 2
-            width: 100vw
+            width: calc( 100vw - 10px )
             height: 50px
             background: rgba(29, 29, 29, 1)
     &_title
         text-align: center
         @media (max-width: 500px)
             text-align: left
-            padding-left: 5px
     &_burger
         display: none
         @media (max-width: 500px)
-            margin-right: 5px
-            height: 18px
+            height: 20px
             display: flex
             flex-direction: column
             justify-content: space-between
@@ -69,7 +68,18 @@ h2,h3,h4
                 height: 4px
                 background: $green
     &_burger.close
-        rotate: 90deg
+        position: relative
+        top: 5px
+        right: 7px
+        rotate: 45deg
+        span
+            width: 28px
+        span:last-child
+            visibility: hidden
+        span:first-child
+            position: absolute
+            rotate: 90deg
+
     &_page
         grid-column: 1/4
         grid-row: 3/4
