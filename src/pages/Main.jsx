@@ -1,14 +1,16 @@
-import { useState } from 'react'
+
 import Zebra from '../svg/zebra'
 import Telegram from '../svg/telegram.svg'
 import Vk from '../svg/vk.svg'
-import Menu from '../menu/menu'
+
 import Mail from '../svg/mail.svg'
 import Flag from '../svg/flag.svg'
 import phoneTP from '../pic/phioneTP@1x.png'
 import macBook from '../pic/macBook.png'
 import phone from '../pic/phone@1x.png'
 import background from '../pic/coachBackground.png'
+import Header from '../components/header/Header'
+import { useState } from 'react'
 function Main() {
 
     const [menuIsActive,setMenuIsActive] = useState(false)
@@ -22,15 +24,7 @@ function Main() {
       <div className="App">
         <div className='generall_page_wrapper' onClick={()=>setMenuIsActive(false)}>
           <div className='main'>
-            <nav className='main_wrapper-menu'>
-                <h1 className='main_title'>Baruzdin.tri</h1>
-                <div className={menuIsActive ? 'main_burger close' : 'main_burger'} onClick={(e)=>{e.stopPropagation(); setMenuIsActive(!menuIsActive)}}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-            </nav>
-            <Menu active={menuIsActive} setActive={setMenuIsActive} items={items}/>
+            <Header active={menuIsActive} setActive={setMenuIsActive} items={items}/>
             <div className='main_page'>
               <div className='main_page_pic'>
                 <div className='swimming'/>

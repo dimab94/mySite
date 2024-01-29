@@ -1,4 +1,17 @@
-@import ./variables/variables
+@import ./variables/variable
+
+@font-face 
+    font-family: "Oswald"
+    src: url("../fonts/Oswald/Oswald-Light.ttf") format("truetype")
+    font-weight: normal
+@font-face 
+    font-family: "VT323"
+    src: url("../fonts/VT323/VT323-Regular.ttf") format("truetype")
+    font-weight: normal
+@font-face 
+    font-family: "Oswald-Bold"
+    src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype")
+    font-weight: bold
 
 html
     scroll-behavior: smooth
@@ -35,51 +48,6 @@ h2,h3,h4
     @media (max-width: 500px)
         row-gap: 20px
         grid-template-rows: 50px 63vh 60px
-    &_wrapper-menu
-        grid-row: 1/2
-        grid-column: 1/4
-        display: flex
-        flex-direction: column
-        justify-content: center
-        height: 100%
-        @media (max-width:500px)
-            padding: 0 5px
-            flex-direction: row
-            justify-content: space-between
-            align-items: center
-            position: fixed
-            z-index: 2
-            width: calc( 100vw - 10px )
-            height: 50px
-            background: rgba(29, 29, 29, 1)
-    &_title
-        text-align: center
-        @media (max-width: 500px)
-            text-align: left
-    &_burger
-        display: none
-        @media (max-width: 500px)
-            height: 20px
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            span
-                width: 32px
-                height: 4px
-                background: $green
-    &_burger.close
-        position: relative
-        top: 5px
-        right: 7px
-        rotate: 45deg
-        span
-            width: 28px
-        span:last-child
-            visibility: hidden
-        span:first-child
-            position: absolute
-            rotate: 90deg
-
     &_page
         grid-column: 1/4
         grid-row: 3/4
