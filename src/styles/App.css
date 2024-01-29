@@ -224,7 +224,7 @@ h2, h3, h4 {
   border: none;
   font-size: 30px;
   font-family: "Oswald", sans-serif;
-  color: #242424;
+  color: #0f1b2c;
   padding: 2%;
   height: 100%;
   cursor: pointer;
@@ -826,6 +826,7 @@ h2, h3, h4 {
     opacity: 0.5;
   }
   .social img:hover {
+    transition: all 0.2s ease-out;
     -webkit-filter: grayscale(0);
     filter: none;
     opacity: 1;
@@ -1054,6 +1055,9 @@ h2, h3, h4 {
   justify-self: center;
   cursor: pointer;
 }
+.programs button:hover {
+  background: #192f4d;
+}
 .programs button:active {
   background: #0f1b2c;
 }
@@ -1148,6 +1152,7 @@ h2, h3, h4 {
 }
 @media (min-width: 835px) {
   .footer_contact a:hover {
+    transition: all 0.2s ease-out;
     color: #f1faee;
   }
 }

@@ -144,7 +144,7 @@ h2,h3,h4
         border: none
         font-size: 30px
         font-family: $mainFont
-        color: #242424
+        color: #0f1b2c
         padding: 2%
         height: 100%
         cursor: pointer
@@ -536,6 +536,7 @@ h2,h3,h4
             filter: grayscale(1)
             opacity: 0.5
             &:hover
+                transition: all 0.2s ease-out
                 -webkit-filter: grayscale(0)
                 filter: none
                 opacity: 1
@@ -678,6 +679,8 @@ h2,h3,h4
         border: 0
         justify-self: center
         cursor: pointer
+        &:hover
+            background: #192f4d
         &:active
             background: #0f1b2c
     h4
@@ -744,6 +747,7 @@ h2,h3,h4
             color: $footerFontColor
             @media (min-width:835px)
                 &:hover
+                    transition: all 0.2s ease-out
                     color:$white
         &_mail
             display: flex

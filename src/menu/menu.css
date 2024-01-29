@@ -75,8 +75,9 @@
 }
 @media (min-width: 501px) {
   .menu li:hover {
+    transition: all 0.1s ease-out;
     cursor: pointer;
-    filter: drop-shadow(2px -1px 0px #f1faee);
+    filter: drop-shadow(2px 1px 0px #f1faee);
   }
 }
 
