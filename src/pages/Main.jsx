@@ -3,14 +3,14 @@ import Zebra from '../svg/zebra'
 import Telegram from '../svg/telegram.svg'
 import Vk from '../svg/vk.svg'
 
-import Mail from '../svg/mail.svg'
-import Flag from '../svg/flag.svg'
+
 import phoneTP from '../pic/phioneTP@1x.png'
 import macBook from '../pic/macBook.png'
 import phone from '../pic/phone@1x.png'
 import background from '../pic/coachBackground.png'
 import Header from '../components/header/Header'
 import { useState } from 'react'
+import Footer from '../components/footer/Footer'
 function Main() {
 
     const [menuIsActive,setMenuIsActive] = useState(false)
@@ -185,31 +185,7 @@ function Main() {
               <p>После заполнения анкеты необходимо дождаться обратной связи.</p>
             </div>
           </div>
-          <div className='footer'>
-            <div className='footer_block section'>
-              <div className='footer_social'>
-                <h1 className='footer_title'>Baruzdin.tri</h1>
-                <div className='footer_contact'>
-                  <a href='https://vk.com/baruzdin_tri'>Vk</a>
-                  <a href='https://t.me/dmitriibaruzdin'>Telegram</a>
-                  <a href='https://www.instagram.com/baruzdin.tri?igsh=djFtajhyZzk3ZHJs&utm_source=qr'>Instagram</a>
-                  <a href='https://www.strava.com/athletes/dbaruzdin'>Strava</a>
-                  <div className='footer_contact_mail'>
-                    <img src={Mail} alt='mail'/>
-                    <a href="mailto:tri@baruzdin.online&body=Привет, у меня остались вопросы">tri@baruzdin.online</a>
-                  </div>
-                </div>
-              </div>
-              <div className='footer_location'>
-                <div className='footer_location_wrapper-city'>
-                  <img src={Flag} alt='ru'/>
-                  <div className='footer_location_city'>Saint-Petersburg</div>
-                </div>
-                <div className='footer_location_date'>2024</div>
-                
-              </div>
-            </div>
-          </div>
+          <Footer/>
         </div>
       </div>
     );
