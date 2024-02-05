@@ -57,14 +57,12 @@ h2, h3, h4 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 60px 40px 600px 62px;
-  gap: 3vh 2.75%;
-  margin-bottom: 30px;
+  column-gap: 2.75%;
+  margin-bottom: 80px;
 }
 @media (max-width: 500px) {
   .main {
-    row-gap: 20px;
-    grid-template-rows: 50px 63vh 60px;
+    margin-bottom: 50px;
   }
 }
 .main_page {
@@ -79,42 +77,33 @@ h2, h3, h4 {
 }
 .main_page_pic {
   display: flex;
-  height: 100%;
+  height: 544px;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 .main_page_pic div {
-  width: 360px;
+  width: 32%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main_page_pic div {
-    height: 100%;
-    width: 30vw;
+    padding-top: 4px;
   }
 }
 .main_page_pic .swimming {
-  background: no-repeat url(../pic/swimming.png);
-  background-size: cover;
+  background: center/cover no-repeat url(../pic/swimming.png);
 }
 .main_page_pic .cycling {
-  background: no-repeat url(../pic/cycling.png);
-  background-size: cover;
-  background-position: center;
+  background: center/cover no-repeat url(../pic/cycling.png);
   box-shadow: drop-shadow(8px -6px 0px #ADFF00);
-}
-@media (max-width: 1170px) {
-  .main_page_pic .cycling {
-    box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
-  }
+  box-shadow: 6px -6px 0px 0px rgb(173, 255, 0);
 }
 @media (max-width: 500px) {
   .main_page_pic .cycling {
-    box-shadow: 4px -4px 0px 0px rgb(173, 255, 0);
+    box-shadow: none;
   }
 }
 .main_page_pic .running {
-  background: no-repeat url(../pic/running.png);
-  background-size: cover;
-  background-position: center;
+  background: center/cover no-repeat url(../pic/running.png);
 }
 .main_page_slogan {
   position: absolute;

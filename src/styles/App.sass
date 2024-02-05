@@ -1,5 +1,4 @@
 @import ./variables/variable
-
 @font-face 
     font-family: "Oswald"
     src: url("../fonts/Oswald/Oswald-Light.ttf") format("truetype")
@@ -42,12 +41,10 @@ h2,h3,h4
     width: 100%
     display: grid
     grid-template-columns: repeat(3,1fr)
-    grid-template-rows: 60px 40px 600px 62px
-    gap: 3vh 2.75% 
-    margin-bottom: 30px
+    column-gap: 2.75% 
+    margin-bottom: 80px
     @media (max-width: 500px)
-        row-gap: 20px
-        grid-template-rows: 50px 63vh 60px
+        margin-bottom: 50px
     &_page
         grid-column: 1/4
         grid-row: 3/4
@@ -56,29 +53,23 @@ h2,h3,h4
             grid-row: 2/3
         &_pic
             display: flex
-            height: 100%
+            height: 544px
             justify-content: space-between
+            margin-bottom: 30px
             div
-                width: 360px
-                @media (max-width: 1200px)
-                    height: 100%
-                    width: 30vw
-            .swimming
-                background: no-repeat url(../pic/swimming.png)
-                background-size: cover
-            .cycling
-                background: no-repeat url(../pic/cycling.png)
-                background-size: cover
-                background-position: center 
-                box-shadow: $shadowDek
-                @media (max-width: 1170px)
-                    box-shadow: 6px -6px 0px 0px $green
+                width: 32%
                 @media (max-width: 500px)
-                    box-shadow: 4px -4px 0px 0px $green
+                    padding-top: 4px
+            .swimming
+                background: center / cover no-repeat url(../pic/swimming.png)
+            .cycling
+                background: center / cover no-repeat url(../pic/cycling.png)
+                box-shadow: $shadowDek
+                box-shadow: 6px -6px 0px 0px $green
+                @media (max-width: 500px)
+                    box-shadow: none
             .running
-                background: no-repeat url(../pic/running.png)
-                background-size: cover
-                background-position: center
+                background: center / cover no-repeat url(../pic/running.png)
 
         &_slogan
             position: absolute
