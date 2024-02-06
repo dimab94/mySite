@@ -29,6 +29,15 @@
   justify-content: space-around;
 }
 
+.header-back h2 {
+  margin: 0;
+  font-family: "VT323", sans-serif;
+  font-size: 30px;
+}
+.header-back a {
+  text-decoration: none;
+}
+
 .title {
   text-align: center;
   margin-bottom: 30px;

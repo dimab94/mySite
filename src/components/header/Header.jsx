@@ -16,8 +16,8 @@ function Header ({active,setActive, items}) {
                 <Menu active={active} setActive={setActive} items={items}/>
             </div>
             :
-            <div>
-                <Link to='/'><h3>back</h3></Link>
+            <div className='header-back'>
+                <Link to='/'><h2>Back</h2></Link>
             </div>
             }
         </nav>
