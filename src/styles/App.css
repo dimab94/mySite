@@ -793,6 +793,7 @@ h2, h3, h4 {
   grid-row: 1/2;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   filter: drop-shadow(2px 3px 0px #ADFF00);
 }
 @media (max-width: 834px) {
@@ -801,7 +802,7 @@ h2, h3, h4 {
     grid-row: 3/4;
   }
 }
-@media (max-width: 538px) {
+@media (max-width: 570px) {
   .programs_top {
     display: none;
   }
@@ -858,7 +859,7 @@ h2, h3, h4 {
     grid-row: 3/4;
   }
 }
-@media (max-width: 538px) {
+@media (max-width: 570px) {
   .programs_benefit_goals {
     grid-column: 2/4;
   }
@@ -868,14 +869,6 @@ h2, h3, h4 {
     grid-column: 1/2;
     grid-row: 5/6;
   }
-}
-.programs_run {
-  background: no-repeat url(../pic/runCard.png) top center;
-  background-size: cover;
-}
-.programs_triathlon {
-  background: no-repeat url(../pic/swimCard.png) top center;
-  background-size: cover;
 }
 .programs_feedback {
   grid-column: 3/5;
@@ -905,89 +898,6 @@ h2, h3, h4 {
 }
 .programs_feedback p {
   width: 100%;
-}
-.programs .card_wrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-self: center;
-  height: 389px;
-}
-@media (max-width: 579px) {
-  .programs .card_wrapper {
-    margin-bottom: 5%;
-  }
-}
-.programs .card {
-  width: 230px;
-  filter: drop-shadow(8px -6px 0px #ADFF00);
-  border-radius: 20px;
-  display: grid;
-  grid-template-rows: 118px 125px 60px 80px;
-  text-align: center;
-  align-items: center;
-}
-@media (max-width: 890px) {
-  .programs .card {
-    filter: drop-shadow(4px -2px 0px #ADFF00);
-  }
-}
-.programs .card_triathlon {
-  grid-column: 3/4;
-  grid-row: 2/5;
-}
-@media (max-width: 834px) {
-  .programs .card_triathlon {
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
-}
-@media (max-width: 579px) {
-  .programs .card_triathlon {
-    grid-column: 2/4;
-  }
-}
-@media (max-width: 474px) {
-  .programs .card_triathlon {
-    grid-column: 1/2;
-    grid-row: 6/7;
-  }
-}
-.programs .card_run {
-  grid-column: 4/5;
-  grid-row: 2/5;
-}
-@media (max-width: 834px) {
-  .programs .card_run {
-    grid-column: 3/4;
-    grid-row: 4/5;
-  }
-}
-@media (max-width: 579px) {
-  .programs .card_run {
-    grid-column: 2/4;
-    grid-row: 5/6;
-  }
-}
-@media (max-width: 474px) {
-  .programs .card_run {
-    grid-column: 1/2;
-    grid-row: 7/8;
-  }
-}
-.programs button {
-  width: 210px;
-  height: 60px;
-  background: rgb(29, 53, 87);
-  border-radius: 10px;
-  border: 0;
-  justify-self: center;
-  cursor: pointer;
-}
-.programs button:hover {
-  background: #192f4d;
-}
-.programs button:active {
-  background: #0f1b2c;
 }
 .programs h4 {
   font-family: "Oswald", sans-serif;

@@ -2,8 +2,6 @@
 import Zebra from '../svg/zebra'
 import Telegram from '../svg/telegram.svg'
 import Vk from '../svg/vk.svg'
-
-
 import phoneTP from '../pic/phioneTP@1x.png'
 import macBook from '../pic/macBook.png'
 import phone from '../pic/phone@1x.png'
@@ -11,10 +9,12 @@ import background from '../pic/coachBackground.png'
 import Header from '../components/header/Header'
 import { useState } from 'react'
 import Footer from '../components/footer/Footer'
+import Card from '../components/cards/Card'
+
 function Main() {
 
     const [menuIsActive,setMenuIsActive] = useState(false)
-
+  
     const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
     const formMult = 'https://forms.yandex.ru/u/65aebf2d2530c278d9a62430/'
   
@@ -160,26 +160,7 @@ function Main() {
                 <h2>Цели</h2>
                   <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
             </div>
-            <div className='card_wrapper card_triathlon'>
-              <div className='programs_triathlon card'>
-                <h4>Triathlon</h4>
-                <p>Комплексная подготовка по&nbsp;всем трем видам.</p>
-                <h5>12 000₽</h5>
-                <button onClick={()=>window.location.href = formTri}>
-                  Заполнить анкету
-                </button>
-              </div>
-            </div>
-            <div className='card_wrapper card_run'>
-              <div className='programs_run card'>
-                <h4>Multisport</h4>
-                <p>Подготовка по плаванию&nbsp;/ велосипеду&nbsp;/ бегу.</p>
-                <h5>10 000₽</h5>
-                <button onClick={()=>window.location.href = formMult}>
-                  Заполнить анкету
-                </button>
-              </div>
-            </div>
+            <Card/>
             <div className='programs_bottom'><Zebra/></div>
             <div className='programs_feedback'>
               <p>После заполнения анкеты необходимо дождаться обратной связи.</p>
