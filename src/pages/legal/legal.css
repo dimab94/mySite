@@ -1,0 +1,35 @@
+.legal_title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  color: #f1faee;
+  grid-column: 1/6;
+  grid-row: 1/2;
+  text-align: center;
+}
+.legal_list {
+  list-style-type: none;
+  grid-column: 1/6;
+  grid-row: 2/3;
+}
+.legal_list li {
+  margin: 20px;
+}
+.legal_link {
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  color: #f1faee;
+  list-style: none;
+}
+.legal_link:hover {
+  border-bottom: 1px solid;
+  transition: all 0.2s ease-out;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=legal.css.map */

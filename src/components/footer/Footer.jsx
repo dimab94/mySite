@@ -1,6 +1,7 @@
 import './footer.css'
 import Mail from '../../svg/mail.svg'
 import Flag from '../../svg/flag.svg'
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return ( 
@@ -19,12 +20,17 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='footer_location'>
-                <div className='footer_location_wrapper-city'>
-                    <img src={Flag} alt='ru'/>
-                    <div className='footer_location_city'>Saint-Petersburg</div>
+            <div className='footer_right-side'>
+                <div className='footer_right-side_documents'>
+                    <Link className='doc' to={'/legal'}>Правовая информация</Link>
                 </div>
-                <div className='footer_location_date'>2024</div>
+                <div className='footer_right-side_wrapper'>
+                    <div className='footer_right-side_wrapper_city'>
+                        <img src={Flag} alt='ru'/>
+                        <div className='footer_location_city'>Saint-Petersburg</div>
+                    </div>
+                    <div className='footer_right-side_date'>2024</div>
+                </div>
             </div>
         </div>
     </div>

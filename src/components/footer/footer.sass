@@ -11,8 +11,9 @@
     font-family: $secondFont
     color: $footerFontColor
     font-size: 24px
+    align-self: flex-end
     @media (max-width:474px)
-        height:205px
+        height:270px
     &_block
         height: 130px
         margin: 0 10px
@@ -52,10 +53,9 @@
         font-size: 40px
         @media (max-width:474px)
             text-align: center
-    &_location
+    &_right-side
+        margin-top: 12px
         grid-column: 4/6
-        align-self: flex-end
-        height: 55.2px
         display: flex
         align-items: flex-end
         justify-content: space-between
@@ -66,12 +66,29 @@
             grid-column: 1/2
             grid-row: 2/3
             justify-self: center
-            flex-direction: row
             width: 230px
-            height: 40px
-        &_wrapper-city
+            height: 90px
+            align-items: center
+            margin-top:0
+        &_wrapper
             display: flex
-            width: 180px
-            justify-content: space-between
-            img
-                width: 20px
+            align-items: flex-end
+            flex-direction: column
+            @media (max-width:474px)
+                align-items: center
+            &_city
+                display: flex
+                width: 180px
+                justify-content: space-between
+                img
+                    width: 20px
+.doc
+    font-family: $mainFont
+    font-size: 20px
+    text-decoration: none
+    color: $footerFontColor
+    &:hover
+        transition: all 0.2s ease-out
+        color:$white
+
+        

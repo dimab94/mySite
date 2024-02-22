@@ -1,8 +1,9 @@
 import './header.css'
 import Menu from '../menu/menu';
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function Header ({active,setActive, items}) {
+    const navigate = useNavigate()
     return ( 
         <nav className='wrapper'>
             <h1 className='title'>Baruzdin.tri</h1>
@@ -17,7 +18,7 @@ function Header ({active,setActive, items}) {
             </div>
             :
             <div className='header-back'>
-                <Link to='/'><h2>Back</h2></Link>
+                <button onClick={() => navigate(-1)}>go back</button>
             </div>
             }
         </nav>

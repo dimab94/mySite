@@ -15,15 +15,12 @@ function Main() {
 
     const [menuIsActive,setMenuIsActive] = useState(false)
   
-    const formTri = 'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/'
-    const formMult = 'https://forms.yandex.ru/u/65aebf2d2530c278d9a62430/'
-  
     const items = [{value:'About',href:'#about'},{value:'Coach',href:'#coach'},{value:'Programs',href:'#programs'},{value:'Payment',href:''}]
 
     return (
       <div className="App">
         <div className='generall_page_wrapper' onClick={()=>setMenuIsActive(false)}>
-          <div className='main'>
+          <div className='main first-page'>
             <Header active={menuIsActive} setActive={setMenuIsActive} items={items}/>
             <div className='main_page'>
               <div className='main_page_pic'>

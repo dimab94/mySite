@@ -29,6 +29,9 @@
   justify-content: space-around;
 }
 
+.header-back {
+  display: flex;
+}
 .header-back h2 {
   margin: 0;
   font-family: "VT323", sans-serif;
