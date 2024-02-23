@@ -4,15 +4,37 @@
   color: #f1faee;
   grid-column: 1/6;
   grid-row: 1/2;
-  text-align: center;
+}
+@media (max-width: 1300px) {
+  .legal_title {
+    margin: 24px 60px;
+  }
+}
+@media (max-width: 500px) {
+  .legal_title {
+    margin: 24px 30px;
+    font-size: 20px;
+  }
 }
 .legal_list {
   list-style-type: none;
   grid-column: 1/6;
   grid-row: 2/3;
+  padding: 0;
 }
 .legal_list li {
-  margin: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+@media (max-width: 1300px) {
+  .legal_list {
+    margin: 24px 60px;
+  }
+}
+@media (max-width: 500px) {
+  .legal_list {
+    margin: 10px 30px;
+  }
 }
 .legal_link {
   font-family: "Oswald", sans-serif;

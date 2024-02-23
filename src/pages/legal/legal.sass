@@ -7,13 +7,24 @@
         color: $white
         grid-column: 1/6
         grid-row: 1/2
-        text-align: center
+        @media (max-width: 1300px)
+            margin: 24px 60px
+        @media (max-width: 500px)
+            margin: 24px 30px
+            font-size: 20px
     &_list
         list-style-type: none
         grid-column: 1/6
         grid-row: 2/3
+        padding: 0
         li
-            margin: 20px
+            margin-top: 20px
+            font-size: 20px
+        @media (max-width: 1300px)
+            margin: 24px 60px
+        @media (max-width: 500px)
+            margin: 10px 30px
+            
     &_link
         font-family: $mainFont
         text-decoration: none

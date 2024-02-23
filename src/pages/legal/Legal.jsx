@@ -9,7 +9,7 @@ function Legal() {
             <div className="main-content">
                 <div className="main any-page"><Header/></div>
                 <div className="container section">
-                    <p className="legal_title">С&nbsp;помошью этого сайта мы&nbsp;можете сделать свои первые шаги в&nbsp;спорте на&nbsp;выносливость. Чтобы узнать правила пользования сайтом, какие сведения собираются и&nbsp;как они используются, и&nbsp;другую информацию, внимательно изучите эти документы.</p>
+                    <p className="legal_title">С&nbsp;помощью этого сайта мы&nbsp;можете сделать свои первые шаги в&nbsp;спорте на&nbsp;выносливость. Чтобы узнать правила пользования сайтом, какие сведения собираются и&nbsp;как они используются, и&nbsp;другую информацию, внимательно изучите эти документы.</p>
                     <ul className="legal_list">
                         <li><Link className="legal_link" to={'/rules'}>Правила пользования сайтом</Link></li>
                         <li><Link className="legal_link" to={'/privacy'}>Политика конфиденциальности</Link></li>
@@ -18,7 +18,7 @@ function Legal() {
                     </ul>
                 </div>
             </div>
-            <Footer/>
+            <Footer props={'legal'}/>
         </div>
     );
 }

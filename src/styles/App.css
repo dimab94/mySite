@@ -62,6 +62,7 @@ h2, h3, h4 {
 
 .first-page {
   margin-bottom: 80px;
+  max-width: 1172px;
 }
 @media (max-width: 500px) {
   .first-page {
@@ -71,15 +72,16 @@ h2, h3, h4 {
 
 .any-page {
   margin-bottom: 20px;
+  background: rgb(29, 29, 29);
+  width: 100%;
 }
 @media (max-width: 500px) {
   .any-page {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
 }
 
 .main {
-  max-width: 1172px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

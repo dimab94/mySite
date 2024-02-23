@@ -3,8 +3,9 @@ import Mail from '../../svg/mail.svg'
 import Flag from '../../svg/flag.svg'
 import { Link } from 'react-router-dom';
 
-function Footer() {
-    return ( 
+function Footer({props}) {
+    let location = props
+    return (
     <div className='footer'>
         <div className='footer_block section'>
             <div className='footer_social'>
@@ -22,7 +23,12 @@ function Footer() {
             </div>
             <div className='footer_right-side'>
                 <div className='footer_right-side_documents'>
-                    <Link className='doc' to={'/legal'}>Правовая информация</Link>
+                {location !== 'legal'
+                ?
+                <Link className='doc' to={'/legal'}>Правовая информация</Link>
+                :
+                <div></div>
+                }
                 </div>
                 <div className='footer_right-side_wrapper'>
                     <div className='footer_right-side_wrapper_city'>
