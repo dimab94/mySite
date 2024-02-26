@@ -61,7 +61,7 @@ h2, h3, h4 {
 }
 
 .first-page {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   max-width: 1172px;
 }
 @media (max-width: 500px) {
@@ -176,7 +176,6 @@ h2, h3, h4 {
   font-family: "Oswald", sans-serif;
   color: #0f1b2c;
   padding: 2%;
-  height: 100%;
   cursor: pointer;
   transition: all 0.1s ease-out;
 }
