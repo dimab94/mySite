@@ -54,4 +54,25 @@
   align-items: center;
 }
 
+.container {
+  width: 80%;
+}
+
+.doc-style {
+  font-family: sans-serif;
+  color: #f1faee;
+  padding: 2%;
+  line-height: 1.5rem;
+}
+.doc-style a {
+  color: #f1faee;
+}
+.doc-style a:hover {
+  cursor: pointer;
+}
+
+.doc-title {
+  text-align: center;
+}
+
 /*# sourceMappingURL=legal.css.map */
