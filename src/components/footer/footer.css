@@ -22,7 +22,7 @@
 }
 @media (max-width: 474px) {
   .footer_block {
-    height: 90%;
+    height: 100%;
   }
 }
 .footer_social {
@@ -90,11 +90,12 @@
 }
 @media (max-width: 474px) {
   .footer_right-side {
+    justify-content: flex-end;
     grid-column: 1/2;
     grid-row: 2/3;
     justify-self: center;
     width: 230px;
-    height: 90px;
+    height: 100px;
     align-items: center;
     margin-top: 0;
   }
@@ -108,14 +109,6 @@
   .footer_right-side_wrapper {
     align-items: center;
   }
-}
-.footer_right-side_wrapper_city {
-  display: flex;
-  width: 180px;
-  justify-content: space-between;
-}
-.footer_right-side_wrapper_city img {
-  width: 20px;
 }
 
 .doc {
