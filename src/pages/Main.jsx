@@ -146,7 +146,7 @@ function Main() {
             </div>
             <div className='programs_top'><Zebra/></div>
               <div className='programs_benefit_types'>
-                <h2>Виды спорта</h2>
+                <h2>Виды программ</h2>
                 <p>Подготовка к&nbsp;тритлону или к&nbsp;одному из&nbsp;видов в&nbsp;отдельности.</p>
               </div>
               <div className='programs_benefit_deadlines'>
@@ -155,7 +155,7 @@ function Main() {
               </div>
               <div className='programs_benefit_goals'>
                 <h2>Цели</h2>
-                  <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам.Помогу с&nbsp;выбором основного старта.</p>
+                  <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам. Помогу с&nbsp;выбором основного старта.</p>
             </div>
             <Card/>
             <div className='programs_bottom'><Zebra/></div>

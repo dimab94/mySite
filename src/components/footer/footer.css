@@ -66,6 +66,10 @@
   justify-content: space-between;
   width: 215px;
 }
+.footer_contact_mail:hover {
+  transition: all 0.2s ease-out;
+  color: #f1faee;
+}
 .footer_title {
   color: rgb(57, 57, 57);
   font-size: 40px;
@@ -111,11 +115,15 @@
   }
 }
 
-.doc {
+.doc, .doc_title {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
-  text-decoration: none;
   color: rgb(57, 57, 57);
+  margin: 0;
+}
+
+.doc {
+  text-decoration: none;
 }
 .doc:hover {
   transition: all 0.2s ease-out;

@@ -48,6 +48,9 @@
             align-items: center
             justify-content: space-between
             width: 215px
+            &:hover
+                transition: all 0.2s ease-out
+                color:$white
     &_title
         color: $footerFontColor
         font-size: 40px
@@ -77,11 +80,13 @@
             flex-direction: column
             @media (max-width:474px)
                 align-items: center
-.doc
+.doc, .doc_title
     font-family: $mainFont
     font-size: 20px
-    text-decoration: none
     color: $footerFontColor
+    margin: 0
+.doc
+    text-decoration: none
     &:hover
         transition: all 0.2s ease-out
         color:$white

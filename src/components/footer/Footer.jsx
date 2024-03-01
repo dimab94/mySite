@@ -2,7 +2,6 @@ import './footer.css'
 import Mail from '../../svg/mail.svg'
 import Flag from '../../svg/flag.svg'
 import { Link } from 'react-router-dom';
-import Payment from '../../pic/Payment.png';
 
 function Footer({props}) {
     let location = props
@@ -23,9 +22,7 @@ function Footer({props}) {
                 </div>
             </div>
             <div className='footer_right-side'>
-                <a href="https://freekassa.ru" target="_blank" rel="noopener noreferrer">
-                    <img src={Payment} title="Прием платежей на сайте"/>
-                </a>
+                <p className='doc_title'>Баруздин Д.Э. ИНН 781103860352</p>
                 <div className='footer_right-side_documents'>
                 {location !== 'legal'
                 ?

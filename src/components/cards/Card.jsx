@@ -26,7 +26,7 @@ function Card() {
                   <div className={'card card_'+item.clases}>
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>
-                    <h5>от {item.price}</h5>
+                    <h5>{item.price}</h5>
                     <Link preventScrollReset={false} className='card_link' to={item.path}>
                         <div className='card_button'>
                             <p>Заполнить анкету</p>
