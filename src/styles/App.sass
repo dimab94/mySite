@@ -35,6 +35,12 @@ h2,h3,h4
     font-family: $mainFont
     color: $green
     font-weight: normal
+
+button
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
 .generall_page_wrapper
     display: flex
     flex-direction: column
@@ -613,11 +619,10 @@ h2,h3,h4
         @media (max-width:474px)
             margin: 5% 0
             text-align: center
-    p,button
+    &_text
         font-family: $mainFont
         color: $white
         font-size: 20px
-    p
         @media (max-width:474px)
             text-align: center
             margin: 20px 2%

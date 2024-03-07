@@ -52,6 +52,12 @@ h2, h3, h4 {
   font-weight: normal;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .generall_page_wrapper {
   display: flex;
   flex-direction: column;
@@ -942,13 +948,13 @@ h2, h3, h4 {
     text-align: center;
   }
 }
-.programs p, .programs button {
+.programs_text {
   font-family: "Oswald", sans-serif;
   color: #f1faee;
   font-size: 20px;
 }
 @media (max-width: 474px) {
-  .programs p {
+  .programs_text {
     text-align: center;
     margin: 20px 2%;
   }

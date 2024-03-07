@@ -9,13 +9,15 @@ import background from '../pic/coachBackground.png'
 import Header from '../components/header/Header'
 import { useState } from 'react'
 import Footer from '../components/footer/Footer'
-import Card from '../components/cards/Card'
+import CardList from '../components/cardList/CardList'
+import Modal from '../Modal/Modal'
 
 function Main() {
 
     const [menuIsActive,setMenuIsActive] = useState(false)
-  
-    const items = [{value:'About',href:'#about'},{value:'Coach',href:'#coach'},{value:'Programs',href:'#programs'},{value:'Payment',href:''}]
+    const [modalActive,setModalActive] = useState(false)
+
+    const items = [{value:'About',href:'#about',key:'about'},{value:'Coach',href:'#coach',key:'coach'},{value:'Programs',href:'#programs',key:'programs'},{value:'Payment',href:'',key:'payment'}]
 
     return (
       <div className="App">
@@ -147,22 +149,25 @@ function Main() {
             <div className='programs_top'><Zebra/></div>
               <div className='programs_benefit_types'>
                 <h2>Виды программ</h2>
-                <p>Подготовка к&nbsp;тритлону или к&nbsp;одному из&nbsp;видов в&nbsp;отдельности.</p>
+                <p className='programs_text'>Подготовка к&nbsp;тритлону или к&nbsp;одному из&nbsp;видов в&nbsp;отдельности.</p>
               </div>
               <div className='programs_benefit_deadlines'>
                 <h2>Сроки</h2>
-                  <p>Программы подготовки рассчитаны на&nbsp;срок от&nbsp;2х&nbsp;месяцев, до&nbsp;2х&nbsp;лет.</p>
+                  <p className='programs_text'>Программы подготовки рассчитаны на&nbsp;срок от&nbsp;2х&nbsp;месяцев, до&nbsp;2х&nbsp;лет.</p>
               </div>
               <div className='programs_benefit_goals'>
                 <h2>Цели</h2>
-                  <p>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам. Помогу с&nbsp;выбором основного старта.</p>
+                  <p className='programs_text'>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам. Помогу с&nbsp;выбором основного старта.</p>
             </div>
-            <Card/>
+            <CardList setActive={setModalActive}/>
             <div className='programs_bottom'><Zebra/></div>
             <div className='programs_feedback'>
-              <p>После заполнения анкеты необходимо дождаться обратной связи.</p>
+              <p className='programs_text'>После заполнения анкеты необходимо дождаться обратной связи.</p>
             </div>
           </div>
+          <Modal active={modalActive} setActive={setModalActive}>
+            <CardList />
+          </Modal>
           <Footer/>
         </div>
       </div>
