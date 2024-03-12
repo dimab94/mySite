@@ -19,6 +19,42 @@ function Main() {
 
     const items = [{value:'About',href:'#about',key:'about'},{value:'Coach',href:'#coach',key:'coach'},{value:'Programs',href:'#programs',key:'programs'},{value:'Payment',href:'',key:'payment'}]
 
+    const cards=[
+      {
+          class: 'Triathlon',
+          key: '1.0',
+          card: [{
+            title:'Triathlon',
+            description:'Комплексная подготовка по\u00A0всем трем видам.',
+            price:'12 000₽',
+            path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
+            key: '1.1'
+          },
+          {title:'Triathlon +',
+          description:'Комплексная подготовка по\u00A0всем трем видам.',
+          price:'12 000₽',
+          path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
+          key: '1.2'}
+        ]
+      },
+      {
+          class: 'Multisport',
+          key: '2.0',
+          card: [{
+            title:'Multisport',
+            description:'Подготовка по плаванию\u00A0/ велосипеду\u00A0/ бегу.',
+            price:'10 000₽',
+            path:'https://forms.yandex.ru/u/65aebf2d2530c278d9a62430/',
+            key: '2.1'
+          }]
+      }
+    ]
+
+    const [cardsList,setCardsList] = useState([])
+
+    const handleFilter =(cardClassArr)=> setCardsList(cardClassArr)
+
+
     return (
       <div className="App">
         <div className='generall_page_wrapper' onClick={()=>setMenuIsActive(false)}>
@@ -159,14 +195,14 @@ function Main() {
                 <h2>Цели</h2>
                   <p className='programs_text'>На&nbsp;каждой из&nbsp;программ подготовлю вас к&nbsp;1-2 основным стартам. Помогу с&nbsp;выбором основного старта.</p>
             </div>
-            <CardList setActive={setModalActive}/>
+            <CardList setActive={setModalActive} cards={cards} handleFilter={handleFilter}/>
             <div className='programs_bottom'><Zebra/></div>
             <div className='programs_feedback'>
               <p className='programs_text'>После заполнения анкеты необходимо дождаться обратной связи.</p>
             </div>
           </div>
           <Modal active={modalActive} setActive={setModalActive}>
-            <CardList />
+            <CardList cards={cardsList}/>
           </Modal>
           <Footer/>
         </div>
