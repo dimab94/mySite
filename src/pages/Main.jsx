@@ -24,18 +24,20 @@ function Main() {
           class: 'Triathlon',
           key: '1.0',
           card: [{
-            title:'Triathlon',
-            description:'Комплексная подготовка по\u00A0всем трем видам.',
+            title:'Basic',
+            description:'Базовая программа персонального планирования по&nbsp;триатлону.',
             price:'12 000₽',
+            advantages:['Тренировки по&nbsp;трем видам, ОФП, растяжка и&nbsp;др.','Первичная консультация','Еженедельное составление плана тренировок','Еженедельная проверка выпонения тренировок','Обратная связь в&nbsp;сообщениях (мессенджерах)','Планирование гонок'],
             path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
             key: '1.1'
-          },
-          {title:'Triathlon +',
-          description:'Комплексная подготовка по\u00A0всем трем видам.',
-          price:'12 000₽',
-          path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
-          key: '1.2'}
-        ]
+            },
+            {title:'Plus',
+            description:'Улучшеная программа персонального планирования по&nbsp;триатлону.',
+            price:'15 000₽',
+            advantages:['Первичная консультация','Еженедельное составление плана тренировок','Проверка 1&nbsp;раз в&nbsp;2&nbsp;дня','Корректировки плана&rsquo;,&rsquo;Связь в&nbsp;удобном для тебя формате (звонки/сообщения)','Планирование гонок','Заморозка 1-3 недели'],
+            path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
+            key: '1.2'
+          }]
       },
       {
           class: 'Multisport',
@@ -44,6 +46,7 @@ function Main() {
             title:'Multisport',
             description:'Подготовка по плаванию\u00A0/ велосипеду\u00A0/ бегу.',
             price:'10 000₽',
+            advantages:['Тренировки по избранному виду, ОФП, растяжка и&nbsp;др.','Первичная консультация','Еженедельное составление плана тренировок','Еженедельная проверка выпонения тренировок','Обратная связь в&nbsp;сообщениях (мессенджерах)','Планирование гонок'],
             path:'https://forms.yandex.ru/u/65aebf2d2530c278d9a62430/',
             key: '2.1'
           }]
@@ -201,8 +204,7 @@ function Main() {
               <p className='programs_text'>После заполнения анкеты необходимо дождаться обратной связи.</p>
             </div>
           </div>
-          <Modal active={modalActive} setActive={setModalActive}>
-            <CardList cards={cardsList}/>
+          <Modal active={modalActive} setActive={setModalActive} filterCards={cardsList}>
           </Modal>
           <Footer/>
         </div>
