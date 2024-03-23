@@ -10,7 +10,7 @@ import Header from '../components/header/Header'
 import { useState } from 'react'
 import Footer from '../components/footer/Footer'
 import CardList from '../components/cardList/CardList'
-import Modal from '../Modal/Modal'
+import Modal from '../modal/Modal'
 
 function Main() {
 
@@ -34,7 +34,7 @@ function Main() {
             {title:'Plus',
             description:`Улучшеная программа персонального планирования\u00A0триатлону.`,
             price:'15 000₽',
-            advantages:[`Первичная консультация`,`Еженедельное составление плана тренировок`,`Проверка 1\u00A0раз в\u00A02\u00A0дня`,`Корректировки плана&rsquo;,&rsquo;Связь\u00A0удобном для тебя формате (звонки/сообщения)`,`Планирование гонок`,`Заморозка 1-3 недели`],
+            advantages:[`Первичная консультация`,`Еженедельное составление плана тренировок`,`Проверка 1\u00A0раз в\u00A02\u00A0дня`,`Корректировки плана`,`Связь\u00A0удобном для тебя формате (звонки/сообщения)`,`Планирование гонок`,`Заморозка 1-3 недели`],
             path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
             key: '1.2'
           }]
@@ -53,7 +53,7 @@ function Main() {
       }
     ]
 
-    const [cardsList,setCardsList] = useState(cards[0])
+    const [cardsList,setCardsList] = useState(cards[1])
 
     const handleFilter =(cardClassArr)=> setCardsList(cardClassArr)
 

@@ -1,39 +1,46 @@
-import React, { Children, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Link } from "react-router-dom";
 import './modal.css'
 
 const Modal = ({active,setActive,filterCards}) => {
-    let programCard = filterCards.card
-    let defCard = programCard[0]
-
-    const [targetProgram,setTargetProgram]=useState(defCard)
+    let programCard = filterCards.card 
+    const [targetProgram,setTargetProgram]=useState(programCard[0])
+    const [checkbox,setCheckbox]=useState()
+    const checking = ()=>{checkbox ? setCheckbox(false) : setCheckbox(true)}
+    
+    useEffect(()=>{
+        setTargetProgram(programCard[0])
+    },[programCard])
 
     return (
         <div className={active ? 'modal active' : 'modal'} onClick={()=>{setActive(false)}}>
             <div className={active ? 'modal_content active' : 'modal_content'} onClick={e=>e.stopPropagation()}>
-                <div className='modal_content_header'>
+                <div className={filterCards?'modal_content_header '+ (filterCards.class).toLowerCase():'modal_content_header'}>
                     <p className='modal_content_header_title'>{filterCards.class}</p>
                 </div>
                 <div className='modal_content_tumbler'>
                     {programCard.map(item=>
-                        <div className='modal_content_tumbler_active' onClick={()=>setTargetProgram(item)}>{item.title}</div>
+                        <div className={(targetProgram==item)?'modal_content_tumbler_el active':'modal_content_tumbler_el'} onClick={()=>setTargetProgram(item)}><p>{item.title}</p></div>
                     )}
                 </div>
-                <div className='modal_content_description'></div>
-                <div className='modal_content_advantages'>
-                    <p className='modal_content_advantages_title'>Что входит в эту программу?</p>
-                    <ul>
-                        {(targetProgram.advantages).map(item=>
-                            <li>{item}</li>
-                        )}
-                    </ul>
+                <div className='modal_content_wrapper'>
+                    <div className='modal_content_description'>{targetProgram.description}</div>
+                    <div className='modal_content_advantages'>
+                        <p className='modal_content_advantages_title'>Что входит в эту программу?</p>
+                        <ul>
+                            {(targetProgram.advantages).map(item=>
+                                <li>{item}</li>
+                            )}
+                        </ul>
+                    </div>
+                    <div className='modal_content_price'>{targetProgram.price}</div>
+                    <div className='modal_content_acceptPolicy'>
+                        <input type='checkbox' id="accept" name='privacy_accept' onClick={()=>checking()} />
+                        <label htmlFor='accept'>Я согласен с условиями политики конфиденциальности.</label>
+                        <Link className='card_link' to={'/privacy'}>Подробнее</Link>
+                    </div>
+                    <button disabled={!checkbox} className={checkbox? 'modal_content_button active': 'modal_content_button'} onClick={(e) => {e.preventDefault(); window.open(targetProgram.path)}}>Заполнить анкету</button>
                 </div>
-                <div className='modal_content_price'></div>
-                <div className='modal_content_acceptPolicy'>
-                    <input type="checkbox" id="accept" name="Я согласен с условиями политики конфиденциальности. Подробне" />
-                </div>
-                <button>
-                    Заполнить анкету
-                </button>
             </div>
         </div>
     );

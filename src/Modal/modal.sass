@@ -3,7 +3,7 @@
 .modal
     height: 100vh
     width: 100vw
-    background-color: rgba(0,0,0,0.4)
+    background-color: rgba(0, 0, 0, 0.60)
     position: fixed
     top: 0
     left: 0
@@ -13,16 +13,90 @@
     opacity: 0
     pointer-events: none
     transition: 0.3s all
+    font-family: $mainFont
+    & p
+        margin: 0
     &_content
-        padding: 20px
         width: 50vw
         border-radius: 5px
         background-color: white
         transform: scale(0.8)
         transition: 0.1s all
+        background: rgba(29, 29, 29, 1)
+        color: $white
         &.active
             transform: scale(1)
-        
+        &_header
+            display: flex
+            height: 150px
+            width: 100%
+            justify-content: center
+            align-items: center
+            background-blend-mode: multiply
+            margin-bottom: 22px
+            &.triathlon
+                background: center / cover no-repeat url(../pic/triathlon-card-background.png),rgba(36, 36, 36, 0.25)
+            &.multisport
+                background: center / cover no-repeat url(../pic/multisport-card-background.png),rgba(36, 36, 36, 0.25)
+            & p
+                font-size: 40px
+                color: $white
+                filter: drop-shadow(1px 1px $footerFontColor)
+        &_tumbler
+            display: flex
+            justify-content: center
+            font-family: $secondFont
+            margin-bottom: 22px
+            &_el
+                border: 1px $green solid
+                font-size: 25px
+                width: 65px
+                text-align: center
+                cursor: pointer
+                &.active
+                    background: $green
+                    color: #000
+        &_wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+        &_description
+            margin-bottom: 22px
+        &_advantages
+            width: 350px
+            height: 215px
+            & p
+                text-align: center
+                color: $green
+            & li
+                padding-bottom: 5px
+        &_price
+            color: $green
+            font-size: 30px
+        &_acceptPolicy
+            display: flex
+            height: 50px
+            align-items: center
+            width: 420px
+            justify-content: space-around
+            & label, input
+                cursor: pointer
+            & a
+                color: $white
+        &_button
+            width: 250px
+            height: 65px
+            padding: 0
+            font-family: $mainFont
+            font-size: 20px
+            margin-bottom: 20px
+            border: none
+            background: $footerGrey
+            cursor: not-allowed
+            &.active
+                background: $green
+                cursor: pointer
     &.active
         opacity: 1
         pointer-events: all
+
