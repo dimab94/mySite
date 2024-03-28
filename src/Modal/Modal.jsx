@@ -16,6 +16,10 @@ const Modal = ({active,setActive,filterCards}) => {
         <div className={active ? 'modal active' : 'modal'} onClick={()=>{setActive(false)}}>
             <div className={active ? 'modal_content active' : 'modal_content'} onClick={e=>e.stopPropagation()}>
                 <div className={filterCards?'modal_content_header '+ (filterCards.class).toLowerCase():'modal_content_header'}>
+                    <div className='modal_close' onClick={()=>{setActive(false)}}>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <p className='modal_content_header_title'>{filterCards.class}</p>
                 </div>
                 <div className='modal_content_tumbler'>
@@ -35,8 +39,10 @@ const Modal = ({active,setActive,filterCards}) => {
                     </div>
                     <div className='modal_content_price'>{targetProgram.price}</div>
                     <div className='modal_content_acceptPolicy'>
-                        <input type='checkbox' id="accept" name='privacy_accept' onClick={()=>checking()} />
-                        <label htmlFor='accept'>Я согласен с условиями политики конфиденциальности.</label>
+                        <div>
+                            <input type='checkbox' id="accept" name='privacy_accept' onClick={()=>checking()} />
+                            <label htmlFor='accept'>Я согласен с условиями политики конфиденциальности.</label>
+                        </div>
                         <Link className='card_link' to={'/privacy'}>Подробнее</Link>
                     </div>
                     <button disabled={!checkbox} className={checkbox? 'modal_content_button active': 'modal_content_button'} onClick={(e) => {e.preventDefault(); window.open(targetProgram.path)}}>Заполнить анкету</button>
