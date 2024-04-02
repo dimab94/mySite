@@ -1,6 +1,5 @@
 import './footer.css'
 import Mail from '../../svg/mail.svg'
-import Flag from '../../svg/flag.svg'
 import { Link } from 'react-router-dom';
 
 function Footer({props}) {

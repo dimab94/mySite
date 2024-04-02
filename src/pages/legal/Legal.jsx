@@ -7,7 +7,7 @@ function Legal() {
     return (  
         <div className="generall_page_wrapper">
             <div className="main-content">
-                <div className="main any-page"><Header/></div>
+                <div className="any-page"><Header/></div>
                 <div className="container section">
                     <p className="legal_title">С&nbsp;помощью этого сайта вы&nbsp;можете сделать свои первые шаги в&nbsp;спорте на&nbsp;выносливость. Чтобы узнать правила пользования сайтом, какие сведения собираются и&nbsp;как они используются, и&nbsp;другую информацию, внимательно изучите эти документы.</p>
                     <ul className="legal_list">

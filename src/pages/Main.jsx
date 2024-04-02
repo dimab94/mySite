@@ -17,8 +17,6 @@ function Main() {
     const [menuIsActive,setMenuIsActive] = useState(false)
     const [modalActive,setModalActive] = useState(false)
 
-    const items = [{value:'About',href:'#about',key:'about'},{value:'Coach',href:'#coach',key:'coach'},{value:'Programs',href:'#programs',key:'programs'},{value:'Payment',href:'',key:'payment'}]
-
     const cards=[
       {
           class: 'Triathlon',
@@ -61,8 +59,8 @@ function Main() {
     return (
       <div className="App">
         <div className='generall_page_wrapper' onClick={()=>setMenuIsActive(false)}>
+          <Header active={menuIsActive} setActive={setMenuIsActive}/>
           <div className='main first-page'>
-            <Header active={menuIsActive} setActive={setMenuIsActive} items={items}/>
             <div className='main_page'>
               <div className='main_page_pic'>
                 <div className='swimming'/>

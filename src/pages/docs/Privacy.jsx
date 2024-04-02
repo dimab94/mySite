@@ -6,7 +6,7 @@ function Privacy() {
     return (  
         <div className="generall_page_wrapper">
             <div className="main-content">
-                <div className="main any-page"><Header/></div>
+                <div className="any-page"><Header/></div>
                     <div className="container doc-style">
                         <p className="doc-title_main">Политика обработки персональных данных</p>
                         <br/>

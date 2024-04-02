@@ -10,7 +10,7 @@ const Menu = ({items,active,setActive}) => {
           {items.map(item=>
                 <li onClick={()=>setActive(false)} key={item.key}>
                     {item.value=='Payment'?
-                    <Link to={`/${item.value}`}>{item.value}</Link>
+                    <Link to={`/${(item.value).toLowerCase()}`}>{item.value}</Link>
                     :
                     <a href={item.href}>{item.value}</a>
                     }                  

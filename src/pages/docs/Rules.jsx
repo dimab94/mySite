@@ -6,7 +6,7 @@ function Rules() {
     return (  
         <div className="generall_page_wrapper">
                 <div className="main-content">
-                <div className="main any-page"><Header/></div>
+                <div className="any-page"><Header/></div>
                 <div className="container doc-style">
                     <p className="doc-title_main">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</p>
                     Настоящее Соглашение заключается между Баруздиным Дмитрием Эдуардовичем, в дальнейшем именуемым «Владелец», и любым лицом, становящимся после принятия условий данного соглашения пользователем сайта, расположенного в сети Интернет по адресу:  https://baruzdin.online (далее – Сайт), в дальнейшем именуемым «Пользователь», вместе по тексту Соглашения именуемые «Стороны», а по отдельности – «Сторона».<br/>

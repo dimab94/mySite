@@ -1,14 +1,18 @@
 import './header.css'
 import Menu from '../menu/menu';
 import { useNavigate,useLocation } from "react-router-dom"
+import { useState } from 'react';
 
-function Header ({active,setActive, items}) {
+function Header ({active,setActive}) {
     const navigate = useNavigate()
     const location = useLocation()
+
+    const items = [{value:'About',href:'#about',key:'about'},{value:'Coach',href:'#coach',key:'coach'},{value:'Programs',href:'#programs',key:'programs'},{value:'Payment',href:'',key:'payment'}]
+
     return ( 
         <nav className={location.pathname==='/'?'main-wrapper':'wrapper'}>
             <h1 className='title'>Baruzdin.tri</h1>
-            {items ? 
+            {(location.pathname==='/'||location.pathname==='/legal'||location.pathname==='/payment') ?
             <div className='header-menu'>
                 <div className={active ? 'burger close' : 'burger'} onClick={(e)=>{e.stopPropagation(); setActive(!active)}}>
                   <span></span>

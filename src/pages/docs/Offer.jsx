@@ -6,7 +6,7 @@ function Offer() {
     return (  
         <div className="generall_page_wrapper">
             <div className="main-content">
-                <div className="main any-page"><Header/></div>
+                <div className="any-page"><Header/></div>
                 <div className="container doc-style">
                     <p className="doc-title_main">Публичная оферта</p>
                     Настоящая оферта в соответствии с пунктом 2 статьи 437 Гражданского кодекса Российской Федерации является официальным предложением (публичной офертой) Баруздина Дмитрия Эдуардовича, именуемого в дальнейшем «Исполнитель», и содержит все существенные условия предоставления услуг.<br/>
