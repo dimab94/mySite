@@ -3,11 +3,11 @@ import Menu from '../menu/menu';
 import { useNavigate,useLocation } from "react-router-dom"
 import { useState } from 'react';
 
-function Header ({active,setActive}) {
+function Header ({active,setActive,setRefreshPage}) {
     const navigate = useNavigate()
     const location = useLocation()
 
-    const items = [{value:'About',href:'#about',key:'about'},{value:'Coach',href:'#coach',key:'coach'},{value:'Programs',href:'#programs',key:'programs'},{value:'Payment',href:'',key:'payment'}]
+    const items = [{value:'About',key:'about'},{value:'Coach',key:'coach'},{value:'Programs',key:'programs'},{value:'Payment',key:'payment'}]
 
     return ( 
         <nav className={location.pathname==='/'?'main-wrapper':'wrapper'}>
@@ -19,7 +19,7 @@ function Header ({active,setActive}) {
                   <span></span>
                   <span></span>
                 </div>
-                <Menu active={active} setActive={setActive} items={items}/>
+                <Menu active={active} setActive={setActive} items={items} setRefreshPage={setRefreshPage}/>
             </div>
             :
             <div className='header-back'>
