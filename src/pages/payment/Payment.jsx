@@ -2,12 +2,11 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
-const Payment = () => {
+const Payment = ({setRefreshPage}) => {
     return (
         <div className="generall_page_wrapper">
             <div className="main-content">
-                <div className="payment_wrapper">
-                    <div className="payment_programs">x</div>
+                <div className="any-page">
                 </div>
             </div>
         </div>

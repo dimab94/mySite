@@ -1,15 +1,6 @@
-
-import Zebra from '../svg/zebra'
-import Telegram from '../svg/telegram.svg'
-import Vk from '../svg/vk.svg'
-import phoneTP from '../pic/phioneTP@1x.png'
-import macBook from '../pic/macBook.png'
-import phone from '../pic/phone@1x.png'
-import background from '../pic/coachBackground.png'
 import Header from '../components/header/Header'
 import { useState } from 'react'
 import Footer from '../components/footer/Footer'
-import CardList from '../components/cardList/CardList'
 import Modal from '../modal/Modal'
 import MainContent from '../components/mainContent/MainContent'
 import Payment from './payment/Payment'
@@ -58,13 +49,12 @@ function Main() {
     const handleFilter =(cardClassArr)=> setCardsList(cardClassArr)
 
     const [refreshPage,setRefreshPage] = useState(false)
-
     console.log(refreshPage)
     return (
       <div className="App">
         <div className='generall_page_wrapper' onClick={()=>setMenuIsActive(false)}>
           <Header active={menuIsActive} setActive={setMenuIsActive} setRefreshPage={setRefreshPage}/>
-          {refreshPage ? <Payment/> :<MainContent handleFilter={handleFilter} setModalActive={setModalActive} cards={cards}/>}
+          {refreshPage=='payment' ? <Payment setRefreshPage={setRefreshPage}/> :<MainContent handleFilter={handleFilter} setModalActive={setModalActive} cards={cards} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>}
           <Modal active={modalActive} setActive={setModalActive} filterCards={cardsList}>
           </Modal>
           <Footer/>
@@ -72,5 +62,6 @@ function Main() {
       </div>
     );
 }
+/* модалку над убрать в главный контент */
 
 export default Main;

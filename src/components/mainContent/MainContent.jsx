@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CardList from '../cardList/CardList'
 import Zebra from '../../svg/zebra'
 import Telegram from '../../svg/telegram.svg'
@@ -9,7 +9,13 @@ import phone from '../../pic/phone@1x.png'
 import background from '../../pic/coachBackground.png'
 
 
-const MainContent = ({handleFilter,setModalActive,cards}) => {
+const MainContent = ({handleFilter,setModalActive,cards,refreshPage,setRefreshPage}) => {
+  useEffect(()=>{
+    if(refreshPage){
+        document.querySelector('#'+refreshPage).scrollIntoView({ behavior: 'smooth' });
+        setRefreshPage(false)
+    }
+  })
     return (
         <div>
             <div className='main first-page'>
