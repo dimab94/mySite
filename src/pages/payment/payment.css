@@ -1,3 +1,82 @@
-
+.programsCard {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .programsCard {
+    margin-top: 80px;
+  }
+}
+.programsCard-blocks {
+  background: #1d1d1d;
+  font-family: "Oswald", sans-serif;
+  color: #f1faee;
+  width: 430px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .programsCard-blocks {
+    width: 80%;
+  }
+}
+.programsCard-blocks:hover {
+  cursor: pointer;
+}
+.programsCard-blocks:hover p {
+  color: rgb(173, 255, 0);
+}
+.programsCard-blocks p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.programsCard-blocks p.active {
+  color: rgb(173, 255, 0);
+}
+.programsCard-blocks-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.programsCard-description {
+  margin-bottom: 40px;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  height: 69px;
+}
+.programsCard-price {
+  color: rgb(173, 255, 0);
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.programsCard button {
+  background-color: rgb(173, 255, 0);
+  width: 250px;
+  height: 65px;
+  margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  border: none;
+}
+.programsCard button:hover {
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .programsCard button {
+    width: 90%;
+  }
+}
+.programsCard a {
+  color: rgb(57, 57, 57);
+  font-size: 20px;
+}
 
 /*# sourceMappingURL=payment.css.map */

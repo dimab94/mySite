@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  background: rgb(29, 29, 29);
+  background: #1d1d1d;
   height: 200px;
   align-items: center;
   display: flex;
@@ -36,6 +36,7 @@
     grid-column: 1/2;
     grid-row: 1/2;
     height: 140px;
+    justify-content: space-around;
   }
 }
 .footer_contact {
@@ -77,6 +78,7 @@
 @media (max-width: 474px) {
   .footer_title {
     text-align: center;
+    font-size: 30px;
   }
 }
 .footer_right-side {
@@ -120,6 +122,11 @@
   font-size: 20px;
   color: rgb(57, 57, 57);
   margin: 0;
+}
+@media (max-width: 474px) {
+  .doc, .doc_title {
+    font-size: 18px;
+  }
 }
 
 .doc {

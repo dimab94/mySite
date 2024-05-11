@@ -1,0 +1,65 @@
+@import ../../styles/variables/variable
+
+    
+    
+.programsCard
+    margin-top: 30px
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 100%
+    @media (max-width: 500px)
+        margin-top: 80px
+    &-blocks
+        background:#1d1d1d
+        font-family: $mainFont
+        color: $white
+        width: 430px
+        padding: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 30px
+        @media (max-width: 500px)
+            width: 80%
+        &:hover
+            cursor: pointer
+            & p
+                color: $green
+        & p
+            font-size: 24px
+            margin-bottom: 30px
+            &.active
+                color: $green
+        &-information
+            display: flex
+            flex-direction: column
+            align-items: center
+
+    &-description
+        margin-bottom: 40px
+        font-size: 20px
+        width: 80%
+        text-align: center
+        height: 69px
+        
+    &-price
+        color: $green
+        font-size: 30px
+        margin-bottom: 40px
+    button
+        background-color: $green
+        width: 250px
+        height: 65px
+        margin-bottom: 10px
+        font-family: $mainFont
+        font-size: 20px
+        border: none
+        &:hover
+            cursor: pointer
+        @media (max-width: 500px)
+            width: 90%
+    a
+        color: $footerGrey
+        font-size: 20px

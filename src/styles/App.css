@@ -77,7 +77,6 @@ button {
 }
 
 .any-page {
-  margin-bottom: 20px;
   background: rgb(29, 29, 29);
   width: 100%;
 }
@@ -401,6 +400,12 @@ button {
 }
 .about_phones img:first-child {
   margin: 0 0 5% 6%;
+  filter: drop-shadow(8px -6px 0px #ADFF00);
+}
+@media (max-width: 890px) {
+  .about_phones img:first-child {
+    filter: drop-shadow(4px -2px 0px #ADFF00);
+  }
 }
 @media (max-width: 834px) {
   .about_phones img:first-child {
@@ -695,11 +700,13 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
 }
 @media (max-width: 834px) {
   .coach_logo {
     grid-column: 2/3;
     grid-row: 4/5;
+    margin: 0px;
   }
 }
 @media (max-width: 569px) {
@@ -723,6 +730,9 @@ button {
     height: 60px;
     justify-content: center;
   }
+}
+.coach_logo_title {
+  font-size: 32px;
 }
 .coach_statistics {
   grid-column: 2/5;
@@ -957,6 +967,7 @@ button {
   .programs_text {
     text-align: center;
     margin: 20px 2%;
+    font-size: 18px;
   }
 }
 

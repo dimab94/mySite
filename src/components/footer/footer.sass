@@ -2,7 +2,7 @@
 
 .footer
     width: 100%
-    background: rgba(29, 29, 29, 1)
+    background: #1d1d1d
     height: 200px
     align-items: center
     display: flex
@@ -28,6 +28,7 @@
             grid-column: 1/2
             grid-row: 1/2
             height: 140px
+            justify-content: space-around
     &_contact
         display: flex
         flex-wrap: wrap
@@ -56,6 +57,7 @@
         font-size: 40px
         @media (max-width:474px)
             text-align: center
+            font-size: 30px
     &_right-side
         margin-top: 12px
         grid-column: 4/6
@@ -85,6 +87,8 @@
     font-size: 20px
     color: $footerFontColor
     margin: 0
+    @media (max-width:474px)
+        font-size: 18px
 .doc
     text-decoration: none
     &:hover

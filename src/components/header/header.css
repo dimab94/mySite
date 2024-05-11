@@ -10,8 +10,8 @@ nav {
   nav {
     background: rgb(29, 29, 29);
     justify-content: center;
-    width: calc(100% - 10px);
-    padding: 0 5px;
+    width: 100%;
+    padding: 0;
     height: 50px;
     flex-direction: row;
     justify-content: space-between;
@@ -23,12 +23,20 @@ nav {
 nav.wrapper {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .header-back {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 300px;
+}
+@media (max-width: 500px) {
+  .header-back {
+    width: 120px;
+    margin: 0 5px;
+    justify-content: flex-end;
+  }
 }
 .header-back button {
   font-family: "VT323", sans-serif;
@@ -36,6 +44,14 @@ nav.wrapper {
   color: rgb(173, 255, 0);
   background: none;
   background: rgb(57, 57, 57);
+}
+.header-back button:last-child {
+  margin-left: 25px;
+}
+@media (max-width: 500px) {
+  .header-back button:last-child {
+    margin-left: 5px;
+  }
 }
 .header-back button:hover {
   cursor: pointer;
@@ -52,7 +68,8 @@ nav.wrapper {
 }
 @media (max-width: 500px) {
   .title {
-    margin: 0;
+    font-size: 25px;
+    margin: 0 5px;
     text-align: left;
     vertical-align: middle;
     z-index: 2;
@@ -69,6 +86,7 @@ nav.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 5px;
   }
   .burger span {
     width: 32px;

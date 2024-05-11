@@ -8,10 +8,10 @@ nav
     padding-top: 20px
     margin-bottom: 30px
     @media (max-width:500px)
-        background: rgba(29, 29, 29, 1)
+        background: #1d1d1d
         justify-content: center
-        width: calc( 100% - 10px )
-        padding: 0 5px
+        width: 100%
+        padding: 0
         height: 50px
         flex-direction: row
         justify-content: space-between
@@ -21,16 +21,25 @@ nav
     &.wrapper
         display: flex
         align-items: center
+        width: 100%
 .header-back
     display: flex
-    justify-content: space-between
+    justify-content: center
     width: 300px
+    @media (max-width:500px)
+        width: 120px
+        margin:0 5px
+        justify-content: flex-end
     button
         font-family: $secondFont
         font-size: 30px
         color: $green
         background: none
         background: $footerGrey
+        &:last-child
+            margin-left: 25px
+            @media (max-width:500px)
+                margin-left: 5px
         &:hover
             cursor: pointer
         @media (max-width:500px)
@@ -39,7 +48,8 @@ nav
     text-align: center
     margin-bottom: 30px
     @media (max-width: 500px)
-        margin:0
+        font-size: 25px
+        margin:0 5px
         text-align: left
         vertical-align: middle
         z-index: 2
@@ -51,6 +61,7 @@ nav
         display: flex
         flex-direction: column
         justify-content: space-between
+        margin-right: 5px
         span
             width: 32px
             height: 4px

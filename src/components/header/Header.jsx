@@ -11,7 +11,7 @@ function Header ({active,setActive,setRefreshPage}) {
 
     return ( 
         <nav className={location.pathname==='/'?'main-wrapper':'wrapper'}>
-            <h1 className='title'>Baruzdin.tri</h1>
+            <h1 className='title'>Baruzdin.online</h1>
             {(location.pathname==='/'||location.pathname==='/payment') ?
             <div className='header-menu'>
                 <div className={active ? 'burger close' : 'burger'} onClick={(e)=>{e.stopPropagation(); setActive(!active)}}>
@@ -22,7 +22,7 @@ function Header ({active,setActive,setRefreshPage}) {
                 <Menu active={active} setActive={setActive} items={items} setRefreshPage={setRefreshPage}/>
             </div>
             :
-            <div className='header-back' style={{justifyContent:location.pathname=='/legal'?'center':'space-between'}}>
+            <div className='header-back'>
                 <button style={{display:location.pathname=='/legal'?'none':'block'}} onClick={() => navigate(-1)}>back</button>
                 <button onClick={() => navigate('/')}>home</button>
             </div>
