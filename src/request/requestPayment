@@ -1,0 +1,19 @@
+curl --request https://api.yookassa.ru/v3/payments \
+  -X POST \
+  -u <342896>:<live_vzHKSzBwfaYqtoSrZ5DhFEoWovMoYcxvpeP1mrP-AuE> \
+  -H 'Idempotence-Key: <wwfsfasf>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "amount": {
+          "value": "2.00",
+          "currency": "RUB"
+        },
+        "payment_method_data": {
+          "type": "bank_card"
+        },
+        "confirmation": {
+          "type": "redirect",
+          "return_url": "https://baruzdin.online/"
+        },
+        "description": "Заказ №72"
+      }'

@@ -109,10 +109,10 @@ const MainContent = ({handleFilter,setModalActive,cards,refreshPage,setRefreshPa
             <article className='coach_first'>
             Высшее образование в&nbsp;сфере физической культуры и&nbsp;спорта, закончил бакалавриат и&nbsp;магистратуру НГУ им. Лесгафта. Занимаюсь тренерской деятельностью с&nbsp;2014&nbsp;года, начинал с&nbsp;обучения плаванию.</article>
             <article className='coach_second'>
-            Работаю со&nbsp;спортсменами разных возрастов и&nbsp;уровней. Подготавливаю к&nbsp;стартам в&nbsp;тритлоне от&nbsp;самых коротких, до&nbsp;самых длинных дистанций, порой даже экстримальных&nbsp;&mdash; таких как триатлон Siberman.</article>
-            <article className='coach_third'>С&nbsp;детства профессионально занимался плаванием, позже перешел в&nbsp;триатлон. До&nbsp;2014 года являлся профессиональным спртсменом, выступал за&nbsp;сборную России. Мастер спорта по&nbsp;тритлону.</article>
+            Работаю со&nbsp;спортсменами разных возрастов и&nbsp;уровней. Подготавливаю к&nbsp;стартам в&nbsp;тритлоне от&nbsp;самых коротких, до&nbsp;самых длинных дистанций, порой даже экстремальных&nbsp;&mdash; таких как триатлон Siberman.</article>
+            <article className='coach_third'>С&nbsp;детства профессионально занимался плаванием, позже перешел в&nbsp;триатлон. До&nbsp;2014 года являлся профессиональным спртсменом, выступал за&nbsp;сборную России. Мастер спорта по&nbsp;триатлону.</article>
             <div className='coach_logo'>
-              <h1 className='main_title coach_logo_title'>Baruzdin.online</h1>
+              <h1 className='main_title coach_logo_title'>Baruzdin-tri</h1>
               <div className='social'>
                 <a href='https://vk.com/baruzdin_tri' target="_blank">< img src={Vk} alt='logo' width="40" height="40"/></a>
                 <a href='https://t.me/dmitriibaruzdin' target="_blank">< img src={Telegram} alt='logo' width="40" height="40"/></a>

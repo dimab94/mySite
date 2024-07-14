@@ -11,7 +11,7 @@ function Header ({active,setActive,setRefreshPage}) {
 
     return ( 
         <nav className={location.pathname==='/'?'main-wrapper':'wrapper'}>
-            <h1 className='title'>Baruzdin.online</h1>
+            <h1 className='title'>Baruzdin-tri</h1>
             {(location.pathname==='/'||location.pathname==='/payment') ?
             <div className='header-menu'>
                 <div className={active ? 'burger close' : 'burger'} onClick={(e)=>{e.stopPropagation(); setActive(!active)}}>

@@ -36,30 +36,58 @@
             display: flex
             flex-direction: column
             align-items: center
+            max-width: 430px
 
     &-description
-        margin-bottom: 40px
         font-size: 20px
         width: 80%
         text-align: center
-        height: 69px
+        height: 70px
+        @media (max-width: 500px)
+            height: 80px
         
     &-price
         color: $green
         font-size: 30px
-        margin-bottom: 40px
+        height: 60px
+        &-input
+            display: none
+
+    &-form
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        height: 150px
+        &-cust
+            width: 100%
+            margin-bottom: 10px
+            &-input
+                width: calc( 100% - 4px )
+                padding: 2px
+                border: 0
+
+        &-btnLogo
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 10px
+        &-product
+            margin-bottom: 10px
+
     button
         background-color: $green
         width: 250px
-        height: 65px
-        margin-bottom: 10px
+        height: 55px
         font-family: $mainFont
         font-size: 20px
         border: none
+        margin-bottom: 10px
         &:hover
             cursor: pointer
         @media (max-width: 500px)
-            width: 90%
+            width: 100%
     a
         color: $footerGrey
         font-size: 20px

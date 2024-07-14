@@ -44,38 +44,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 430px;
 }
 .programsCard-description {
-  margin-bottom: 40px;
   font-size: 20px;
   width: 80%;
   text-align: center;
-  height: 69px;
+  height: 70px;
+}
+@media (max-width: 500px) {
+  .programsCard-description {
+    height: 80px;
+  }
 }
 .programsCard-price {
   color: rgb(173, 255, 0);
   font-size: 30px;
-  margin-bottom: 40px;
+  height: 60px;
+}
+.programsCard-price-input {
+  display: none;
+}
+.programsCard-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+.programsCard-form-cust {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.programsCard-form-cust-input {
+  width: calc(100% - 4px);
+  padding: 2px;
+  border: 0;
+}
+.programsCard-form-btnLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.programsCard-form-product {
+  margin-bottom: 10px;
 }
 .programsCard button {
   background-color: rgb(173, 255, 0);
   width: 250px;
-  height: 65px;
-  margin-bottom: 10px;
+  height: 55px;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   border: none;
+  margin-bottom: 10px;
 }
 .programsCard button:hover {
   cursor: pointer;
 }
 @media (max-width: 500px) {
   .programsCard button {
-    width: 90%;
+    width: 100%;
   }
 }
 .programsCard a {
-  color: rgb(57, 57, 57);
+  color: #393939;
   font-size: 20px;
 }
 
