@@ -6,7 +6,7 @@ function Refund() {
         <div className="generall_page_wrapper">
             <div className="main-content">
             <div className="any-page"><Header/></div>
-            <div className="container">
+            <div className="container doc-style">
                 Текст условий возврата платежа
             </div>
             </div>

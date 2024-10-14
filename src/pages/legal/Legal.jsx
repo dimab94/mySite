@@ -14,7 +14,7 @@ function Legal() {
                         <li><Link className="legal_link" to={'/rules'}>Правила пользования сайтом</Link></li>
                         <li><Link className="legal_link" to={'/privacy'}>Политика конфиденциальности</Link></li>
                         <li><Link className="legal_link" to={'/offer'}>Договор оферты</Link></li>
-                        <li><Link className="legal_link" to={'/refund'}>Условия возврата и отмены платежа</Link></li>
+                        {/* <li><Link className="legal_link" to={'/refund'}>Условия возврата и отмены платежа</Link></li> */}
                     </ul>
                 </div>
             </div>

@@ -10,7 +10,7 @@ import Offer from './pages/docs/Offer';
 import Rules from './pages/docs/Rules';
 import Refund from './pages/docs/Refund';
 import Legal from './pages/legal/Legal';
-import Utilites from './pages/calculator/Utilites';
+import Utilites from './pages/utilites/Utilites';
 
 function App() {
 
@@ -45,7 +45,7 @@ function App() {
         <Route path='/offer' Component={Offer}/>
         <Route path='/privacy' Component={Privacy}/>
         <Route exact path='/' Component={Main}/>
-        <Route exact path='/utilites' Component={Utilites}/>
+        <Route path='/utilites' Component={Utilites}/>
         {/* <Route path='/form' Component={Form}/> */}
       </Routes>
     </BrowserRouter>

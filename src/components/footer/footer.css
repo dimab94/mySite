@@ -7,7 +7,7 @@
   justify-content: center;
   font-style: normal;
   font-family: "VT323", sans-serif;
-  color: rgb(57, 57, 57);
+  color: #393939;
   font-size: 24px;
   align-self: flex-end;
 }
@@ -53,7 +53,7 @@
 .footer_contact a {
   text-decoration: none;
   margin-right: 10px;
-  color: rgb(57, 57, 57);
+  color: #393939;
 }
 @media (min-width: 835px) {
   .footer_contact a:hover {
@@ -65,14 +65,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 215px;
+  width: 230px;
 }
 .footer_contact_mail:hover {
   transition: all 0.2s ease-out;
   color: #f1faee;
 }
 .footer_title {
-  color: rgb(57, 57, 57);
+  color: #393939;
   font-size: 40px;
 }
 @media (max-width: 474px) {
@@ -116,11 +116,15 @@
     align-items: center;
   }
 }
+.footer_right-side a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .doc, .doc_title {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
-  color: rgb(57, 57, 57);
+  color: #393939;
   margin: 0;
 }
 @media (max-width: 474px) {

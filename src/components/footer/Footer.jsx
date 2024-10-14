@@ -16,7 +16,7 @@ function Footer({props}) {
                     <a href='https://www.strava.com/athletes/dbaruzdin' target="_blank">Strava</a>
                     <div className='footer_contact_mail'>
                         <img src={Mail} alt='mail'/>
-                        <a href="mailto:tri@baruzdin.online&body=Привет, у меня остались вопросы">tri@baruzdin.ru</a>
+                        <a href="mailto:mail@baruzdin-tri.ru&body=Привет, у меня остались вопросы">mail@baruzdin-tri.ru</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@ function Footer({props}) {
                 }
                 </div>
                 <div className='footer_right-side_wrapper'>
-                    <div className='footer_right-side_date'>2024</div>
+                    <Link className="'footer_right-side_date'" to={'/utilites'}>2024</Link>
                 </div>
             </div>
         </div>

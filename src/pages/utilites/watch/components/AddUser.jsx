@@ -1,0 +1,30 @@
+import { useState } from "react";
+import '../styles/stopWatch.css'
+
+function AddUser({create}) {
+
+    const [userName,SetUserName] = useState('')
+    const [userGroup,SetUserGroup] = useState('')
+
+    function addnewUser (e){
+        e.preventDefault();
+        const newUser = {
+            id:Date.now(),
+            group:userGroup,
+            name:userName
+        }
+        create(newUser)
+        SetUserName('')
+        SetUserGroup('')
+    }
+
+    return ( 
+        <form className='input_block'>
+            <input value={userGroup} onChange={event=>SetUserGroup(event.target.value)} className="input_group" type="text" placeholder="#"/>
+            <input value={userName} onChange={event=>SetUserName(event.target.value)} className="input_name" type="text" placeholder="Name"/>
+            <button onClick={addnewUser} className="button button_add">add</button>
+        </form>
+    );
+}
+
+export default AddUser;

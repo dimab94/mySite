@@ -24,7 +24,7 @@ const Modal = ({active,setActive,filterCards}) => {
                 </div>
                 <div className='modal_content_tumbler'>
                     {programCard.map(item=>
-                        <div className={(targetProgram==item)?'modal_content_tumbler_el active':'modal_content_tumbler_el'} onClick={()=>setTargetProgram(item)}><p>{item.title}</p></div>
+                        <div className={(targetProgram==item)?'modal_content_tumbler_el active':'modal_content_tumbler_el'} onClick={()=>setTargetProgram(item)} key={item.key}><p>{item.title}</p></div>
                     )}
                 </div>
                 <div className='modal_content_wrapper'>
@@ -33,7 +33,7 @@ const Modal = ({active,setActive,filterCards}) => {
                         <p className='modal_content_advantages_title'>Что входит в эту программу?</p>
                         <ul>
                             {(targetProgram.advantages).map(item=>
-                                <li>{item}</li>
+                                <li key={Math.random()}>{item}</li>
                             )}
                         </ul>
                     </div>
