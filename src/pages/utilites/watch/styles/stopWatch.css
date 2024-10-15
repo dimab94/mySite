@@ -48,6 +48,7 @@
   flex-direction: column;
 }
 .stopwatch_wrapper {
+  padding: 2%;
   display: grid;
   grid-template-columns: 170px auto;
   grid-template-rows: auto;
@@ -71,7 +72,6 @@
 }
 .users_list {
   border: 1px solid;
-  padding: 2%;
   height: auto;
 }
 .users_item {
@@ -84,21 +84,25 @@
 .user_laps {
   grid-column: 1/3;
   grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .user_lapsTime {
   display: flex;
   flex-flow: column wrap;
   flex-wrap: wrap;
   max-height: 200px;
+  width: 100%;
 }
 .user_lapsTime_el {
   height: 18px;
 }
 .user_button-lastLap {
   display: flex;
-  width: 100%;
-  justify-content: flex-end;
   height: 35px;
+  align-items: center;
+  width: 60px;
 }
 .user_button-control {
   display: flex;
