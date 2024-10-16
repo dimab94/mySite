@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import AddUser from "./watch/components/AddUser";
 import { useState, useRef} from "react";
 import StopWatchWrapper from "./watch/components/StopWatchWrapper";
+import './watch/styles/stopWatch.css';
 
 
 function Utilites() {

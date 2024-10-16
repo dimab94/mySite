@@ -5,7 +5,7 @@ function StopWatch({props,users,reset}) {
     const [isRunning,setIsRunning] = useState(false);
     const [isFinish,setIsFinish] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
-    const [isHide, setIsHide] = useState(false)
+    const [isHide, setIsHide] = useState(true)
     const intervalIdRef = useRef(null);
     const startTimeRef = useRef(0);
     const mainStartTimeRef = useRef(0);
@@ -49,7 +49,6 @@ function StopWatch({props,users,reset}) {
 
     function lapVisible(){
         setIsHide(!isHide)
-        console.log(isHide)
     }
 
     function start(){
@@ -132,7 +131,7 @@ function StopWatch({props,users,reset}) {
                         <div className="user_lapsTime">
                            {lapResults.map((objLap,index)=>
                            <div className="user_lapsTime_el" key={index}>
-                               <b>{index+1}</b>.{formatTime(objLap.elapsedTime)}
+                               <b className="user_lapsTime_el_listNumber">{index+1}</b>{formatTime(objLap.elapsedTime)}
                            </div>
                            )}
                         </div>

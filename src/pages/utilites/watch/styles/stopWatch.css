@@ -1,17 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Share+Tech+Mono&display=swap");
 .timer {
-  padding: 100px 2%;
+  margin: 100px 2%;
+  padding: 20px 0;
   max-width: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background: #1d1d1d;
+  border-radius: 5px;
 }
 
-.input_block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
+.input_wrapper {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input_block {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input_group {
   width: 5%;
@@ -29,18 +38,27 @@
 .button {
   height: 30px;
   width: 60px;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  margin: 0 2px;
+  transform: none;
+  filter: drop-shadow(2px 2px 0px rgb(173, 255, 0));
+  font-family: "Oswald", sans-serif;
+}
+.button:active {
+  transform: translate(1px, 2px);
 }
 .button_block {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
 }
-.button_lap {
-  margin-left: 5px;
-}
 .button_lastLap {
-  width: 60px;
   justify-self: flex-end;
+}
+.button_add {
+  width: 120px;
 }
 
 .stopwatch {
@@ -48,7 +66,6 @@
   flex-direction: column;
 }
 .stopwatch_wrapper {
-  padding: 2%;
   display: grid;
   grid-template-columns: 170px auto;
   grid-template-rows: auto;
@@ -56,29 +73,39 @@
 
 .display {
   font-size: 50px;
-  font-family: monospace;
+  font-family: "Reddit Mono", monospace;
   grid-column: 1/3;
   justify-content: center;
   justify-self: center;
+  color: rgb(173, 255, 0);
+  margin-bottom: 10px;
 }
 .display_user {
+  height: 38px;
+  width: 158px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
   font-size: 35px;
-  font-family: monospace;
-  height: 42px;
+  font-family: "Reddit Mono", monospace;
+  background: rgb(173, 255, 0);
 }
 
 .users {
   width: 100%;
 }
 .users_list {
-  border: 1px solid;
+  border: 1px solid #6d6d6d;
+  border-radius: 5px;
+  padding: 2%;
   height: auto;
+  margin: 4px 0;
 }
 .users_item {
   margin: 0;
   font-size: 24px;
-  color: #b7b7b7;
-  font-family: monospace;
+  color: #f1faee;
+  font-family: "Oswald", sans-serif;
 }
 
 .user_laps {
@@ -96,7 +123,16 @@
   width: 100%;
 }
 .user_lapsTime_el {
+  display: flex;
   height: 18px;
+  font-family: monospace;
+  color: #f1faee;
+}
+.user_lapsTime_el_listNumber {
+  color: #6d6d6d;
+  width: 16px;
+  text-align: end;
+  margin-right: 4px;
 }
 .user_button-lastLap {
   display: flex;

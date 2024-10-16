@@ -19,10 +19,12 @@ function AddUser({create}) {
     }
 
     return ( 
-        <form className='input_block'>
-            <input value={userGroup} onChange={event=>SetUserGroup(event.target.value)} className="input_group" type="text" placeholder="#"/>
-            <input value={userName} onChange={event=>SetUserName(event.target.value)} className="input_name" type="text" placeholder="Name"/>
-            <button onClick={addnewUser} className="button button_add">add</button>
+        <form className='input_wrapper'>
+            <div className="input_block">
+                <input value={userGroup} onChange={event=>SetUserGroup(event.target.value)} className="input_group" type="text" placeholder="#"/>
+                <input value={userName} onChange={event=>SetUserName(event.target.value)} className="input_name" type="text" placeholder="Name"/>
+            </div>
+            <button onClick={addnewUser} className="button button_add">Add</button>
         </form>
     );
 }
