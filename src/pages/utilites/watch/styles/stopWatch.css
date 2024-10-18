@@ -75,6 +75,7 @@
 .stopwatch {
   display: flex;
   flex-direction: column;
+  padding: 2%;
 }
 .stopwatch_wrapper {
   display: grid;
@@ -108,7 +109,6 @@
 .users_list {
   border: 1px solid #6d6d6d;
   border-radius: 5px;
-  padding: 2%;
   height: auto;
   margin: 4px 0;
 }

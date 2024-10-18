@@ -33,7 +33,12 @@ function StopWatch({props,users,reset}) {
     useEffect(()=>{
 
         if(mainTimerIsRunning){
-            start()
+            start();
+        }
+        else{
+            stop();
+            setIsFinish(true);
+            setElapsedTime(mainFinishTimeRef.current - mainStartTimeRef.current);//тут хочется сделать чтоб он сразу сохранял финиш. Еще добавить цвета когда юзер сделал финиш.
         }
 
     }, [mainTimerIsRunning]);

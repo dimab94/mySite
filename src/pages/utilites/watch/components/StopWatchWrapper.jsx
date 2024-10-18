@@ -7,6 +7,7 @@ function StopWatchWrapper({userArr,deleteUser}) {
 
     const [isRunning,setIsRunning] = useState(false);
     const [reset,setReset] = useState(false)
+    const [finished, setFinished] = useState(false)
 
     function allStart(){
         setIsRunning(true);
@@ -14,20 +15,23 @@ function StopWatchWrapper({userArr,deleteUser}) {
 
     function allStop(){
         setIsRunning(false);
+        setFinished(true)
     }
     function allReset(){
         setReset(!reset)
         setIsRunning(false)
+        setFinished(false)
     }
 
     return ( 
         <div className="container">
             <StopWatch props={[isRunning,0]} reset={[reset,allReset]}/>
             <div className="button_block">
-                { isRunning
-                            ?<button onClick={allReset} className="button button_reset">Reset</button>
+                { finished || isRunning
+                            ?<button onClick={allStop} className="button button_start">Finish</button>
                             :<button onClick={allStart} className="button button_start">Start</button>
                         }
+                <button onClick={allReset} className="button button_reset">Reset</button>
             </div>
             
             <UserList props={[isRunning,deleteUser]} users={userArr} reset={[reset,allReset]}/>
