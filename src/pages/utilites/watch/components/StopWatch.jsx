@@ -34,6 +34,7 @@ function StopWatch({props,users,reset}) {
 
         if(mainTimerIsRunning){
             start();
+            setIsFinish(false)
         }
         else{
             stop();

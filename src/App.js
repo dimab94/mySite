@@ -32,8 +32,8 @@ function App() {
       path:'https://forms.yandex.ru/u/653f51375d2a064c3cdf0328/',
       key: '1.2'
     }]
-}
-
+  }
+  
   return (
     <BrowserRouter>
     <ScrollToTop/>
