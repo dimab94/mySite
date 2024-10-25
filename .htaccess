@@ -4,6 +4,12 @@ SetEnvIf X-Forwarded-Proto https SERVER_PORT=443
 SetEnvIf X-Forwarded-Proto https HTTPS=on
 RewriteCond %{HTTP:HTTPS} !=on [NC]
 RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+AddType application/javascript .js
+RewriteEngine On
+
+# Исключаем service-worker.js из переадресации
+RewriteRule ^service-worker\.js$ - [L]
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
