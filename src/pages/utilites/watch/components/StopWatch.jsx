@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import '../styles/stopWatch.css'
 
-function StopWatch({props,users,reset}) {
+function StopWatch({props,user,reset}) {
     const [isRunning,setIsRunning] = useState(false);
     const [isFinish,setIsFinish] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
@@ -20,7 +20,7 @@ function StopWatch({props,users,reset}) {
         if(isRunning){
             intervalIdRef.current = setInterval(()=>{
                 setElapsedTime(Date.now() - startTimeRef.current)
-            },200);
+            },100);
             
         }
 
@@ -39,7 +39,7 @@ function StopWatch({props,users,reset}) {
         else{
             stop();
             setIsFinish(true);
-            setElapsedTime(mainFinishTimeRef.current - mainStartTimeRef.current);//тут хочется сделать чтоб он сразу сохранял финиш. Еще добавить цвета когда юзер сделал финиш.
+            setElapsedTime(mainFinishTimeRef.current - mainStartTimeRef.current);
         }
 
     }, [mainTimerIsRunning]);
@@ -98,7 +98,7 @@ function StopWatch({props,users,reset}) {
             setIsRunning(true);
         }
         else{
-            deleteUser(users)
+            deleteUser(user)
         }
 
     }
@@ -125,14 +125,14 @@ function StopWatch({props,users,reset}) {
     return ( 
         <div className="stopwatch" onClick={lapVisible}>
             <div className="stopwatch_wrapper">
-                <div className={users? "display_user" :"display"}>{formatTime(elapsedTime)}</div>
-                {users
+                <div className={user? "display_user" :"display"}>{formatTime(elapsedTime)}</div>
+                {user
                     ?<div className="user_button-control" onClick={(e)=>e.stopPropagation()}>
                         <button className="button button_lap" onClick={lap}>Lap</button><button className="button button_finish" onClick={stop}>Finish</button>
                     </div>
                     :<div/>
                 }
-                {users && isHide
+                {user && isHide
                     ?<div className="user_laps">
                         <div className="user_lapsTime">
                            {lapResults.map((objLap,index)=>

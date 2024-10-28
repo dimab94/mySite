@@ -8,7 +8,19 @@ import './watch/styles/stopWatch.css';
 
 function Utilites() {
 
-    const [userArr, SetUserArr]= useState([])
+    const [userArr, SetUserArr]= useState([{
+        id:124412,
+        group:1,
+        name:'userName'
+    },{
+        id:764435,
+        group:2,
+        name:'dima'
+    },{
+        id:54347,
+        group:1,
+        name:'agi'
+    }])
 
     const createUser = (newUser) => {
         SetUserArr([...userArr,newUser])
