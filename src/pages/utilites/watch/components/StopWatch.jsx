@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import '../styles/stopWatch.css'
 
-function StopWatch({props,user,reset}) {
+function StopWatch({props,user,reset,groupLap}) {
     const [isRunning,setIsRunning] = useState(false);
     const [isFinish,setIsFinish] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
@@ -14,6 +14,16 @@ function StopWatch({props,user,reset}) {
 
     const mainTimerIsRunning = props[0]
     const deleteUser = props[1]
+    const buttonLap = groupLap[0]
+    const allLap = groupLap[1]
+    
+    useEffect(()=>{
+        if (user&&(buttonLap==user.group)){
+            lap();
+            allLap(false)
+        }
+    }, [buttonLap]);
+
   
     useEffect(()=>{
 
@@ -98,7 +108,7 @@ function StopWatch({props,user,reset}) {
             setIsRunning(true);
         }
         else{
-            deleteUser(user)
+            deleteUser(user.id)
         }
 
     }
