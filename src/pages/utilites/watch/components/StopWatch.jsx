@@ -5,7 +5,7 @@ function StopWatch({props,user,reset,groupLap}) {
     const [isRunning,setIsRunning] = useState(false);
     const [isFinish,setIsFinish] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
-    const [isHide, setIsHide] = useState(true)
+    const [isHide, setIsHide] = useState(false)
     const intervalIdRef = useRef(null);
     const startTimeRef = useRef(0);
     const mainStartTimeRef = useRef(0);

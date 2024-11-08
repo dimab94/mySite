@@ -20,27 +20,27 @@ function Utilites() {
         name:'Виктор'
     },{
         id:3,
-        group:1,
+        group:2,
         name:'Ярослав'
     },{
         id:4,
-        group:2,
+        group:3,
         name:'Саша А.'
     },{
         id:5,
-        group:1,
+        group:2,
         name:'Хаонань'
     },{
         id:6,
-        group:2,
+        group:3,
         name:'Аля'
     },{
         id:7,
-        group:3,
+        group:4,
         name:'Саша Ж.'
     },{
         id:8,
-        group:4,
+        group:5,
         name:'Катя'
     }]
     const runPass = [
