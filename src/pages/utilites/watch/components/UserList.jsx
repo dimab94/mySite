@@ -37,6 +37,7 @@ function UserList({props, users,reset}) {
       else {
           setIsHide(isHide.filter((i)=>i!==groupNumber))
       }
+      console.log(groupedUsers)
     }
     // Группируем пользователей
     const groupedUsers = groupUsersByGroup(users);

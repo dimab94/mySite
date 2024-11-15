@@ -44,6 +44,9 @@
   flex-direction: row;
   align-items: center;
 }
+.group_item {
+  width: 80px;
+}
 
 .input_wrapper {
   margin-bottom: 30px;
@@ -151,12 +154,23 @@
   height: auto;
   margin: 4px 0 0;
 }
+.user_list_title {
+  display: flex;
+  flex-direction: row;
+}
 .user_item {
+  width: 120px;
+  overflow: hidden;
   padding: 2% 2% 0;
   margin: 0;
   font-size: 24px;
   color: #f1faee;
   font-family: "Oswald", sans-serif;
+}
+.user_lapCounter {
+  width: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .user_laps {
@@ -170,7 +184,7 @@
   display: flex;
   flex-flow: column wrap;
   flex-wrap: wrap;
-  max-height: 200px;
+  max-height: 100px;
   width: 100%;
   overflow-x: auto;
 }
