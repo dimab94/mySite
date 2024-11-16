@@ -47,14 +47,14 @@ function UserList({props, users,reset}) {
         {groupedUsers.map((group, index) => (
             <div className="group_list" key={index} style={{backgroundColor: colors[index % colors.length],border:colors[index % colors.length]}}>
                 <div className="group_wrapper">
-                    <div className="group_name" onClick={()=>HideAndBlock(index+1)}>
-                        <p className="group_item">{index+1} Группа</p>
+                    <div className="group_name" onClick={()=>HideAndBlock(group[0].group)}>
+                        <p className="group_item">{(group[0].group!=-1)?group[0].group:'--'} Группа</p>
                         {(group.length>1)
                           ?<ArrowDropDownIcon/>
                           :<div/>
                         }
                     </div>
-                    <button className="group_button" onClick={()=>setGropupLap(index+1)}><RestartAltIcon/></button>
+                    <button className="group_button" onClick={()=>setGropupLap(group[0].group)}><RestartAltIcon/></button>
                 </div>
                 {group.map((user, index) => (
                     <User props={props} user={user} reset={reset} key={index} groupLap = {[groupLap,allLap]} style={{display:(isHide.includes(user.group))||index===0 ?'block':'none'}}/>
