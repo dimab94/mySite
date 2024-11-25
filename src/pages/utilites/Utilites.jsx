@@ -85,6 +85,9 @@ function Utilites() {
     const deleteUser = (id) => {
         SetUserArr([...userArr].filter(el=>el.id!==id))
     }
+    const refreshArr = (arr)=>{
+        SetUserArr(arr)
+    }
 
     function selectGroup(ev){
         switch(ev){
@@ -105,7 +108,7 @@ function Utilites() {
                 <div className="any-page"><Header/></div>
                 <div className="timer">
                     <AddUser create={createUser}/>
-                    <StopWatchWrapper userArr={userArr} deleteUser={deleteUser}/>
+                    <StopWatchWrapper userArr={[userArr,refreshArr]} deleteUser={deleteUser} />
                 </div>
             </div>
             <select name="student_info" id="groups" defaultValue={'1'} onChange={(e)=>selectGroup(e.target.value)}>

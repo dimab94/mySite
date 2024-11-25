@@ -34,7 +34,7 @@ function StopWatchWrapper({userArr,deleteUser}) {
                 <button onClick={allReset} className="button button_reset">Reset</button>
             </div>
             
-            <UserList props={[isRunning,deleteUser]} users={userArr} reset={[reset,allReset]}/>
+            <UserList props={[isRunning,deleteUser]} userArr={userArr} reset={[reset,allReset]}/>
         </div>
     );
 }
