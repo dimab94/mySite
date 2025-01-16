@@ -37,7 +37,7 @@ const Modal = ({active,setActive,filterCards}) => {
                             )}
                         </ul>
                     </div>
-                    <div className='modal_content_price'>{targetProgram.price}</div>
+                    <div className='modal_content_price'>{targetProgram.price} ₽</div>
                     <div className='modal_content_acceptPolicy'>
                         <div>
                             <input type='checkbox' id="accept" name='privacy_accept' onClick={()=>checking()} />

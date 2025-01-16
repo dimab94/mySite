@@ -31,7 +31,7 @@ function Footer({props}) {
                 }
                 </div>
                 <div className='footer_right-side_wrapper'>
-                    <Link className="'footer_right-side_date'" to={'/utilites'}>2024</Link>
+                    <Link className="'footer_right-side_date'" to={'/utilites'}>2025</Link>
                 </div>
             </div>
         </div>

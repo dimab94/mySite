@@ -31,7 +31,7 @@ function UserList({props, userArr,reset}) {
     setGropupLap(tumbler)
   }
 
-  const HideAndBlock=(groupNumber)=>{
+  const HideBlock=(groupNumber)=>{
     if (!isHide.includes(groupNumber)){
         setIsHide([...isHide,(groupNumber)])
     }
@@ -47,9 +47,9 @@ function UserList({props, userArr,reset}) {
   return (
     <div className="users">
       {groupedUsers.map((group, index) => (
-          <div className="group_list" key={index} style={{backgroundColor: colors[index % colors.length],border:colors[index % colors.length]}}>
+          <div className="group_list" key={group.id} style={{backgroundColor: colors[index % colors.length],border:colors[index % colors.length]}}>
               <div className="group_wrapper">
-                  <div className="group_name" onClick={()=>HideAndBlock(group.id)}>
+                  <div className="group_name" onClick={()=>HideBlock(group.id)}>
                       <p className="group_item">{(group.id!==-1)?group.id:'--'} Группа</p>
                       {(group.arr.length>1)
                         ?<ArrowDropDownIcon/>
@@ -58,13 +58,14 @@ function UserList({props, userArr,reset}) {
                   </div>
                   <button className="group_button" onClick={()=>setGropupLap(group.id)}><RestartAltIcon/></button>
               </div>
-              {group.arr.map((user, index) => (
+              {group.arr.map((user,index) => (
                   <User props={props} 
                   user={user} 
                   reset={reset} 
-                  key={index} 
+                  key={user.id} 
                   userArr={userArr} 
-                  groupLap = {[groupLap,allLap]} style={{display:(isHide.includes(user.group))||index===0 ?'block':'none'}}
+                  groupLap = {[groupLap,allLap]} 
+                  style={{display:(isHide.includes(user.group))||index===0 ?'block':'none'}}
                   />
               ))}
               
@@ -75,5 +76,3 @@ function UserList({props, userArr,reset}) {
 }
 
 export default UserList;
-
-//баг при добавлении нового пользователя - сбрысывается время и круги.
