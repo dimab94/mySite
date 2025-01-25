@@ -151,7 +151,7 @@ function StopWatch({props,user,reset,groupLap,lapsCalc}) {
                     ?<div className="user_laps">
                         <div className="user_lapsTime">
                            {lapResults.map((objLap,index)=>
-                           <div className="user_lapsTime_el" key={index}>
+                           <div className="user_lapsTime_el" key={Math.floor(Math.random()*10000)}>
                                <b className="user_lapsTime_el_listNumber">{index+1}</b>{formatTime(objLap.elapsedTime)}
                            </div>
                            )}

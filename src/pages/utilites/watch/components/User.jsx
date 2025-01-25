@@ -8,7 +8,7 @@ function User({props, user,reset, groupLap,style}) {
     const lapsCalc=(lapNumber)=>{
         setLapCounter(lapNumber)
     }
-    
+
     return ( 
         <div className="user" 
             draggable={true}
@@ -18,7 +18,7 @@ function User({props, user,reset, groupLap,style}) {
                     <p className="user_item">{user.name}</p>
                     <p className="user_lapCounter">Lap {lapCounter}</p>
                 </div>
-                <StopWatch props={props} user={user} reset={reset} groupLap = {groupLap} lapsCalc={lapsCalc}/> 
+                <StopWatch props={props} user={user} reset={reset} groupLap = {groupLap} lapsCalc={lapsCalc} key={user.id}/> 
             </div>
     </div>
      );
