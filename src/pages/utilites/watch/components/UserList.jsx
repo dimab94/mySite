@@ -1,6 +1,6 @@
 import User from "./User";
 import '../styles/stopWatch.css'
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -9,7 +9,6 @@ function UserList({props, userArr,reset}) {
 
   const [groupLap,setGropupLap]=useState(false)
   const [isHide, setIsHide]=useState([])
-  const usersB = userArr[0]
   const users = userArr[0]
   const refreshArr = userArr[1]
   //const [users, setUsers] = useState(users)
@@ -119,8 +118,7 @@ function UserList({props, userArr,reset}) {
                                 <User props={props} 
                                 user={user} 
                                 reset={reset} 
-                                key={user.id} 
-                                userArr={userArr} 
+                                key={user.id}  
                                 groupLap = {[groupLap,allLap]} 
                                 />
                             </div>

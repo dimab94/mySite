@@ -1,6 +1,6 @@
 import { useState, useRef} from "react";
 import UserList from "./UserList";
-import StopWatch from "./StopWatch";
+import StopWatchMain from "./StopWatchMain";
 import '../styles/stopWatch.css'
 
 function StopWatchWrapper({userArr,deleteUser}) {
@@ -25,7 +25,7 @@ function StopWatchWrapper({userArr,deleteUser}) {
 
     return ( 
         <div className="container">
-            <StopWatch props={[isRunning,0]} reset={[reset,allReset]} groupLap={[]}/>
+            <StopWatchMain props={isRunning} clearFunc={[reset,allReset]}/>
             <div className="button_block">
                 { finished || isRunning
                             ?<button onClick={allStop} className="button button_start">Finish</button>
@@ -35,6 +35,7 @@ function StopWatchWrapper({userArr,deleteUser}) {
             </div>
             
             <UserList props={[isRunning,deleteUser]} userArr={userArr} reset={[reset,allReset]}/>
+            {/*may be delet resetAll ? */}
         </div>
     );
 }
