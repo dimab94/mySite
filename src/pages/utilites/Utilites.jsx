@@ -11,71 +11,100 @@ function Utilites() {
     const [userArr, SetUserArr]= useState([])
 
     const miniGroup = [{
-        id:1,
-        group:1,
-        name:'Тимур'
-    },{
-        id:2,
         group:1,
         name:'Виктор'
     },{
-        id:3,
         group:2,
         name:'Ярослав'
     },{
-        id:4,
-        group:3,
-        name:'Саша А.'
-    },{
-        id:5,
-        group:2,
+        group:1,
         name:'Хаонань'
     },{
-        id:6,
         group:3,
         name:'Аля'
     },{
-        id:7,
+        group:3,
+        name:'Варя'
+    },{
         group:4,
         name:'Саша Ж.'
     },{
-        id:8,
+        group:4,
+        name:'Оля'
+    },{
         group:5,
         name:'Катя'
+    },{
+        group:5,
+        name:'Алексей'
     }]
     const runPass = [
         {
-            id:9,
             group:1,
             name:'Максим'
         },{
-            id:10,
             group:1,
-            name:'Артем'
+            name:'Сергей З.'
         },{
-            id:11,
             group:2,
+            name:'Сергей Т.'
+        },{
+            group:3,
             name:'Дима'
         },{
-            id:12,
             group:2,
+            name:'Артем'
+        },{
+            group:3,
+            name:'Олег'
+        },{
+            group:3,
+            name:'Игорь'
+        },{
+            group:2,
+            name:'Александра'
+        },{
+            group:4,
             name:'Динара'
         },{
-            id:13,
-            group:3,
-            name:'Даша'
-        },{
-            id:14,
-            group:3,
+            group:4,
             name:'Лена'
         },{
-            id:15,
-            group:1,
-            name:'Сергей'
-        },{
-            id:16,
             group:4,
+            name:'Юля'
+        },{
+            group:5,
             name:'Соня'
+        },{
+            group:5,
+            name:'Даша'
+        },{
+            group:5,
+            name:'Тамара'
+        },{
+            group:5,
+            name:'Ксюша'
+        },{
+            group:5,
+            name:'Таня'
+        },{
+            group:5,
+            name:'Аня'
+        },{
+            group:5,
+            name:'Азат'
+        },{
+            group:6,
+            name:'Юлия'
+        },{
+            group:6,
+            name:'Лилия'
+        },{
+            group:6,
+            name:'Женя'
+        },{
+            group:6,
+            name:'Настя'
         }
     ]
 
@@ -92,10 +121,10 @@ function Utilites() {
     function selectGroup(ev){
         switch(ev){
             case 'miniGroup':
-                SetUserArr(miniGroup)
+                SetUserArr(miniGroup.map(el=>{return {...el,startTLap:null,resultList:null,id:Math.floor(Math.random()*10000)}}))
                 break;
             case 'runPass':
-                SetUserArr(runPass)
+                SetUserArr(runPass.map(el=>{return {...el,startTLap:null,resultList:null,id:Math.floor(Math.random()*10000)}}))
                 break;
         }
         

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import '../styles/stopWatch.css'
 
-function StopWatch({props,user,reset,groupLap}) {
+function StopWatch({props,userObj,reset,groupLap,lapsCounter}) {
     
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isHide, setIsHide] = useState(false)
@@ -11,12 +11,14 @@ function StopWatch({props,user,reset,groupLap}) {
     const mainFinishTimeRef = useRef(0);
     const intervalIdRef = useRef(null);
 
-    const [mainTimerIsRunning,deleteUser] = props
+    const [mainTimerIsRunning,mainTimerIsFinish,deleteUser] = props
     const [buttonLap,allLap] = groupLap
 
     const [lapResults,setLapResults] = useState([])
     const startTimeLap = useRef(0);
     const startTimeMain = useRef(0);
+    const [user, refreshUser] = userObj
+    const [resetAll,refreshResetAll] = reset
 
     //console.log(user)
 
@@ -44,12 +46,18 @@ function StopWatch({props,user,reset,groupLap}) {
 
     useEffect(()=>{
 
-        if(reset[0]){
+        if(resetAll){
             resert();
-            reset[1](false)
+            refreshResetAll(false)
         }
 
-    }, [reset]);
+    }, [resetAll]);
+
+    useEffect(()=>{
+
+        lapsCounter(lapResults.length+1)
+
+    }, [lapResults]);
 
     function lapVisible(){
         setIsHide(!isHide)
@@ -60,13 +68,19 @@ function StopWatch({props,user,reset,groupLap}) {
             start();
             setIsFinish(false)
         }
-        else{
+        if(mainTimerIsFinish){
             stop();
             setIsFinish(true);
             setElapsedTime(mainFinishTimeRef.current - startTimeMain.current);
         }
 
     }, [mainTimerIsRunning]);
+
+    useEffect(()=>{
+        if(startTimeLap.current){
+            refreshUser({...user, startTLap:startTimeLap.current,resultList:lapResults})
+        }
+    }, [startTimeLap.current]);
 
     function start(){
         setIsRunning(true)
@@ -93,6 +107,7 @@ function StopWatch({props,user,reset,groupLap}) {
         setIsRunning(false);
         setLapResults([])
         setIsFinish(false)
+        refreshUser({...user, startTLap:null,resultList:null})
     }
     function lap(){
         if(isRunning){     
@@ -107,7 +122,7 @@ function StopWatch({props,user,reset,groupLap}) {
             startTimeLap.current = LapArr[0].startLapTime
             setLapResults(lapResults.slice(0,-1))
             setIsRunning(true)
-            console.log(lapResults)
+            refreshUser({...user, startTLap:null,resultList:null})
         }
         else{
             deleteUser(user.id)
@@ -137,7 +152,10 @@ function StopWatch({props,user,reset,groupLap}) {
     return ( 
         <div className="stopwatch" onClick={lapVisible}>
             <div className="stopwatch_wrapper">
-                <div className="display_user">{formatTime(elapsedTime)}</div>
+                <div className="display_user">
+                    
+                    <div className="user_timer">{formatTime(elapsedTime)}</div>
+                    </div>
                     <div className="user_button-control" onClick={(e)=>e.stopPropagation()}>
                         <button className="button button_lap" onClick={lap}>Lap</button><button className="button button_finish" onClick={stop}>Finish</button>
                     </div>
@@ -145,7 +163,7 @@ function StopWatch({props,user,reset,groupLap}) {
                     ?<div className="user_laps">
                         <div className="user_lapsTime">
                            {lapResults.map((objLap,index)=>
-                           <div className="user_lapsTime_el" key={Math.floor(Math.random()*10000)}>
+                           <div className="user_lapsTime_el" key={Math.floor(Math.random()*100000)}>
                                <b className="user_lapsTime_el_listNumber">{index+1}</b>{formatTime(objLap.elapsedTime)}
                            </div>
                            )}

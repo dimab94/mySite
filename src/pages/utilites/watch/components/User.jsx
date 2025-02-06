@@ -1,18 +1,18 @@
 import StopWatch from "./StopWatch";
 import '../styles/stopWatch.css';
-import { useState, useRef, useEffect} from "react";
+import { useState} from "react";
 
 function User({props, user,reset, groupLap,style}) {
 
     const [lapCounter,setLapCounter] = useState(0)
 
-/*     useEffect(()=>{
-        if (user){
-            lapsCalc(lapResults.current.length + 1)
-        }
-    }, [lapResults]); */
+    const [userObj,setUserObj] = useState({...user, startTLap:null,resultList:null})
 
+    console.log(user)
 
+    const refreshUser=(arr)=>{
+        setUserObj(arr)
+    }
 
     const lapsCalc=(lapNumber)=>{
         setLapCounter(lapNumber)
@@ -27,7 +27,7 @@ function User({props, user,reset, groupLap,style}) {
                     <p className="user_item">{user.name}</p>
                     <p className="user_lapCounter">Lap {lapCounter}</p>
                 </div>
-                <StopWatch props={props} user={user} reset={reset} groupLap = {groupLap} key={user.id}/> 
+                <StopWatch props={props} userObj={[userObj,refreshUser]} lapsCounter={lapsCalc} reset={reset} groupLap = {groupLap} key={user.id}/> 
             </div>
     </div>
      );

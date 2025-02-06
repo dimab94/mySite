@@ -13,7 +13,9 @@ function AddUser({create}) {
         const newUser = {
             id:Date.now(),
             group:finalValue,
-            name:userName
+            name:userName,
+            startTLap:null,
+            resultList:null
         }
         create(newUser)
         SetUserName('')

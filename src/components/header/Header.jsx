@@ -10,7 +10,7 @@ function Header ({active,setActive,setRefreshPage}) {
     const items = [{value:'About',key:'about'},{value:'Coach',key:'coach'},{value:'Programs',key:'programs'},{value:'Payment',key:'payment'}]
 
     return ( 
-        <nav className={location.pathname==='/'?'main-wrapper':'wrapper'}>
+        <nav className={location.pathname==='/'?'main-wrapper':'wrapper'} style={{display:location.pathname=='/utilites'?'none':'block'}}>
             <h1 className='title'>Baruzdin-tri</h1>
             {(location.pathname==='/'||location.pathname==='/payment') ?
             <div className='header-menu'>

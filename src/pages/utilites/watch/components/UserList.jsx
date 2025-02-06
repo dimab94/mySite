@@ -9,8 +9,7 @@ function UserList({props, userArr,reset}) {
 
   const [groupLap,setGropupLap]=useState(false)
   const [isHide, setIsHide]=useState([])
-  const users = userArr[0]
-  const refreshArr = userArr[1]
+  const [users,refreshArr] = userArr
   //const [users, setUsers] = useState(users)
   const colors = ['#213723','rgb(88 40 40)','rgb(124 102 19)','rgb(82 22 72)','rgb(22 82 77)','rgb(67 33 104)']
 
@@ -31,7 +30,6 @@ function UserList({props, userArr,reset}) {
   const allLap = (tumbler)=>{
     setGropupLap(tumbler)
   }
-
   const HideBlock=(groupNumber)=>{
     if (!isHide.includes(groupNumber)){
         setIsHide([...isHide,(groupNumber)])

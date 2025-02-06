@@ -8,7 +8,7 @@ nav {
 }
 @media (max-width: 500px) {
   nav {
-    background: rgb(29, 29, 29);
+    background: #1d1d1d;
     justify-content: center;
     width: 100%;
     padding: 0;
@@ -16,11 +16,11 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     margin: 0;
   }
 }
 nav.wrapper {
+  position: fixed;
   display: flex;
   align-items: center;
   width: 100%;
@@ -43,7 +43,7 @@ nav.wrapper {
   font-size: 30px;
   color: rgb(173, 255, 0);
   background: none;
-  background: rgb(57, 57, 57);
+  background: #393939;
 }
 .header-back button:last-child {
   margin-left: 25px;
