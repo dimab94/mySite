@@ -55,12 +55,17 @@
 }
 .container {
   width: 80%;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 60px 0;
+  }
 }
 
 .doc-style {
   font-family: sans-serif;
   color: #f1faee;
-  padding: 2%;
   line-height: 1.5rem;
 }
 .doc-style a {
