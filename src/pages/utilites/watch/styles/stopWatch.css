@@ -10,6 +10,10 @@
   border-radius: 5px;
 }
 
+.container-watch {
+  width: 80%;
+}
+
 .group_list {
   border: 2px solid;
   border-radius: 5px;

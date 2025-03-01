@@ -9,18 +9,16 @@ nav {
 @media (max-width: 500px) {
   nav {
     background: #1d1d1d;
-    justify-content: center;
+    position: fixed;
     width: 100%;
-    padding: 0;
-    height: 50px;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 0;
     align-items: center;
     margin: 0;
   }
 }
 nav.wrapper {
-  position: fixed;
   display: flex;
   align-items: center;
   width: 100%;
@@ -29,12 +27,11 @@ nav.wrapper {
 .header-back {
   display: flex;
   justify-content: center;
-  width: 300px;
+  margin-right: 10px;
 }
 @media (max-width: 500px) {
   .header-back {
     width: 120px;
-    margin: 0 5px;
     justify-content: flex-end;
   }
 }
@@ -69,7 +66,7 @@ nav.wrapper {
 @media (max-width: 500px) {
   .title {
     font-size: 25px;
-    margin: 0 5px;
+    margin: 0 10px;
     text-align: left;
     vertical-align: middle;
     z-index: 2;

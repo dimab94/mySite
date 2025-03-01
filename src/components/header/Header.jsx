@@ -10,8 +10,8 @@ function Header ({active,setActive,setRefreshPage}) {
     const items = [{value:'About',key:'about'},{value:'Coach',key:'coach'},{value:'Programs',key:'programs'},{value:'Payment',key:'payment'}]
 
     return ( 
-        <nav className={location.pathname==='/'?'main-wrapper':'wrapper'} style={{display:location.pathname=='/utilites'?'none':'block'}}>
-            <h1 className='title'>Baruzdin-tri</h1>
+        <nav className={location.pathname==='/'?'main-wrapper':'wrapper'} style={{display:location.pathname=='/utilites'?'none':'flex'}}>
+            <div><h1 className='title'>Baruzdin-tri</h1></div>
             {(location.pathname==='/'||location.pathname==='/payment') ?
             <div className='header-menu'>
                 <div className={active ? 'burger close' : 'burger'} onClick={(e)=>{e.stopPropagation(); setActive(!active)}}>

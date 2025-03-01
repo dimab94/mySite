@@ -24,7 +24,7 @@ function StopWatchWrapper({userArr,deleteUser}) {
     }
 
     return ( 
-        <div className="container">
+        <div className="container-watch">
             <StopWatchMain props={isRunning} clearFunc={[reset,allReset]}/>
             <div className="button_block">
                 { finished || isRunning

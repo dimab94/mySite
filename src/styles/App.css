@@ -80,11 +80,6 @@ button {
   background: rgb(29, 29, 29);
   width: 100%;
 }
-@media (max-width: 500px) {
-  .any-page {
-    margin-bottom: 50px;
-  }
-}
 
 .main {
   width: 100%;

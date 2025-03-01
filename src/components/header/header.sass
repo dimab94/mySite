@@ -9,27 +9,23 @@ nav
     margin-bottom: 30px
     @media (max-width:500px)
         background: #1d1d1d
-        justify-content: center
+        position: fixed
         width: 100%
-        padding: 0
-        height: 50px
-        flex-direction: row
         justify-content: space-between
+        flex-direction: row
+        padding: 10px 0
         align-items: center
-        //position: fixed
         margin: 0
     &.wrapper
-        position: fixed
         display: flex
         align-items: center
         width: 100%
 .header-back
     display: flex
     justify-content: center
-    width: 300px
+    margin-right: 10px
     @media (max-width:500px)
         width: 120px
-        margin:0 5px
         justify-content: flex-end
     button
         font-family: $secondFont
@@ -50,7 +46,7 @@ nav
     margin-bottom: 30px
     @media (max-width: 500px)
         font-size: 25px
-        margin:0 5px
+        margin:0 10px
         text-align: left
         vertical-align: middle
         z-index: 2
