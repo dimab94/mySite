@@ -180,3 +180,5 @@ function StopWatch({props,userObj,reset,groupLap,lapsCounter}) {
     );
 }
 export default StopWatch;
+
+/* Надо сделать перенос между группами */

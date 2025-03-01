@@ -64,14 +64,20 @@ function Utilites() {
             group:2,
             name:'Александра'
         },{
-            group:4,
+            group:2,
+            name:'Хаонань'
+        },{
+            group:3,
             name:'Динара'
         },{
             group:4,
             name:'Лена'
         },{
-            group:4,
+            group:3,
             name:'Юля'
+        },{
+            group:4,
+            name:'Андрей'
         },{
             group:5,
             name:'Соня'
@@ -79,29 +85,26 @@ function Utilites() {
             group:5,
             name:'Даша'
         },{
-            group:5,
+            group:4,
             name:'Тамара'
         },{
             group:5,
-            name:'Ксюша'
-        },{
-            group:5,
-            name:'Таня'
-        },{
-            group:5,
-            name:'Аня'
-        },{
-            group:5,
-            name:'Азат'
+            name:'Руфат'
         },{
             group:6,
-            name:'Юлия'
+            name:'Анастасия Ф.'
+        },{
+            group:6,
+            name:'Женя Н.'
+        },{
+            group:6,
+            name:'Мария'
         },{
             group:6,
             name:'Лилия'
         },{
             group:6,
-            name:'Женя'
+            name:'Женя О.'
         },{
             group:6,
             name:'Настя'
