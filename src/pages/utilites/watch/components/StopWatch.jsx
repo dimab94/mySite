@@ -54,10 +54,10 @@ function StopWatch({props,userObj,reset,groupLap,lapsCounter}) {
     }, [resetAll]);
 
     useEffect(()=>{
-
-        lapsCounter(lapResults.length+1)
-
-    }, [lapResults]);
+        if(startTimeMain.current && isRunning){
+            lapsCounter(lapResults.length+1)
+        }
+    }, [lapResults,startTimeMain.current,isRunning]);
 
     function lapVisible(){
         setIsHide(!isHide)
@@ -103,10 +103,13 @@ function StopWatch({props,userObj,reset,groupLap,lapsCounter}) {
     }
 
     function resert(){
+        lapsCounter('')
         setElapsedTime(0);
         setIsRunning(false);
         setLapResults([])
         setIsFinish(false)
+        startTimeMain.current = 0
+        mainFinishTimeRef.current = 0
         refreshUser({...user, startTLap:null,resultList:null})
     }
     function lap(){
