@@ -764,7 +764,12 @@ button {
 }
 @media (max-width: 834px) {
   .coach_number {
-    font-size: 90px;
+    font-size: 80px;
+  }
+}
+@media (max-width: 500px) {
+  .coach_number {
+    font-size: 60px;
   }
 }
 

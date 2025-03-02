@@ -17,6 +17,10 @@ const MainContent = ({handleFilter,setModalActive,cards,refreshPage,setRefreshPa
         setRefreshPage(false)
     }
   })
+  function yearsSince2014() {
+    const currentYear = new Date().getFullYear();
+    return currentYear - 2014;
+  }
     return (
       <div>
           <div className='main first-page'>
@@ -120,15 +124,15 @@ const MainContent = ({handleFilter,setModalActive,cards,refreshPage,setRefreshPa
             </div>
             <div className='coach_statistics'>
               <div className='exp'>
-                <div className='coach_number'>9</div>
+                <div className='coach_number'>{yearsSince2014()}</div>
                 <p>лет стажа</p>
               </div>
               <div className='finishers_middle'>
-                <div className='coach_number'>22</div>
-                <p>финишера 70.3</p>
+                <div className='coach_number'>&gt;30</div>
+                <p>финишеров 70.3</p>
               </div>
               <div className='finishers_long'>
-                <div className='coach_number'>6</div>
+                <div className='coach_number'>7</div>
                 <p>финишеров IM</p>
             </div>
             </div>
